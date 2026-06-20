@@ -42,5 +42,61 @@
       "item_2": "Odpovedá na otázky podľa vašich interných dokumentov.",
       "item_3": "Spúšťa opakované úlohy podľa pravidiel, ktoré nastavíte."
     }
+  },
+  "how_it_works": {
+    "title": "Ako to funguje",
+    "step_1_title": "Nahráte doklad",
+    "step_1_desc": "Pošlete faktúru e-mailom, naskenujete alebo odfotíte mobilom.",
+    "step_2_title": "Systém vyťaží údaje",
+    "step_2_desc": "Prečíta sumu, dodávateľa, IČO aj dátum splatnosti.",
+    "step_3_title": "Vy skontrolujete",
+    "step_3_desc": "Porovnáte výsledok s originálom, prípadne niečo opravíte.",
+    "step_4_title": "Zapíše sa do účtovníctva",
+    "step_4_desc": "Schválený doklad sa uloží priamo do vášho systému."
+  },
+  "products": {
+    "title": "Riešenia a ceny",
+    "price_from": "od",
+    "price_unit": "€ / mesiac",
+    "flagship_badge": "Hlavný produkt",
+    "card_1_title": "Vyťažovanie dokladov",
+    "card_1_desc": "Automaticky prečíta a zatriedi faktúry, dodacie listy aj účtenky do vášho účtovníctva.",
+    "card_1_for": "Pre firmy, ktoré spracúvajú desiatky až stovky dokladov mesačne.",
+    "card_2_title": "RAG znalostná báza",
+    "card_2_desc": "Prehľadáva vaše interné dokumenty a odpovedá na otázky s odkazom na zdroj.",
+    "card_2_for": "Pre tímy, ktoré strácajú čas hľadaním informácií v dokumentácii.",
+    "card_3_title": "AI agenti & automatizácia",
+    "card_3_desc": "Spúšťa opakované úlohy podľa pravidiel, ktoré nastavíte — bez manuálnych krokov.",
+    "card_3_for": "Pre firmy s opakovanými procesmi naprieč systémami."
+  },
+  "why": {
+    "title": "Prečo ProjentIQ",
+    "item_1_title": "Dáta zostávajú u vás",
+    "item_1_desc": "Spracovanie prebieha v EÚ, žiadne dáta neopúšťajú dohodnutú infraštruktúru.",
+    "item_2_title": "Napojenie na vaše účtovníctvo",
+    "item_2_desc": "Podporujeme Pohodu, Omegu aj iDoklad — bez ručného exportu a importu.",
+    "item_3_title": "Rozumie slovenčine aj češtine",
+    "item_3_desc": "Nie je to preklad z angličtiny — systém je trénovaný na lokálne doklady a jazyk.",
+    "item_4_title": "Demo na vašich dokladoch",
+    "item_4_desc": "Pred objednávkou vám ukážeme, ako systém spracuje vaše reálne faktúry."
+  },
+  "testimonials": {
+    "coming_soon": "Zatiaľ nemáme referencie, ktoré by sme mohli zverejniť — pracujeme na tom s prvými klientmi."
+  },
+  "faq": {
+    "title": "Časté otázky",
+    "q1": "Ako sú chránené naše dáta?",
+    "a1": "Dáta spracúvame v EÚ a neopúšťajú dohodnutú infraštruktúru. S každým klientom podpisujeme spracovateľskú zmluvu podľa GDPR.",
+    "q2": "Na aké účtovné systémy sa napájate?",
+    "a2": "Aktuálne podporujeme Pohodu, Omegu a iDoklad. Pri iných systémoch vieme pripraviť napojenie na mieru — ozvite sa nám.",
+    "q3": "Koľko trvá nasadenie?",
+    "a3": "Závisí od rozsahu a počtu dokladových typov, zvyčajne ide o dni až pár týždňov. Presný odhad dostanete po prvej konzultácii.",
+    "q4": "Čo ak doklad systém nerozpozná správne?",
+    "a4": "Označíte chybu priamo pri kontrole, opravíte hodnotu a systém si to zapamätá pre budúce podobné doklady.",
+    "q5": "Musíme meniť naše súčasné účtovníctvo?",
+    "a5": "Nie, systém sa napája na váš existujúci systém, nenahrádza ho."
+  },
+  "cta_band": {
+    "title": "Ukážeme vám to na vašej faktúre."
   }
 }
