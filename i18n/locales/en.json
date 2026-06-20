@@ -42,5 +42,61 @@
       "item_2": "Answers questions based on your internal documents.",
       "item_3": "Runs repeatable tasks based on rules you set."
     }
+  },
+  "how_it_works": {
+    "title": "How it works",
+    "step_1_title": "Upload the document",
+    "step_1_desc": "Send an invoice by email, scan it, or take a photo with your phone.",
+    "step_2_title": "The system extracts the data",
+    "step_2_desc": "It reads the amount, vendor, tax ID, and due date.",
+    "step_3_title": "You review it",
+    "step_3_desc": "Compare the result with the original and fix anything if needed.",
+    "step_4_title": "It's recorded in your accounting system",
+    "step_4_desc": "Once approved, the document is saved directly into your system."
+  },
+  "products": {
+    "title": "Solutions & pricing",
+    "price_from": "from",
+    "price_unit": "€ / month",
+    "flagship_badge": "Flagship product",
+    "card_1_title": "Document extraction",
+    "card_1_desc": "Automatically reads and sorts invoices, delivery notes, and receipts into your accounting system.",
+    "card_1_for": "For businesses processing dozens to hundreds of documents a month.",
+    "card_2_title": "RAG knowledge base",
+    "card_2_desc": "Searches your internal documents and answers questions with a source reference.",
+    "card_2_for": "For teams losing time searching through documentation.",
+    "card_3_title": "AI agents & automation",
+    "card_3_desc": "Runs repeatable tasks based on rules you define — no manual steps.",
+    "card_3_for": "For businesses with repeatable processes across multiple systems."
+  },
+  "why": {
+    "title": "Why ProjentIQ",
+    "item_1_title": "Your data stays with you",
+    "item_1_desc": "Processing happens in the EU — no data leaves the agreed infrastructure.",
+    "item_2_title": "Connects to your accounting system",
+    "item_2_desc": "We support Pohoda, Omega, and iDoklad — no manual export or import.",
+    "item_3_title": "Built for Slovak and Czech",
+    "item_3_desc": "Not a translation from English — the system is trained on local documents and language.",
+    "item_4_title": "Demo on your own documents",
+    "item_4_desc": "Before you commit, we'll show you how the system handles your real invoices."
+  },
+  "testimonials": {
+    "coming_soon": "We don't have publishable references yet — we're working on this with our first clients."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "How is our data protected?",
+    "a1": "Data is processed within the EU and doesn't leave the agreed infrastructure. We sign a data processing agreement under GDPR with every client.",
+    "q2": "Which accounting systems do you connect to?",
+    "a2": "We currently support Pohoda, Omega, and iDoklad. For other systems we can build a custom connection — get in touch.",
+    "q3": "How long does setup take?",
+    "a3": "It depends on the scope and number of document types, usually days to a few weeks. You'll get an exact estimate after the first consultation.",
+    "q4": "What if the system misreads a document?",
+    "a4": "You flag the error right during review, correct the value, and the system remembers it for similar documents going forward.",
+    "q5": "Do we need to change our current accounting system?",
+    "a5": "No, the system connects to your existing setup — it doesn't replace it."
+  },
+  "cta_band": {
+    "title": "We'll show you on your own invoice."
   }
 }

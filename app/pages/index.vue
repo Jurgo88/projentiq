@@ -9,5 +9,11 @@ useSeoMeta({
 
 <template>
   <HeroSection />
-  <!-- TODO: ďalšie sekcie pridané v ďalších fázach (issue #4) -->
+  <HowItWorks />
+  <ProductCards />
+  <WhyProjentIQ />
+  <Testimonials />
+  <FaqSection />
+  <CtaBand />
+  <!-- TODO: kontaktný formulár pridaný v issue #5 -->
 </template>
