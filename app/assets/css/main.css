@@ -1,0 +1,74 @@
+:root {
+  --color-bg: #0a0a0f;
+  --color-surface: #0f0f17;
+  --color-text: #f2f2f5;
+  --color-text-muted: #a3a3b0;
+  --color-accent: #5b8cff;
+  --color-border: #23232f;
+  --color-focus: #8ab0ff;
+}
+
+.light {
+  --color-bg: #ffffff;
+  --color-surface: #f5f6f8;
+  --color-text: #14141a;
+  --color-text-muted: #4a4a55;
+  --color-accent: #2f6bff;
+  --color-border: #e1e2e6;
+  --color-focus: #2f6bff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans, system-ui, sans-serif);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
