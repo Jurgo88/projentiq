@@ -1,4 +1,8 @@
 <script setup lang="ts">
+// TODO: trust_strip.item_2 (CS) hovorí len všeobecne "QR kód na účtenkách" —
+// SK verzia menuje konkrétny systém eKasa, pre CZ trh treba overiť s
+// marketérom, či existuje priamy ekvivalent na pomenovanie (napr. EET
+// nahradenie po roku 2023), aby štítok zostal rovnako konkrétny.
 const { t } = useI18n()
 
 const items = [1, 2, 3, 4, 5]
