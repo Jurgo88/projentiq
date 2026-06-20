@@ -1,5 +1,6 @@
 {
   "nav": {
+    "main_label": "Main navigation",
     "solutions": "Solutions",
     "pricing": "Pricing",
     "references": "References",
@@ -8,5 +9,21 @@
   "meta": {
     "title": "ProjentIQ — AI invoice and document automation for businesses",
     "description": "AI automation for invoice and document processing, built for Slovak and Czech businesses."
+  },
+  "a11y": {
+    "skip_link": "Skip to content"
+  },
+  "theme": {
+    "switch_to_light": "Switch to light theme",
+    "switch_to_dark": "Switch to dark theme"
+  },
+  "lang": {
+    "switch_label": "Switch page language"
+  },
+  "footer": {
+    "links_label": "Links",
+    "address_placeholder": "Registered address: TODO — add real address",
+    "ico_placeholder": "Company ID: TODO — add real ID",
+    "gdpr_link": "Privacy & cookies"
   }
 }

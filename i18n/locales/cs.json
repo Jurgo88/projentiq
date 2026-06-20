@@ -1,5 +1,6 @@
 {
   "nav": {
+    "main_label": "Hlavní navigace",
     "solutions": "Řešení",
     "pricing": "Ceník",
     "references": "Reference",
@@ -8,5 +9,21 @@
   "meta": {
     "title": "ProjentIQ — AI automatizace faktur a dokumentů pro firmy",
     "description": "AI automatizace zpracování faktur a dokumentů pro slovenské a české firmy."
+  },
+  "a11y": {
+    "skip_link": "Přeskočit na obsah"
+  },
+  "theme": {
+    "switch_to_light": "Přepnout na světlý režim",
+    "switch_to_dark": "Přepnout na tmavý režim"
+  },
+  "lang": {
+    "switch_label": "Přepnout jazyk stránky"
+  },
+  "footer": {
+    "links_label": "Odkazy",
+    "address_placeholder": "Sídlo: TODO — doplnit skutečnou adresu",
+    "ico_placeholder": "IČO: TODO — doplnit",
+    "gdpr_link": "Ochrana osobních údajů a cookies"
   }
 }

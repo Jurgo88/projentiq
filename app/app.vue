@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { t } = useI18n()
 const i18nHead = useLocaleHead({ addSeoAttributes: true })
 
 useHead({
@@ -11,11 +12,9 @@ useHead({
 <template>
   <div>
     <NuxtRouteAnnouncer />
-    <a href="#main" class="skip-link">Preskočiť na obsah</a>
+    <a href="#main-content" class="skip-link">{{ t('a11y.skip_link') }}</a>
     <NuxtLayout>
-      <main id="main">
-        <NuxtPage />
-      </main>
+      <NuxtPage />
     </NuxtLayout>
   </div>
 </template>
