@@ -25,5 +25,17 @@
     "address_placeholder": "Sídlo: TODO — doplnit skutečnou adresu",
     "ico_placeholder": "IČO: TODO — doplnit",
     "gdpr_link": "Ochrana osobních údajů a cookies"
+  },
+  "hero": {
+    "title": "Faktury a doklady vám přepíše software, ne účetní.",
+    "lead": "Nahrajete nebo vyfotíte doklad, systém vytěží částky, dodavatele i datum splatnosti. Vy už jen zkontrolujete a schválíte zápis do účetnictví.",
+    "cta_contact": "Napsat nám",
+    "panel_caption": "Ukázka rozhraní — ilustrační data",
+    "panel": {
+      "doc_invoice": "Faktura",
+      "doc_delivery": "Dodací list",
+      "status_done": "Zpracováno",
+      "status_review": "Čeká na kontrolu"
+    }
   }
 }
