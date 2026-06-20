@@ -6,6 +6,30 @@ const panelItems = [
   { docKey: 'hero.panel.doc_delivery', vendor: 'Stavebniny Krajná', amount: '—', statusKey: 'hero.panel.status_review' },
   { docKey: 'hero.panel.doc_invoice', vendor: 'IT Servis Plus', amount: '345,50 €', statusKey: 'hero.panel.status_done' }
 ]
+
+const rotatingPhrases = computed(() => [
+  t('hero.rotator.item_1'),
+  t('hero.rotator.item_2'),
+  t('hero.rotator.item_3')
+])
+
+const activeIndex = ref(0)
+let timer: ReturnType<typeof setInterval> | undefined
+
+function startRotation() {
+  if (timer || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  timer = setInterval(() => {
+    activeIndex.value = (activeIndex.value + 1) % rotatingPhrases.value.length
+  }, 3500)
+}
+
+function stopRotation() {
+  clearInterval(timer)
+  timer = undefined
+}
+
+onMounted(startRotation)
+onUnmounted(stopRotation)
 </script>
 
 <template>
@@ -14,6 +38,16 @@ const panelItems = [
       <div class="hero__copy">
         <h1>{{ t('hero.title') }}</h1>
         <p>{{ t('hero.lead') }}</p>
+        <p
+          class="hero__rotator"
+          aria-live="polite"
+          @mouseenter="stopRotation"
+          @mouseleave="startRotation"
+        >
+          <Transition name="fade" mode="out-in">
+            <span :key="activeIndex">{{ rotatingPhrases[activeIndex] }}</span>
+          </Transition>
+        </p>
         <div class="hero__cta">
           <a href="#demo" class="btn-primary">{{ t('nav.cta_demo') }}</a>
           <a href="#kontakt" class="btn-secondary">{{ t('hero.cta_contact') }}</a>
@@ -65,6 +99,36 @@ const panelItems = [
   font-size: 1.05rem;
   margin: 0 0 1.75rem;
   max-width: 38rem;
+}
+
+.hero__rotator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 1.4rem;
+  margin: 0 0 1.75rem;
+  color: var(--color-accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.hero__rotator::before {
+  content: '';
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
 .hero__cta {

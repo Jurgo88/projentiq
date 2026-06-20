@@ -27,8 +27,8 @@
     "gdpr_link": "Ochrana osobných údajov a cookies"
   },
   "hero": {
-    "title": "Faktúry a doklady prepíše za vás softvér, nie účtovníčka.",
-    "lead": "Nahráte alebo odfotíte doklad, systém vyťaží sumy, dodávateľa aj dátum splatnosti. Vy už len skontrolujete a schválite zápis do účtovníctva.",
+    "title": "Faktúru odfotíte, systém ju prečíta a založí v účtovníctve.",
+    "lead": "Vyťaží sumu, dodávateľa, IČO aj dátum splatnosti — vy si len overíte výsledok a kliknete na schválenie. Funguje to s faktúrami z e-mailu, naskenovanými aj odfotenými mobilom.",
     "cta_contact": "Napísať nám",
     "panel_caption": "Ukážka rozhrania — ilustračné dáta",
     "panel": {
@@ -36,6 +36,11 @@
       "doc_delivery": "Dodací list",
       "status_done": "Spracované",
       "status_review": "Čaká na kontrolu"
+    },
+    "rotator": {
+      "item_1": "Vyťaží sumy, IČO a splatnosť z faktúr.",
+      "item_2": "Odpovedá na otázky podľa vašich interných dokumentov.",
+      "item_3": "Spúšťa opakované úlohy podľa pravidiel, ktoré nastavíte."
     }
   }
 }

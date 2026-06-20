@@ -27,8 +27,8 @@
     "gdpr_link": "Privacy & cookies"
   },
   "hero": {
-    "title": "Software reads your invoices so your bookkeeper doesn't have to.",
-    "lead": "Upload or photograph a document and the system extracts the amounts, vendor, and due date. You just review and approve the entry into your accounting system.",
+    "title": "Photograph an invoice and the system reads it straight into your books.",
+    "lead": "It picks out the amount, vendor, tax ID, and due date — you just check the result and approve it. Works with invoices from email, scans, or a phone photo.",
     "cta_contact": "Get in touch",
     "panel_caption": "Interface preview — illustrative data",
     "panel": {
@@ -36,6 +36,11 @@
       "doc_delivery": "Delivery note",
       "status_done": "Processed",
       "status_review": "Awaiting review"
+    },
+    "rotator": {
+      "item_1": "Extracts amounts, tax IDs, and due dates from invoices.",
+      "item_2": "Answers questions based on your internal documents.",
+      "item_3": "Runs repeatable tasks based on rules you set."
     }
   }
 }

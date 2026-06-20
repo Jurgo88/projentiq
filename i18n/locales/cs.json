@@ -27,8 +27,8 @@
     "gdpr_link": "Ochrana osobních údajů a cookies"
   },
   "hero": {
-    "title": "Faktury a doklady vám přepíše software, ne účetní.",
-    "lead": "Nahrajete nebo vyfotíte doklad, systém vytěží částky, dodavatele i datum splatnosti. Vy už jen zkontrolujete a schválíte zápis do účetnictví.",
+    "title": "Fakturu vyfotíte, systém ji přečte a založí v účetnictví.",
+    "lead": "Vytěží částku, dodavatele, IČO i datum splatnosti — vy si jen ověříte výsledek a kliknete na schválení. Funguje to s fakturami z e-mailu, naskenovanými i vyfocenými mobilem.",
     "cta_contact": "Napsat nám",
     "panel_caption": "Ukázka rozhraní — ilustrační data",
     "panel": {
@@ -36,6 +36,11 @@
       "doc_delivery": "Dodací list",
       "status_done": "Zpracováno",
       "status_review": "Čeká na kontrolu"
+    },
+    "rotator": {
+      "item_1": "Vytěží částky, IČO a splatnost z faktur.",
+      "item_2": "Odpovídá na otázky podle vašich interních dokumentů.",
+      "item_3": "Spouští opakované úkoly podle pravidel, která nastavíte."
     }
   }
 }
