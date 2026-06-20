@@ -98,5 +98,25 @@
   },
   "cta_band": {
     "title": "We'll show you on your own invoice."
+  },
+  "contact": {
+    "title": "Get in touch",
+    "lead": "Tell us a bit about what you're looking to automate — we'll get back to you with a time for a short demo.",
+    "name_label": "Full name",
+    "company_label": "Company",
+    "email_label": "Email",
+    "message_label": "Message",
+    "message_placeholder": "What would you like to automate?",
+    "consent_pre": "I agree to the ",
+    "consent_link": "processing of personal data",
+    "consent_post": ".",
+    "submit": "Send",
+    "sending": "Sending…",
+    "success_title": "Thank you!",
+    "success_message": "We'll get back to you at the email you provided as soon as possible.",
+    "error_required": "This field is required.",
+    "error_email": "Enter a valid email address.",
+    "error_consent": "You need to agree to data processing before sending.",
+    "error_generic": "We couldn't send your message. Please try again or email us at info{'@'}projentiq.com."
   }
 }

@@ -15,5 +15,5 @@ useSeoMeta({
   <Testimonials />
   <FaqSection />
   <CtaBand />
-  <!-- TODO: kontaktný formulár pridaný v issue #5 -->
+  <ContactForm />
 </template>

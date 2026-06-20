@@ -98,5 +98,25 @@
   },
   "cta_band": {
     "title": "Ukážeme vám to na vaší faktuře."
+  },
+  "contact": {
+    "title": "Ozvěte se nám",
+    "lead": "Napište nám pár slov o tom, co řešíte — ozveme se vám s termínem na krátké demo.",
+    "name_label": "Jméno a příjmení",
+    "company_label": "Firma",
+    "email_label": "E-mail",
+    "message_label": "Zpráva",
+    "message_placeholder": "Co byste chtěli automatizovat?",
+    "consent_pre": "Souhlasím se ",
+    "consent_link": "zpracováním osobních údajů",
+    "consent_post": ".",
+    "submit": "Odeslat",
+    "sending": "Odesílám…",
+    "success_title": "Děkujeme!",
+    "success_message": "Ozveme se vám co nejdříve na uvedený e-mail.",
+    "error_required": "Toto pole je povinné.",
+    "error_email": "Zadejte platný e-mail.",
+    "error_consent": "Pro odeslání je potřeba souhlas se zpracováním údajů.",
+    "error_generic": "Zprávu se nepodařilo odeslat. Zkuste to prosím znovu nebo nám napište na info{'@'}projentiq.com."
   }
 }
