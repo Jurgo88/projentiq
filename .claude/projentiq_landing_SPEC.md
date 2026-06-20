@@ -237,9 +237,16 @@ content/                (voliteľné — texty cez @nuxt/content, per-locale pri
    až ako posledný krok, je to ľahšie zabudovať od začiatku ako dolepiť.
 7. CS a EN lokalizácia textov (po doladení SK verzie, aby sa neprekladalo
    dvakrát).
-8. SEO meta per locale, JSON-LD, hreflang, sitemap, robots, og:image.
-9. Lighthouse + axe audit (SEO, Performance, Accessibility) → doladiť.
-10. Deploy na Netlify cez `nuxt generate`.
+8. Vizuálne doladenie (design polish) — AŽ PO finalizácii copy s marketérom/
+   copywriterom, keďže zmena textu mení nároky na layout. Typografická
+   škála, spacing/rytmus sekcií, prepracovanejší hero vizuál (nielen
+   generická karta), mikro-interakcie/hover stavy, vizuálna kontrola
+   dark aj light témy. Doterajší vizuál (fázy 1-3) je funkčný štrukturálny
+   návrh podľa technických požiadaviek (kontrast, sémantika), nie finálny
+   dizajn.
+9. SEO meta per locale, JSON-LD, hreflang, sitemap, robots, og:image.
+10. Lighthouse + axe audit (SEO, Performance, Accessibility) → doladiť.
+11. Deploy na Netlify cez `nuxt generate`.
 
 ## 10. Čo NErobiť
 - Nevymýšľať čísla, referencie ani mená klientov.
