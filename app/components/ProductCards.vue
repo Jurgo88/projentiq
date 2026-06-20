@@ -1,12 +1,18 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
-// TODO: placeholder ceny na ladenie (spec časť 4, bod 4) — potvrdiť reálne
-// sumy aj menu pre CS trh (€ vs Kč) pred spustením.
+const localeMap: Record<string, string> = { sk: 'sk-SK', cs: 'cs-CZ', en: 'en-US' }
+
+function formatPrice(value: number) {
+  return value.toLocaleString(localeMap[locale.value] ?? 'sk-SK')
+}
+
+// TODO: placeholder jednorazové ceny za nasadenie (copy spec časť 5) —
+// potvrdiť reálne sumy aj menu pre CS trh (€ vs Kč) pred spustením.
 const cards = [
-  { id: 1, flagship: true, price: 49 },
-  { id: 2, flagship: false, price: 79 },
-  { id: 3, flagship: false, price: 99 }
+  { id: 1, flagship: true, price: 2000 },
+  { id: 2, flagship: false, price: 4000 },
+  { id: 3, flagship: false, price: 8000 }
 ]
 </script>
 
@@ -25,9 +31,8 @@ const cards = [
           <p v-if="card.flagship" class="products__badge">{{ t('products.flagship_badge') }}</p>
           <h3>{{ t(`products.card_${card.id}_title`) }}</h3>
           <p class="products__desc">{{ t(`products.card_${card.id}_desc`) }}</p>
-          <p class="products__for">{{ t(`products.card_${card.id}_for`) }}</p>
           <p class="products__price">
-            {{ t('products.price_from') }} <strong>{{ card.price }}</strong> {{ t('products.price_unit') }}
+            {{ t('products.price_from') }} <strong>{{ formatPrice(card.price) }} {{ t('products.price_currency') }}</strong>
           </p>
         </article>
       </div>
@@ -90,12 +95,6 @@ const cards = [
 .products__desc {
   margin: 0 0 0.75rem;
   font-size: 0.92rem;
-}
-
-.products__for {
-  margin: 0 0 1.25rem;
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
 }
 
 .products__price {

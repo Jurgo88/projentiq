@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = []
 <template>
   <section id="references" class="testimonials">
     <div class="testimonials__inner">
-      <h2>{{ t('nav.references') }}</h2>
+      <h2>{{ t('testimonials.title') }}</h2>
 
       <p v-if="testimonials.length === 0" class="testimonials__placeholder">
         {{ t('testimonials.coming_soon') }}

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-const items = [1, 2, 3, 4, 5]
+const items = [1, 2, 3, 4]
 </script>
 
 <template>

@@ -7,8 +7,8 @@
     "cta_demo": "Request a demo"
   },
   "meta": {
-    "title": "ProjentIQ — AI invoice and document automation for businesses",
-    "description": "AI automation for invoice and document processing, built for Slovak and Czech businesses."
+    "title": "ProjentIQ — Invoice and document extraction for businesses",
+    "description": "We automatically extract data from your invoices and documents into your accounting system. Connects to Pohoda and Omega, data stays in the EU. We'll show you on your own invoice."
   },
   "a11y": {
     "skip_link": "Skip to content"
@@ -22,13 +22,14 @@
   },
   "footer": {
     "links_label": "Links",
+    "tagline": "AI automation for document processing, knowledge bases, and workflows — built for small and mid-sized businesses in Slovakia and Czechia.",
     "address_placeholder": "Registered address: TODO — add real address",
     "ico_placeholder": "Company ID: TODO — add real ID",
     "gdpr_link": "Privacy & cookies"
   },
   "hero": {
-    "title": "Photograph an invoice and the system reads it straight into your books.",
-    "lead": "It picks out the amount, vendor, tax ID, and due date — you just check the result and approve it. Works with invoices from email, scans, or a phone photo.",
+    "title": "Software processes your documents, not your staff.",
+    "lead": "Upload or photograph a document and ProjentIQ pulls out the data and prepares it for your accounting system. You just review and approve it. Your data stays with you, in the EU.",
     "cta_contact": "Get in touch",
     "panel_caption": "Interface preview — illustrative data",
     "panel": {
@@ -43,61 +44,65 @@
       "item_3": "Runs repeatable tasks based on rules you set."
     }
   },
+  "trust_strip": {
+    "item_1": "Pohoda · Omega · iDoklad",
+    "item_2": "eKasa QR receipts",
+    "item_3": "Data stored in the EU",
+    "item_4": "Slovak & Czech",
+    "item_5": "Demo within 2 weeks"
+  },
   "how_it_works": {
     "title": "How it works",
     "step_1_title": "Upload the document",
-    "step_1_desc": "Send an invoice by email, scan it, or take a photo with your phone.",
+    "step_1_desc": "A PDF, a scan, or a phone photo — upload several at once if you like.",
     "step_2_title": "The system extracts the data",
-    "step_2_desc": "It reads the amount, vendor, tax ID, and due date.",
-    "step_3_title": "You review it",
-    "step_3_desc": "Compare the result with the original and fix anything if needed.",
-    "step_4_title": "It's recorded in your accounting system",
-    "step_4_desc": "Once approved, the document is saved directly into your system."
+    "step_2_desc": "Vendor, amounts, VAT, due date, and line items.",
+    "step_3_title": "You review the draft",
+    "step_3_desc": "Flagged fields are highlighted — fix them with a click.",
+    "step_4_title": "Entry into your accounting system",
+    "step_4_desc": "Data goes into Pohoda, Omega, or your own system."
   },
   "products": {
     "title": "Solutions & pricing",
     "price_from": "from",
-    "price_unit": "€ / month",
+    "price_currency": "€",
     "flagship_badge": "Flagship product",
     "card_1_title": "Document extraction",
-    "card_1_desc": "Automatically reads and sorts invoices, delivery notes, and receipts into your accounting system.",
-    "card_1_for": "For businesses processing dozens to hundreds of documents a month.",
+    "card_1_desc": "Invoices, receipts, and delivery notes go straight into your accounting system. You just approve them.",
     "card_2_title": "RAG knowledge base",
-    "card_2_desc": "Searches your internal documents and answers questions with a source reference.",
-    "card_2_for": "For teams losing time searching through documentation.",
+    "card_2_desc": "Ask your documents a question and get an answer — always with a source citation.",
     "card_3_title": "AI agents & automation",
-    "card_3_desc": "Runs repeatable tasks based on rules you define — no manual steps.",
-    "card_3_for": "For businesses with repeatable processes across multiple systems."
+    "card_3_desc": "Email agents, approval flows, and connections to your CRM or internal systems."
   },
   "why": {
     "title": "Why ProjentIQ",
     "item_1_title": "Your data stays with you",
-    "item_1_desc": "Processing happens in the EU — no data leaves the agreed infrastructure.",
-    "item_2_title": "Connects to your accounting system",
-    "item_2_desc": "We support Pohoda, Omega, and iDoklad — no manual export or import.",
+    "item_1_desc": "Processing happens in the EU, with no sharing with third parties.",
+    "item_2_title": "Connects to Slovak and Czech systems",
+    "item_2_desc": "Pohoda, Omega, iDoklad, and more.",
     "item_3_title": "Built for Slovak and Czech",
-    "item_3_desc": "Not a translation from English — the system is trained on local documents and language.",
-    "item_4_title": "Demo on your own documents",
-    "item_4_desc": "Before you commit, we'll show you how the system handles your real invoices."
+    "item_3_desc": "Tuned for local documents, diacritics, and language.",
+    "item_4_title": "Demo on your own data",
+    "item_4_desc": "Before you commit, you'll see a result, not a promise."
   },
   "testimonials": {
-    "coming_soon": "We don't have publishable references yet — we're working on this with our first clients."
+    "title": "Our first deployments are underway",
+    "coming_soon": "No invented quotes — we'll fill this in once we have real deployments."
   },
   "faq": {
     "title": "Frequently asked questions",
     "q1": "How is our data protected?",
-    "a1": "Data is processed within the EU and doesn't leave the agreed infrastructure. We sign a data processing agreement under GDPR with every client.",
+    "a1": "Processing happens within the EU and we don't share your documents with third parties. For sensitive setups, we can deploy directly on your own infrastructure.",
     "q2": "Which accounting systems do you connect to?",
-    "a2": "We currently support Pohoda, Omega, and iDoklad. For other systems we can build a custom connection — get in touch.",
-    "q3": "How long does setup take?",
-    "a3": "It depends on the scope and number of document types, usually days to a few weeks. You'll get an exact estimate after the first consultation.",
+    "a2": "Pohoda, Omega, iDoklad, and others via API or import. We can adapt to your own system too.",
+    "q3": "How long does deployment take?",
+    "a3": "A first working demo on your own data usually takes up to two weeks. Full deployment depends on scope.",
     "q4": "What if the system misreads a document?",
-    "a4": "You flag the error right during review, correct the value, and the system remembers it for similar documents going forward.",
-    "q5": "Do we need to change our current accounting system?",
-    "a5": "No, the system connects to your existing setup — it doesn't replace it."
+    "a4": "Flagged fields are always highlighted for review, and nothing gets recorded without your approval. The system also learns from your corrections."
   },
   "cta_band": {
-    "title": "We'll show you on your own invoice."
+    "title": "We'll show you on your own invoice.",
+    "lead": "A free consultation and a demo on a real document from your company."
   },
   "contact": {
     "title": "Get in touch",
@@ -105,18 +110,18 @@
     "name_label": "Full name",
     "company_label": "Company",
     "email_label": "Email",
-    "message_label": "Message",
+    "message_label": "Message (optional)",
     "message_placeholder": "What would you like to automate?",
-    "consent_pre": "I agree to the ",
-    "consent_link": "processing of personal data",
-    "consent_post": ".",
-    "submit": "Send",
+    "consent_pre": "I agree to the processing of data for the purpose of responding to my request. ",
+    "consent_link": "Privacy policy",
+    "consent_post": "",
+    "submit": "Request a demo",
     "sending": "Sending…",
     "success_title": "Thank you!",
-    "success_message": "We'll get back to you at the email you provided as soon as possible.",
+    "success_message": "We'll get back to you within one business day.",
     "error_required": "This field is required.",
     "error_email": "Enter a valid email address.",
     "error_consent": "You need to agree to data processing before sending.",
-    "error_generic": "We couldn't send your message. Please try again or email us at info{'@'}projentiq.com."
+    "error_generic": "Something went wrong. Please try again or email us at info{'@'}projentiq.com."
   }
 }

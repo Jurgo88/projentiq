@@ -8,6 +8,7 @@ const year = new Date().getFullYear()
     <div class="site-footer__inner">
       <div class="site-footer__brand">
         <strong>ProjentIQ</strong>
+        <p class="site-footer__tagline">{{ t('footer.tagline') }}</p>
         <!-- TODO: doplniť reálne sídlo a IČO -->
         <p>{{ t('footer.address_placeholder') }}</p>
         <p>{{ t('footer.ico_placeholder') }}</p>
@@ -45,6 +46,11 @@ const year = new Date().getFullYear()
 
 .site-footer__brand p {
   margin: 0.25rem 0;
+}
+
+.site-footer__brand .site-footer__tagline {
+  max-width: 24rem;
+  margin-top: 0.5rem;
 }
 
 .site-footer__links {

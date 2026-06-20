@@ -7,8 +7,8 @@
     "cta_demo": "Požiadať o demo"
   },
   "meta": {
-    "title": "ProjentIQ — AI automatizácia faktúr a dokumentov pre firmy",
-    "description": "AI automatizácia spracovania faktúr a dokumentov pre slovenské a české firmy."
+    "title": "ProjentIQ — Vyťažovanie faktúr a dokladov pre firmy",
+    "description": "Automaticky vyťažíme údaje z faktúr a dokladov do vášho účtovníctva. Napojenie na Pohodu a Omegu, dáta zostávajú v EÚ. Ukážeme vám to na vašej faktúre."
   },
   "a11y": {
     "skip_link": "Preskočiť na obsah"
@@ -22,13 +22,14 @@
   },
   "footer": {
     "links_label": "Odkazy",
+    "tagline": "AI automatizácia spracovania dokladov, znalostných báz a procesov pre malé a stredné firmy na Slovensku a v Česku.",
     "address_placeholder": "Sídlo: TODO — doplniť reálnu adresu",
     "ico_placeholder": "IČO: TODO — doplniť",
     "gdpr_link": "Ochrana osobných údajov a cookies"
   },
   "hero": {
-    "title": "Faktúru odfotíte, systém ju prečíta a založí v účtovníctve.",
-    "lead": "Vyťaží sumu, dodávateľa, IČO aj dátum splatnosti — vy si len overíte výsledok a kliknete na schválenie. Funguje to s faktúrami z e-mailu, naskenovanými aj odfotenými mobilom.",
+    "title": "Doklady prepíše softvér, nie váš človek.",
+    "lead": "Nahráte alebo odfotíte doklad, ProjentIQ z neho vytiahne údaje a pripraví ich do vášho účtovníctva. Vy ich už len skontrolujete a schválite. Vaše dáta pritom zostávajú u vás, v EÚ.",
     "cta_contact": "Napísať nám",
     "panel_caption": "Ukážka rozhrania — ilustračné dáta",
     "panel": {
@@ -43,61 +44,65 @@
       "item_3": "Spúšťa opakované úlohy podľa pravidiel, ktoré nastavíte."
     }
   },
+  "trust_strip": {
+    "item_1": "Pohoda · Omega · iDoklad",
+    "item_2": "eKasa QR pre bločky",
+    "item_3": "Dáta v EÚ",
+    "item_4": "Slovenčina",
+    "item_5": "Demo do 2 týždňov"
+  },
   "how_it_works": {
     "title": "Ako to funguje",
     "step_1_title": "Nahráte doklad",
-    "step_1_desc": "Pošlete faktúru e-mailom, naskenujete alebo odfotíte mobilom.",
+    "step_1_desc": "PDF, sken alebo fotka z mobilu, aj viac naraz.",
     "step_2_title": "Systém vyťaží údaje",
-    "step_2_desc": "Prečíta sumu, dodávateľa, IČO aj dátum splatnosti.",
-    "step_3_title": "Vy skontrolujete",
-    "step_3_desc": "Porovnáte výsledok s originálom, prípadne niečo opravíte.",
-    "step_4_title": "Zapíše sa do účtovníctva",
-    "step_4_desc": "Schválený doklad sa uloží priamo do vášho systému."
+    "step_2_desc": "Dodávateľ, sumy, DPH, splatnosť aj položky.",
+    "step_3_title": "Skontrolujete návrh",
+    "step_3_desc": "Sporné polia sú zvýraznené, opravíte ich klikom.",
+    "step_4_title": "Zápis do účtovníctva",
+    "step_4_desc": "Údaje idú do Pohody, Omegy alebo vášho systému."
   },
   "products": {
     "title": "Riešenia a ceny",
     "price_from": "od",
-    "price_unit": "€ / mesiac",
+    "price_currency": "€",
     "flagship_badge": "Hlavný produkt",
     "card_1_title": "Vyťažovanie dokladov",
-    "card_1_desc": "Automaticky prečíta a zatriedi faktúry, dodacie listy aj účtenky do vášho účtovníctva.",
-    "card_1_for": "Pre firmy, ktoré spracúvajú desiatky až stovky dokladov mesačne.",
+    "card_1_desc": "Faktúry, bločky a dodacie listy automaticky do účtovníctva. Vy len schválite.",
     "card_2_title": "RAG znalostná báza",
-    "card_2_desc": "Prehľadáva vaše interné dokumenty a odpovedá na otázky s odkazom na zdroj.",
-    "card_2_for": "Pre tímy, ktoré strácajú čas hľadaním informácií v dokumentácii.",
+    "card_2_desc": "Opýtajte sa svojich dokumentov a dostanete odpoveď — vždy s citáciou zdroja.",
     "card_3_title": "AI agenti & automatizácia",
-    "card_3_desc": "Spúšťa opakované úlohy podľa pravidiel, ktoré nastavíte — bez manuálnych krokov.",
-    "card_3_for": "Pre firmy s opakovanými procesmi naprieč systémami."
+    "card_3_desc": "E-mailoví agenti, schvaľovania a napojenie na CRM či interné systémy."
   },
   "why": {
     "title": "Prečo ProjentIQ",
     "item_1_title": "Dáta zostávajú u vás",
-    "item_1_desc": "Spracovanie prebieha v EÚ, žiadne dáta neopúšťajú dohodnutú infraštruktúru.",
-    "item_2_title": "Napojenie na vaše účtovníctvo",
-    "item_2_desc": "Podporujeme Pohodu, Omegu aj iDoklad — bez ručného exportu a importu.",
-    "item_3_title": "Rozumie slovenčine aj češtine",
-    "item_3_desc": "Nie je to preklad z angličtiny — systém je trénovaný na lokálne doklady a jazyk.",
-    "item_4_title": "Demo na vašich dokladoch",
-    "item_4_desc": "Pred objednávkou vám ukážeme, ako systém spracuje vaše reálne faktúry."
+    "item_1_desc": "Spracovanie v EÚ, žiadne zdieľanie s tretími stranami.",
+    "item_2_title": "Napojenie na slovenské systémy",
+    "item_2_desc": "Pohoda, Omega, iDoklad a ďalšie.",
+    "item_3_title": "Naozajstná slovenčina",
+    "item_3_desc": "Ladené na slovenské doklady, diakritiku a jazyk.",
+    "item_4_title": "Demo na vašich dátach",
+    "item_4_desc": "Pred objednávkou uvidíte výsledok, nie sľub."
   },
   "testimonials": {
-    "coming_soon": "Zatiaľ nemáme referencie, ktoré by sme mohli zverejniť — pracujeme na tom s prvými klientmi."
+    "title": "Prvé nasadenia pripravujeme",
+    "coming_soon": "Žiadne vymyslené citáty — sekciu naplníme po prvých reálnych nasadeniach."
   },
   "faq": {
     "title": "Časté otázky",
     "q1": "Ako sú chránené naše dáta?",
-    "a1": "Dáta spracúvame v EÚ a neopúšťajú dohodnutú infraštruktúru. S každým klientom podpisujeme spracovateľskú zmluvu podľa GDPR.",
+    "a1": "Spracovanie prebieha v rámci EÚ a vaše dokumenty nezdieľame s tretími stranami. Pri citlivých prevádzkach vieme riešenie nasadiť priamo na vašu infraštruktúru.",
     "q2": "Na aké účtovné systémy sa napájate?",
-    "a2": "Aktuálne podporujeme Pohodu, Omegu a iDoklad. Pri iných systémoch vieme pripraviť napojenie na mieru — ozvite sa nám.",
+    "a2": "Pohoda, Omega, iDoklad a ďalšie cez API alebo import. Vlastný systém prispôsobíme.",
     "q3": "Koľko trvá nasadenie?",
-    "a3": "Závisí od rozsahu a počtu dokladových typov, zvyčajne ide o dni až pár týždňov. Presný odhad dostanete po prvej konzultácii.",
-    "q4": "Čo ak doklad systém nerozpozná správne?",
-    "a4": "Označíte chybu priamo pri kontrole, opravíte hodnotu a systém si to zapamätá pre budúce podobné doklady.",
-    "q5": "Musíme meniť naše súčasné účtovníctvo?",
-    "a5": "Nie, systém sa napája na váš existujúci systém, nenahrádza ho."
+    "a3": "Prvé funkčné demo na vašich dátach zvyčajne do dvoch týždňov. Plné nasadenie závisí od rozsahu.",
+    "q4": "Čo ak doklad nerozpozná správne?",
+    "a4": "Sporné polia sú vždy zvýraznené na kontrolu a nič sa nezapíše bez vášho schválenia. Systém sa navyše učí z vašich opráv."
   },
   "cta_band": {
-    "title": "Ukážeme vám to na vašej faktúre."
+    "title": "Ukážeme vám to na vašej faktúre.",
+    "lead": "Bezplatná konzultácia a demo na reálnom doklade z vašej firmy."
   },
   "contact": {
     "title": "Ozvite sa nám",
@@ -105,18 +110,18 @@
     "name_label": "Meno a priezvisko",
     "company_label": "Firma",
     "email_label": "E-mail",
-    "message_label": "Správa",
+    "message_label": "Správa (voliteľná)",
     "message_placeholder": "Čo by ste chceli automatizovať?",
-    "consent_pre": "Súhlasím so ",
-    "consent_link": "spracovaním osobných údajov",
-    "consent_post": ".",
-    "submit": "Odoslať",
+    "consent_pre": "Súhlasím so spracovaním údajov za účelom odpovede na moju žiadosť. ",
+    "consent_link": "Ochrana údajov",
+    "consent_post": "",
+    "submit": "Odoslať žiadosť o demo",
     "sending": "Odosielam…",
     "success_title": "Ďakujeme!",
-    "success_message": "Ozveme sa vám čo najskôr na uvedený e-mail.",
+    "success_message": "Ozveme sa vám do jedného pracovného dňa.",
     "error_required": "Toto pole je povinné.",
     "error_email": "Zadajte platný e-mail.",
     "error_consent": "Pre odoslanie je potrebný súhlas so spracovaním údajov.",
-    "error_generic": "Správu sa nepodarilo odoslať. Skúste to prosím znova alebo nám napíšte na info{'@'}projentiq.com."
+    "error_generic": "Niečo sa pokazilo. Skúste to znova alebo nám napíšte na info{'@'}projentiq.com."
   }
 }
