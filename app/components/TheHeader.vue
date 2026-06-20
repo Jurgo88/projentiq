@@ -92,14 +92,8 @@ onUnmounted(() => {
   gap: 0.75rem;
 }
 
-.btn-primary {
-  background: var(--color-accent);
-  color: #fff;
-  text-decoration: none;
+.site-header__actions .btn-primary {
   padding: 0.5rem 1rem;
-  border-radius: 6px;
   font-size: 0.9rem;
-  font-weight: 600;
-  white-space: nowrap;
 }
 </style>

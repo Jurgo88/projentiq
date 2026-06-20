@@ -25,5 +25,17 @@
     "address_placeholder": "Registered address: TODO — add real address",
     "ico_placeholder": "Company ID: TODO — add real ID",
     "gdpr_link": "Privacy & cookies"
+  },
+  "hero": {
+    "title": "Software reads your invoices so your bookkeeper doesn't have to.",
+    "lead": "Upload or photograph a document and the system extracts the amounts, vendor, and due date. You just review and approve the entry into your accounting system.",
+    "cta_contact": "Get in touch",
+    "panel_caption": "Interface preview — illustrative data",
+    "panel": {
+      "doc_invoice": "Invoice",
+      "doc_delivery": "Delivery note",
+      "status_done": "Processed",
+      "status_review": "Awaiting review"
+    }
   }
 }

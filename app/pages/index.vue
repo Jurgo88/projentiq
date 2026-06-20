@@ -8,6 +8,6 @@ useSeoMeta({
 </script>
 
 <template>
-  <h1>ProjentIQ</h1>
-  <!-- TODO: Hero, sekcie a obsah pridané v ďalších fázach (issues #3, #4) -->
+  <HeroSection />
+  <!-- TODO: ďalšie sekcie pridané v ďalších fázach (issue #4) -->
 </template>
