@@ -1,5 +1,6 @@
 {
   "nav": {
+    "main_label": "Hlavná navigácia",
     "solutions": "Riešenia",
     "pricing": "Ceny",
     "references": "Referencie",
@@ -8,5 +9,21 @@
   "meta": {
     "title": "ProjentIQ — AI automatizácia faktúr a dokumentov pre firmy",
     "description": "AI automatizácia spracovania faktúr a dokumentov pre slovenské a české firmy."
+  },
+  "a11y": {
+    "skip_link": "Preskočiť na obsah"
+  },
+  "theme": {
+    "switch_to_light": "Prepnúť na svetlú tému",
+    "switch_to_dark": "Prepnúť na tmavú tému"
+  },
+  "lang": {
+    "switch_label": "Prepnúť jazyk stránky"
+  },
+  "footer": {
+    "links_label": "Odkazy",
+    "address_placeholder": "Sídlo: TODO — doplniť reálnu adresu",
+    "ico_placeholder": "IČO: TODO — doplniť",
+    "gdpr_link": "Ochrana osobných údajov a cookies"
   }
 }
