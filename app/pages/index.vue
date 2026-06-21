@@ -9,6 +9,7 @@ useSeoMeta({
 
 <template>
   <HeroSection />
+  <TrustStrip />
   <HowItWorks />
   <ProductCards />
   <WhyProjentIQ />

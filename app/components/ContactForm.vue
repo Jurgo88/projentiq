@@ -10,7 +10,7 @@ const form = reactive({
   botField: ''
 })
 
-const errors = reactive<{ name?: string; email?: string; message?: string; consent?: string }>({})
+const errors = reactive<{ name?: string; email?: string; consent?: string }>({})
 const status = ref<'idle' | 'sending' | 'success' | 'error'>('idle')
 
 function isValidEmail(value: string) {
@@ -20,9 +20,8 @@ function isValidEmail(value: string) {
 function validate() {
   errors.name = form.name.trim() ? undefined : t('contact.error_required')
   errors.email = isValidEmail(form.email) ? undefined : t('contact.error_email')
-  errors.message = form.message.trim() ? undefined : t('contact.error_required')
   errors.consent = form.consent ? undefined : t('contact.error_consent')
-  return !errors.name && !errors.email && !errors.message && !errors.consent
+  return !errors.name && !errors.email && !errors.consent
 }
 
 async function onSubmit() {
@@ -127,12 +126,8 @@ async function onSubmit() {
               v-model="form.message"
               name="message"
               rows="4"
-              required
               :placeholder="t('contact.message_placeholder')"
-              :aria-invalid="!!errors.message"
-              :aria-describedby="errors.message ? 'cf-message-error' : undefined"
             ></textarea>
-            <p v-if="errors.message" id="cf-message-error" class="contact-form__error">{{ errors.message }}</p>
           </div>
 
           <div class="contact-form__field contact-form__field--checkbox">
