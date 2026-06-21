@@ -80,7 +80,7 @@ const cards = [
   margin: 0 0 0.75rem;
   padding: 0.2rem 0.6rem;
   border-radius: 999px;
-  background: var(--color-accent);
+  background: var(--color-accent-strong);
   color: #fff;
   font-size: 0.7rem;
   font-weight: 700;
