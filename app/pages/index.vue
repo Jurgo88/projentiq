@@ -13,6 +13,7 @@ useSeoMeta({
   <HowItWorks />
   <ProductCards />
   <WhyProjentIQ />
+  <TrustSection />
   <Testimonials />
   <FaqSection />
   <CtaBand />

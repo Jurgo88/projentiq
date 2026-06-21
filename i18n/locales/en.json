@@ -7,8 +7,8 @@
     "cta_demo": "Request a demo"
   },
   "meta": {
-    "title": "ProjentIQ — Invoice and document extraction for businesses",
-    "description": "We automatically extract data from your invoices and documents into your accounting system. Connects to Pohoda and Omega, data stays in the EU. We'll show you on your own invoice."
+    "title": "Projentiq – AI agents, knowledge systems, and process automation",
+    "description": "Projentiq helps companies deploy AI agents, RAG knowledge systems, and automations built on their own data and processes."
   },
   "a11y": {
     "skip_link": "Skip to content"
@@ -28,15 +28,21 @@
     "gdpr_link": "Privacy & cookies"
   },
   "hero": {
-    "title": "Software processes your documents, not your staff.",
-    "lead": "Upload or photograph a document and ProjentIQ pulls out the data and prepares it for your accounting system. You just review and approve it. Your data stays with you, in the EU.",
-    "cta_contact": "Get in touch",
+    "title": "AI systems that work with your data.",
+    "lead": "We design AI agents, knowledge systems, and automations that help teams find information, process documents, and handle repetitive tasks.",
+    "cta_contact": "Contact us",
     "panel_caption": "Interface preview — illustrative data",
     "panel": {
-      "doc_invoice": "Invoice",
-      "doc_delivery": "Delivery note",
-      "status_done": "Processed",
-      "status_review": "Awaiting review"
+      "kind_agent": "AI agent",
+      "kind_search": "Search",
+      "kind_automation": "Automation",
+      "kind_document": "Document",
+      "row_agent": "Answered a question about order status",
+      "row_search": "Found a contract by keyword",
+      "row_automation": "Processed an email order",
+      "row_document": "Invoice — Drevo Wholesale Ltd.",
+      "status_done": "Done",
+      "status_review": "In progress"
     },
     "rotator": {
       "item_1": "Extracts amounts, tax IDs, and due dates from invoices.",
@@ -45,45 +51,55 @@
     }
   },
   "trust_strip": {
-    "item_1": "Pohoda · Omega · iDoklad",
-    "item_2": "eKasa QR receipts",
-    "item_3": "Data stored in the EU",
+    "item_1": "ERP, CRM, and company drives",
+    "item_2": "Data stored in the EU",
+    "item_3": "Demo on your own data",
     "item_4": "Slovak & Czech",
-    "item_5": "Demo within 2 weeks"
+    "item_5": "Deployment within 2 weeks"
   },
   "how_it_works": {
-    "title": "How it works",
-    "step_1_title": "Upload the document",
-    "step_1_desc": "A PDF, a scan, or a phone photo — upload several at once if you like.",
-    "step_2_title": "The system extracts the data",
-    "step_2_desc": "Vendor, amounts, VAT, due date, and line items.",
-    "step_3_title": "You review the draft",
-    "step_3_desc": "Flagged fields are highlighted — fix them with a click.",
-    "step_4_title": "Entry into your accounting system",
-    "step_4_desc": "Data goes into Pohoda, Omega, or your own system."
+    "title": "How we work together",
+    "step_1_title": "Process analysis",
+    "step_1_desc": "Together we identify tasks that take up time or repeat.",
+    "step_2_title": "Solution design",
+    "step_2_desc": "We design an AI agent, automation, or knowledge system based on your data and processes.",
+    "step_3_title": "Pilot deployment",
+    "step_3_desc": "We test the solution on real documents and processes.",
+    "step_4_title": "Production use",
+    "step_4_desc": "Once approved, the system becomes part of daily operations."
   },
   "products": {
     "title": "Solutions & pricing",
     "price_from": "from",
     "price_currency": "€",
     "flagship_badge": "Flagship product",
-    "card_1_title": "Document extraction",
-    "card_1_desc": "Invoices, receipts, and delivery notes go straight into your accounting system. You just approve them.",
-    "card_2_title": "RAG knowledge base",
-    "card_2_desc": "Ask your documents a question and get an answer — always with a source citation.",
-    "card_3_title": "AI agents & automation",
-    "card_3_desc": "Email agents, approval flows, and connections to your CRM or internal systems."
+    "card_1_title": "AI Agents",
+    "card_1_desc": "AI assistants connected to your documents, data, and company systems.",
+    "card_1_examples": "Internal assistant · Customer support · Sales assistant · Operations assistant",
+    "card_2_title": "RAG Knowledge Systems",
+    "card_2_desc": "AI chatbots and assistants that answer based on your company's internal documentation.",
+    "card_2_examples": "Company knowledge base · Technical documentation · Internal processes · Customer support",
+    "card_3_title": "Process Automation",
+    "card_3_desc": "Automation of documents, emails, and repetitive tasks.",
+    "card_3_examples": "Invoice processing · Email processing · Report generation · Data synchronization"
   },
   "why": {
     "title": "Why ProjentIQ",
-    "item_1_title": "Your data stays with you",
-    "item_1_desc": "Processing happens in the EU, with no sharing with third parties.",
-    "item_2_title": "Connects to Slovak and Czech systems",
-    "item_2_desc": "Pohoda, Omega, iDoklad, and more.",
-    "item_3_title": "Built for Slovak and Czech",
-    "item_3_desc": "Tuned for local documents, diacritics, and language.",
-    "item_4_title": "Demo on your own data",
-    "item_4_desc": "Before you commit, you'll see a result, not a promise."
+    "item_1_title": "We work with your data",
+    "item_1_desc": "AI solutions are built on the documents, systems, and information your company already uses.",
+    "item_2_title": "Tailored to your business",
+    "item_2_desc": "Every company works differently. We adapt the design to your specific process.",
+    "item_3_title": "See it first, decide after",
+    "item_3_desc": "Before you commit, you'll see the solution working on your own data.",
+    "item_4_title": "Integrates with your existing systems",
+    "item_4_desc": "ERP, CRM, SharePoint, Google Drive, email, databases, or APIs."
+  },
+  "trust_section": {
+    "title": "We sell technology only after we understand the problem.",
+    "p1": "We don't build generic AI solutions.",
+    "p2": "We first understand the process you want to improve. Only then do we design the technology.",
+    "p3": "The goal isn't to have more AI.",
+    "p4": "The goal is less manual work, faster access to information, and simpler processes."
   },
   "testimonials": {
     "title": "Our first deployments are underway",
@@ -101,8 +117,8 @@
     "a4": "Flagged fields are always highlighted for review, and nothing gets recorded without your approval. The system also learns from your corrections."
   },
   "cta_band": {
-    "title": "We'll show you on your own invoice.",
-    "lead": "A free consultation and a demo on a real document from your company."
+    "title": "We'll show you on your own data.",
+    "lead": "Send us the process or problem you want to solve. We'll design a concrete approach and demo the solution on real company data."
   },
   "contact": {
     "title": "Get in touch",

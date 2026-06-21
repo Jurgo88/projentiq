@@ -7,8 +7,8 @@
     "cta_demo": "Vyžádat demo"
   },
   "meta": {
-    "title": "ProjentIQ — Vytěžování faktur a dokladů pro firmy",
-    "description": "Automaticky vytěžíme údaje z faktur a dokladů do vašeho účetnictví. Napojení na Pohodu a Omegu, data zůstávají v EU. Ukážeme vám to na vaší faktuře."
+    "title": "Projentiq – AI agenti, znalostní systémy a automatizace procesů",
+    "description": "Projentiq pomáhá firmám zavádět AI agenty, RAG znalostní systémy a automatizace postavené na vlastních datech a procesech."
   },
   "a11y": {
     "skip_link": "Přeskočit na obsah"
@@ -28,15 +28,21 @@
     "gdpr_link": "Ochrana osobních údajů a cookies"
   },
   "hero": {
-    "title": "Doklady přepíše software, ne váš člověk.",
-    "lead": "Nahrajete nebo vyfotíte doklad, ProjentIQ z něj vytáhne údaje a připraví je do vašeho účetnictví. Vy je už jen zkontrolujete a schválíte. Vaše data přitom zůstávají u vás, v EU.",
-    "cta_contact": "Napsat nám",
+    "title": "AI systémy, které pracují s vašimi daty.",
+    "lead": "Navrhujeme AI agenty, znalostní systémy a automatizace, které pomáhají týmům vyhledávat informace, zpracovávat dokumenty a provádět opakující se úkoly.",
+    "cta_contact": "Kontaktovat nás",
     "panel_caption": "Ukázka rozhraní — ilustrační data",
     "panel": {
-      "doc_invoice": "Faktura",
-      "doc_delivery": "Dodací list",
-      "status_done": "Zpracováno",
-      "status_review": "Čeká na kontrolu"
+      "kind_agent": "AI agent",
+      "kind_search": "Vyhledávání",
+      "kind_automation": "Automatizace",
+      "kind_document": "Dokument",
+      "row_agent": "Odpověděl na otázku o stavu objednávky",
+      "row_search": "Našel smlouvu podle klíčových slov",
+      "row_automation": "Zpracoval e-mailovou objednávku",
+      "row_document": "Faktura — Velkoobchod Dřevo s.r.o.",
+      "status_done": "Hotovo",
+      "status_review": "Probíhá"
     },
     "rotator": {
       "item_1": "Vytěží částky, IČO a splatnost z faktur.",
@@ -45,45 +51,55 @@
     }
   },
   "trust_strip": {
-    "item_1": "Pohoda · Omega · iDoklad",
-    "item_2": "QR kód na účtenkách",
-    "item_3": "Data v EU",
+    "item_1": "ERP, CRM i firemní disky",
+    "item_2": "Data v EU",
+    "item_3": "Demo na vašich datech",
     "item_4": "Čeština",
-    "item_5": "Demo do 2 týdnů"
+    "item_5": "Nasazení do 2 týdnů"
   },
   "how_it_works": {
-    "title": "Jak to funguje",
-    "step_1_title": "Nahrajete doklad",
-    "step_1_desc": "PDF, sken nebo fotka z mobilu, klidně i víc najednou.",
-    "step_2_title": "Systém vytěží údaje",
-    "step_2_desc": "Dodavatele, částky, DPH, splatnost i položky.",
-    "step_3_title": "Zkontrolujete návrh",
-    "step_3_desc": "Sporná pole jsou zvýrazněná, opravíte je kliknutím.",
-    "step_4_title": "Zápis do účetnictví",
-    "step_4_desc": "Údaje jdou do Pohody, Omegy nebo vašeho systému."
+    "title": "Jak probíhá spolupráce",
+    "step_1_title": "Analýza procesu",
+    "step_1_desc": "Společně identifikujeme úkoly, které zabírají čas nebo se opakují.",
+    "step_2_title": "Návrh řešení",
+    "step_2_desc": "Navrhneme AI agenta, automatizaci nebo znalostní systém podle vašich dat a procesů.",
+    "step_3_title": "Pilotní nasazení",
+    "step_3_desc": "Řešení otestujeme na reálných dokumentech a procesech.",
+    "step_4_title": "Produkční používání",
+    "step_4_desc": "Po schválení se systém stává součástí každodenního provozu."
   },
   "products": {
     "title": "Řešení a ceník",
     "price_from": "od",
     "price_currency": "€",
     "flagship_badge": "Hlavní produkt",
-    "card_1_title": "Vytěžování dokladů",
-    "card_1_desc": "Faktury, účtenky a dodací listy automaticky do účetnictví. Vy jen schválíte.",
-    "card_2_title": "RAG znalostní báze",
-    "card_2_desc": "Zeptejte se svých dokumentů a dostanete odpověď — vždy s citací zdroje.",
-    "card_3_title": "AI agenti a automatizace",
-    "card_3_desc": "E-mailoví agenti, schvalování a napojení na CRM či interní systémy."
+    "card_1_title": "AI Agenti",
+    "card_1_desc": "AI asistenti napojení na vaše dokumenty, data a firemní systémy.",
+    "card_1_examples": "Interní asistent · Zákaznická podpora · Obchodní asistent · Provozní asistent",
+    "card_2_title": "RAG Znalostní Systémy",
+    "card_2_desc": "AI chatboti a asistenti, kteří odpovídají na základě interní dokumentace vaší firmy.",
+    "card_2_examples": "Firemní znalostní báze · Technická dokumentace · Interní procesy · Zákaznická podpora",
+    "card_3_title": "Automatizace Procesů",
+    "card_3_desc": "Automatizace dokumentů, e-mailů a opakujících se úkolů.",
+    "card_3_examples": "Zpracování faktur · Zpracování e-mailů · Generování reportů · Synchronizace dat"
   },
   "why": {
     "title": "Proč ProjentIQ",
-    "item_1_title": "Data zůstávají u vás",
-    "item_1_desc": "Zpracování v EU, žádné sdílení s třetími stranami.",
-    "item_2_title": "Napojení na české i slovenské systémy",
-    "item_2_desc": "Pohoda, Omega, iDoklad a další.",
-    "item_3_title": "Skutečná čeština a slovenština",
-    "item_3_desc": "Laděno na české i slovenské doklady, diakritiku a jazyk.",
-    "item_4_title": "Demo na vašich datech",
-    "item_4_desc": "Před objednávkou uvidíte výsledek, ne slib."
+    "item_1_title": "Pracujeme s vašimi daty",
+    "item_1_desc": "AI řešení jsou postavená na dokumentech, systémech a informacích, které už ve firmě používáte.",
+    "item_2_title": "Řešení na míru",
+    "item_2_desc": "Každá firma funguje jinak. Návrh přizpůsobujeme konkrétnímu procesu.",
+    "item_3_title": "Nejprve ukázka, pak rozhodnutí",
+    "item_3_desc": "Před objednávkou uvidíte řešení na vlastních datech.",
+    "item_4_title": "Integrace na stávající systémy",
+    "item_4_desc": "ERP, CRM, SharePoint, Google Drive, e-mail, databáze nebo API."
+  },
+  "trust_section": {
+    "title": "Technologie prodáváme až poté, co pochopíme problém.",
+    "p1": "Nevytváříme univerzální AI řešení.",
+    "p2": "Nejdříve pochopíme proces, který chcete zlepšit. Až poté navrhujeme technologii.",
+    "p3": "Cílem není mít více AI.",
+    "p4": "Cílem je mít méně manuální práce, rychlejší přístup k informacím a jednodušší procesy."
   },
   "testimonials": {
     "title": "První nasazení připravujeme",
@@ -101,8 +117,8 @@
     "a4": "Sporná pole jsou vždy zvýrazněná ke kontrole a nic se nezapíše bez vašeho schválení. Systém se navíc učí z vašich oprav."
   },
   "cta_band": {
-    "title": "Ukážeme vám to na vaší faktuře.",
-    "lead": "Bezplatná konzultace a demo na reálném dokladu z vaší firmy."
+    "title": "Ukážeme vám to na vašich datech.",
+    "lead": "Pošlete nám proces nebo problém, který chcete řešit. Navrhneme konkrétní postup a ukázku řešení na reálných firemních datech."
   },
   "contact": {
     "title": "Ozvěte se nám",

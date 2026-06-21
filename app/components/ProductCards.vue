@@ -31,6 +31,7 @@ const cards = [
           <p v-if="card.flagship" class="products__badge">{{ t('products.flagship_badge') }}</p>
           <h3>{{ t(`products.card_${card.id}_title`) }}</h3>
           <p class="products__desc">{{ t(`products.card_${card.id}_desc`) }}</p>
+          <p class="products__examples">{{ t(`products.card_${card.id}_examples`) }}</p>
           <p class="products__price">
             {{ t('products.price_from') }} <strong>{{ formatPrice(card.price) }} {{ t('products.price_currency') }}</strong>
           </p>
@@ -95,6 +96,12 @@ const cards = [
 .products__desc {
   margin: 0 0 0.75rem;
   font-size: 0.92rem;
+}
+
+.products__examples {
+  margin: 0 0 0.75rem;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
 }
 
 .products__price {

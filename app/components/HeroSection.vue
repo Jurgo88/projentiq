@@ -2,9 +2,10 @@
 const { t } = useI18n()
 
 const panelItems = [
-  { docKey: 'hero.panel.doc_invoice', vendor: 'Veľkoobchod Drevo s.r.o.', amount: '1 240,00 €', statusKey: 'hero.panel.status_done' },
-  { docKey: 'hero.panel.doc_delivery', vendor: 'Stavebniny Krajná', amount: '—', statusKey: 'hero.panel.status_review' },
-  { docKey: 'hero.panel.doc_invoice', vendor: 'IT Servis Plus', amount: '345,50 €', statusKey: 'hero.panel.status_done' }
+  { kindKey: 'hero.panel.kind_agent', textKey: 'hero.panel.row_agent', statusKey: 'hero.panel.status_done' },
+  { kindKey: 'hero.panel.kind_search', textKey: 'hero.panel.row_search', statusKey: 'hero.panel.status_done' },
+  { kindKey: 'hero.panel.kind_automation', textKey: 'hero.panel.row_automation', statusKey: 'hero.panel.status_review' },
+  { kindKey: 'hero.panel.kind_document', textKey: 'hero.panel.row_document', statusKey: 'hero.panel.status_done' }
 ]
 
 const rotatingPhrases = computed(() => [
@@ -59,9 +60,8 @@ onUnmounted(stopRotation)
           <p class="hero-panel__caption">{{ t('hero.panel_caption') }}</p>
           <ul class="hero-panel__list">
             <li v-for="(item, i) in panelItems" :key="i" class="hero-panel__row">
-              <span class="hero-panel__doc">{{ t(item.docKey) }}</span>
-              <span class="hero-panel__vendor">{{ item.vendor }}</span>
-              <span class="hero-panel__amount">{{ item.amount }}</span>
+              <span class="hero-panel__kind">{{ t(item.kindKey) }}</span>
+              <span class="hero-panel__text">{{ t(item.textKey) }}</span>
               <span
                 class="hero-panel__status"
                 :class="{ 'is-review': item.statusKey.endsWith('status_review') }"
@@ -163,7 +163,7 @@ onUnmounted(stopRotation)
 
 .hero-panel__row {
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto 1fr auto;
   gap: 0.75rem;
   align-items: center;
   padding: 0.6rem 0.75rem;
@@ -172,17 +172,13 @@ onUnmounted(stopRotation)
   font-size: 0.85rem;
 }
 
-.hero-panel__doc {
+.hero-panel__kind {
   color: var(--color-text-muted);
   white-space: nowrap;
 }
 
-.hero-panel__vendor {
+.hero-panel__text {
   font-weight: 600;
-}
-
-.hero-panel__amount {
-  white-space: nowrap;
 }
 
 .hero-panel__status {
@@ -202,7 +198,7 @@ onUnmounted(stopRotation)
   }
 
   .hero-panel__row {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
     row-gap: 0.25rem;
   }
 }
