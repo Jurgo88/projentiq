@@ -35,6 +35,9 @@ export default defineNuxtConfig({
     baseUrl: 'https://projentiq.com',
     defaultLocale: 'sk',
     strategy: 'prefix_except_default',
+    // spec časť 2: žiadny vynútený redirect/switch podľa Accept-Language —
+    // jazyk si používateľ vyberá explicitne cez LangSwitcher
+    detectBrowserLanguage: false,
     locales: [
       { code: 'sk', language: 'sk-SK', name: 'Slovensky', file: 'sk.json' },
       { code: 'cs', language: 'cs-CZ', name: 'Česky', file: 'cs.json' },

@@ -4,6 +4,8 @@
   --color-text: #f2f2f5;
   --color-text-muted: #a3a3b0;
   --color-accent: #5b8cff;
+  /* darker than --color-accent: needed for white text on accent backgrounds to hit 4.5:1 (WCAG AA) */
+  --color-accent-strong: #3d6fe0;
   --color-border: #23232f;
   --color-focus: #8ab0ff;
 }
@@ -13,9 +15,13 @@
   --color-surface: #f5f6f8;
   --color-text: #14141a;
   --color-text-muted: #4a4a55;
-  --color-accent: #2f6bff;
+  /* darker than dark theme's accent: #2f6bff measured under 4.5:1 as text
+     against --color-surface, so light theme uses one accent for both text
+     and accent-strong backgrounds */
+  --color-accent: #2a5fe6;
+  --color-accent-strong: #2a5fe6;
   --color-border: #e1e2e6;
-  --color-focus: #2f6bff;
+  --color-focus: #2a5fe6;
 }
 
 * {
@@ -63,7 +69,7 @@ a {
   left: -9999px;
   top: 0;
   z-index: 1000;
-  background: var(--color-accent);
+  background: var(--color-accent-strong);
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 0 0 4px 0;
@@ -88,7 +94,7 @@ a {
 }
 
 .btn-primary {
-  background: var(--color-accent);
+  background: var(--color-accent-strong);
   color: #fff;
 }
 

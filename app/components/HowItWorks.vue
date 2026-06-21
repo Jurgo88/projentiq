@@ -58,7 +58,7 @@ const steps = [1, 2, 3, 4]
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background: var(--color-accent);
+  background: var(--color-accent-strong);
   color: #fff;
   font-weight: 700;
   font-size: 0.9rem;
