@@ -29,11 +29,15 @@
     "gdpr_link": "Privacy & cookies"
   },
   "hero": {
-    "title": "AI systems that work with your data.",
+    "eyebrow": "AI Agents · RAG · Automation",
+    "title_main": "AI systems that work",
+    "title_highlight": "with your data.",
     "lead": "We design AI agents, knowledge systems, and automations that help teams find information, process documents, and handle repetitive tasks.",
     "cta_contact": "Contact us",
+    "trust_microcopy": "Free demo on your own data · no obligation",
     "panel_caption": "Interface preview — illustrative data",
     "panel": {
+      "live_badge": "Preview",
       "kind_agent": "AI agent",
       "kind_search": "Search",
       "kind_automation": "Automation",

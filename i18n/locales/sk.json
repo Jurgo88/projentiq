@@ -29,11 +29,15 @@
     "gdpr_link": "Ochrana osobných údajov a cookies"
   },
   "hero": {
-    "title": "AI systémy, ktoré pracujú s vašimi dátami.",
+    "eyebrow": "AI Agenti · RAG · Automatizácia",
+    "title_main": "AI systémy, ktoré pracujú",
+    "title_highlight": "s vašimi dátami.",
     "lead": "Navrhujeme AI agentov, znalostné systémy a automatizácie, ktoré pomáhajú tímom vyhľadávať informácie, spracovávať dokumenty a vykonávať opakujúce sa úlohy.",
     "cta_contact": "Kontaktovať nás",
+    "trust_microcopy": "Bezplatné demo na vašich dátach · bez záväzku",
     "panel_caption": "Ukážka rozhrania — ilustračné dáta",
     "panel": {
+      "live_badge": "Ukážka",
       "kind_agent": "AI agent",
       "kind_search": "Vyhľadávanie",
       "kind_automation": "Automatizácia",

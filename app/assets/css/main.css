@@ -45,7 +45,8 @@
   --color-accent-soft: rgba(47, 107, 255, 0.08);
   --color-accent-border: rgba(47, 107, 255, 0.22);
   --color-accent-strong: #2a5fe6;
-  --color-success: #1a9d63;
+  /* darker than spec's #1a9d63: that value measured under 4.5:1 as text (3.47:1 vs white) */
+  --color-success: #117048;
   --color-success-soft: rgba(26, 157, 99, 0.1);
   --gradient-text: linear-gradient(120deg, #2f6bff 0%, #7a4dff 100%);
   --glow-accent: radial-gradient(60% 60% at 50% 0%, rgba(47, 107, 255, 0.1), transparent 70%);
