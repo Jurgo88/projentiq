@@ -8,7 +8,8 @@
   },
   "meta": {
     "title": "Projentiq – AI agents, knowledge systems, and process automation",
-    "description": "Projentiq helps companies deploy AI agents, RAG knowledge systems, and automations built on their own data and processes."
+    "description": "Projentiq helps companies deploy AI agents, RAG knowledge systems, and automations built on their own data and processes.",
+    "service_name": "AI agents, knowledge systems, and process automation"
   },
   "a11y": {
     "skip_link": "Skip to content"

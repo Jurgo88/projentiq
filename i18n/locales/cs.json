@@ -8,7 +8,8 @@
   },
   "meta": {
     "title": "Projentiq – AI agenti, znalostní systémy a automatizace procesů",
-    "description": "Projentiq pomáhá firmám zavádět AI agenty, RAG znalostní systémy a automatizace postavené na vlastních datech a procesech."
+    "description": "Projentiq pomáhá firmám zavádět AI agenty, RAG znalostní systémy a automatizace postavené na vlastních datech a procesech.",
+    "service_name": "AI agenti, znalostní systémy a automatizace procesů"
   },
   "a11y": {
     "skip_link": "Přeskočit na obsah"
