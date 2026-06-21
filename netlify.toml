@@ -1,11 +1,6 @@
 [build]
   command = "npm run generate"
-  publish = ".output/public"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "24"
-
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
