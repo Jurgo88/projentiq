@@ -20,7 +20,7 @@ onUnmounted(() => {
 <template>
   <header class="site-header" :class="{ 'is-scrolled': isScrolled }">
     <div class="site-header__inner">
-      <NuxtLink :to="localePath('index')" class="site-header__logo">ProjentIQ</NuxtLink>
+      <NuxtLink :to="localePath('index')" class="site-header__logo">Projent<span class="site-header__logo-accent">IQ</span></NuxtLink>
 
       <nav class="site-header__nav" :aria-label="t('nav.main_label')">
         <a href="#solutions">{{ t('nav.solutions') }}</a>
@@ -42,13 +42,19 @@ onUnmounted(() => {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
-  transition: padding 0.15s ease;
+  background: color-mix(in srgb, var(--color-bg) 80%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: padding 0.15s ease, border-color 0.15s ease;
+}
+
+.site-header.is-scrolled {
+  border-bottom-color: var(--color-border);
 }
 
 .site-header__inner {
-  max-width: 72rem;
+  max-width: var(--container);
   margin: 0 auto;
   padding: 1.25rem 1.5rem;
   display: flex;
@@ -65,10 +71,14 @@ onUnmounted(() => {
 }
 
 .site-header__logo {
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   font-size: 1.1rem;
   color: var(--color-text);
   text-decoration: none;
+}
+
+.site-header__logo-accent {
+  color: var(--color-accent);
 }
 
 .site-header__nav {
@@ -77,13 +87,32 @@ onUnmounted(() => {
 }
 
 .site-header__nav a {
+  position: relative;
   color: var(--color-text-muted);
   text-decoration: none;
   font-size: 0.95rem;
+  padding-bottom: 0.2rem;
+}
+
+.site-header__nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
 }
 
 .site-header__nav a:hover {
   color: var(--color-text);
+}
+
+.site-header__nav a:hover::after {
+  transform: scaleX(1);
 }
 
 .site-header__actions {
@@ -95,5 +124,6 @@ onUnmounted(() => {
 .site-header__actions .btn-primary {
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
+  box-shadow: none;
 }
 </style>

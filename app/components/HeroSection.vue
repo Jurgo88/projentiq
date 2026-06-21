@@ -2,10 +2,10 @@
 const { t } = useI18n()
 
 const panelItems = [
-  { kindKey: 'hero.panel.kind_agent', textKey: 'hero.panel.row_agent', statusKey: 'hero.panel.status_done' },
-  { kindKey: 'hero.panel.kind_search', textKey: 'hero.panel.row_search', statusKey: 'hero.panel.status_done' },
-  { kindKey: 'hero.panel.kind_automation', textKey: 'hero.panel.row_automation', statusKey: 'hero.panel.status_review' },
-  { kindKey: 'hero.panel.kind_document', textKey: 'hero.panel.row_document', statusKey: 'hero.panel.status_done' }
+  { icon: 'tabler:robot', kindKey: 'hero.panel.kind_agent', textKey: 'hero.panel.row_agent', statusKey: 'hero.panel.status_done' },
+  { icon: 'tabler:search', kindKey: 'hero.panel.kind_search', textKey: 'hero.panel.row_search', statusKey: 'hero.panel.status_done' },
+  { icon: 'tabler:settings-automation', kindKey: 'hero.panel.kind_automation', textKey: 'hero.panel.row_automation', statusKey: 'hero.panel.status_review' },
+  { icon: 'tabler:file-text', kindKey: 'hero.panel.kind_document', textKey: 'hero.panel.row_document', statusKey: 'hero.panel.status_done' }
 ]
 
 const rotatingPhrases = computed(() => [
@@ -35,9 +35,11 @@ onUnmounted(stopRotation)
 
 <template>
   <section id="hero" class="hero">
+    <div class="hero__bg" aria-hidden="true" />
     <div class="hero__inner">
       <div class="hero__copy">
-        <h1>{{ t('hero.title') }}</h1>
+        <p class="eyebrow">{{ t('hero.eyebrow') }}</p>
+        <h1>{{ t('hero.title_main') }} <span class="hero__title-gradient">{{ t('hero.title_highlight') }}</span></h1>
         <p>{{ t('hero.lead') }}</p>
         <p
           class="hero__rotator"
@@ -53,19 +55,32 @@ onUnmounted(stopRotation)
           <a href="#demo" class="btn-primary">{{ t('nav.cta_demo') }}</a>
           <a href="#demo" class="btn-secondary">{{ t('hero.cta_contact') }}</a>
         </div>
+        <p class="hero__trust-microcopy">{{ t('hero.trust_microcopy') }}</p>
       </div>
 
       <div class="hero__visual" aria-hidden="true">
         <div class="hero-panel">
-          <p class="hero-panel__caption">{{ t('hero.panel_caption') }}</p>
+          <div class="hero-panel__header">
+            <p class="hero-panel__caption">{{ t('hero.panel_caption') }}</p>
+            <span class="hero-panel__live">
+              <span class="hero-panel__live-dot" />
+              {{ t('hero.panel.live_badge') }}
+            </span>
+          </div>
           <ul class="hero-panel__list">
             <li v-for="(item, i) in panelItems" :key="i" class="hero-panel__row">
-              <span class="hero-panel__kind">{{ t(item.kindKey) }}</span>
-              <span class="hero-panel__text">{{ t(item.textKey) }}</span>
+              <Icon :name="item.icon" class="hero-panel__icon" />
+              <span class="hero-panel__body">
+                <span class="hero-panel__kind">{{ t(item.kindKey) }}</span>
+                <span class="hero-panel__text">{{ t(item.textKey) }}</span>
+              </span>
               <span
                 class="hero-panel__status"
                 :class="{ 'is-review': item.statusKey.endsWith('status_review') }"
-              >{{ t(item.statusKey) }}</span>
+              >
+                <span class="hero-panel__status-dot" />
+                {{ t(item.statusKey) }}
+              </span>
             </li>
           </ul>
         </div>
@@ -76,11 +91,34 @@ onUnmounted(stopRotation)
 
 <style scoped>
 .hero {
-  padding: 4rem 1.5rem;
+  position: relative;
+  padding: var(--section-y) 1.5rem;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--glow-accent);
+  background-position: center top;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(var(--color-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.03;
 }
 
 .hero__inner {
-  max-width: 72rem;
+  position: relative;
+  z-index: 1;
+  max-width: var(--container);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -89,9 +127,21 @@ onUnmounted(stopRotation)
 }
 
 .hero__copy h1 {
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  line-height: 1.15;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   margin: 0 0 1.25rem;
+}
+
+.hero__title-gradient {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: var(--color-text);
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .hero__title-gradient {
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .hero__copy p {
@@ -109,7 +159,7 @@ onUnmounted(stopRotation)
   margin: 0 0 1.75rem;
   color: var(--color-accent);
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
 }
 
 .hero__rotator::before {
@@ -135,21 +185,70 @@ onUnmounted(stopRotation)
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
+  margin: 0 0 1rem;
+}
+
+.hero__trust-microcopy {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
 }
 
 .hero-panel {
-  background: var(--color-surface);
+  background: var(--color-surface-1);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
+  border-radius: var(--r-lg);
   padding: 1.25rem;
+  box-shadow: var(--sh-lg), var(--hairline-top);
+}
+
+.hero-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
 }
 
 .hero-panel__caption {
-  margin: 0 0 1rem;
-  font-size: 0.75rem;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--tracking-wide);
   color: var(--color-text-muted);
+}
+
+.hero-panel__live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--r-full);
+  background: var(--color-success-soft);
+  color: var(--color-success);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  white-space: nowrap;
+}
+
+.hero-panel__live-dot {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: currentColor;
+  animation: hero-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes hero-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
 }
 
 .hero-panel__list {
@@ -158,7 +257,6 @@ onUnmounted(stopRotation)
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
 }
 
 .hero-panel__row {
@@ -166,30 +264,72 @@ onUnmounted(stopRotation)
   grid-template-columns: auto 1fr auto;
   gap: 0.75rem;
   align-items: center;
-  padding: 0.6rem 0.75rem;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
+  padding: 0.65rem 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: var(--r-sm);
   font-size: 0.85rem;
+  transition: background-color 0.15s ease;
+}
+
+.hero-panel__row:last-child {
+  border-bottom: none;
+}
+
+.hero-panel__row:hover {
+  background: var(--color-surface-2);
+}
+
+.hero-panel__icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.hero-panel__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
 }
 
 .hero-panel__kind {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
   color: var(--color-text-muted);
-  white-space: nowrap;
 }
 
 .hero-panel__text {
-  font-weight: 600;
-}
-
-.hero-panel__status {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--color-accent);
+  font-weight: var(--fw-medium);
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+.hero-panel__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--r-full);
+  background: var(--color-success-soft);
+  color: var(--color-success);
+  font-size: 0.75rem;
+  font-weight: var(--fw-semibold);
+  white-space: nowrap;
+}
+
+.hero-panel__status-dot {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
 .hero-panel__status.is-review {
-  color: var(--color-text-muted);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
 }
 
 @media (max-width: 56rem) {
@@ -198,8 +338,12 @@ onUnmounted(stopRotation)
   }
 
   .hero-panel__row {
-    grid-template-columns: 1fr;
-    row-gap: 0.25rem;
+    grid-template-columns: auto 1fr;
+  }
+
+  .hero-panel__status {
+    grid-column: 1 / -1;
+    justify-self: start;
   }
 }
 </style>
