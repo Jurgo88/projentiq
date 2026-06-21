@@ -9,10 +9,16 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxt/image',
     '@nuxt/fonts',
+    '@nuxt/icon',
     '@nuxtjs/sitemap'
   ],
 
   css: ['~/assets/css/main.css'],
+
+  icon: {
+    provider: 'server',
+    serverBundle: { collections: ['tabler'] }
+  },
 
   app: {
     head: {

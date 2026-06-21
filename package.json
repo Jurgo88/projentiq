@@ -15,7 +15,9 @@
     "vue-router": "^5.1.0"
   },
   "devDependencies": {
+    "@iconify-json/tabler": "^1.2.35",
     "@nuxt/fonts": "^0.14.0",
+    "@nuxt/icon": "^2.2.3",
     "@nuxt/image": "^2.0.0",
     "@nuxtjs/color-mode": "^4.0.1",
     "@nuxtjs/i18n": "^10.4.0",
