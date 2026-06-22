@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const { target, pending } = useReveal()
 
 interface Testimonial {
   quote: string
@@ -16,7 +17,7 @@ const testimonials: Testimonial[] = []
 
 <template>
   <section id="references" class="testimonials">
-    <div class="testimonials__inner">
+    <div ref="target" class="testimonials__inner reveal" :class="{ 'reveal--pending': pending }">
       <h2>{{ t('testimonials.title') }}</h2>
 
       <div v-if="testimonials.length === 0" class="testimonials__placeholder">

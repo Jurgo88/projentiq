@@ -1,10 +1,11 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const { target, pending } = useReveal()
 </script>
 
 <template>
   <section id="approach" class="trust-section">
-    <div class="trust-section__inner">
+    <div ref="target" class="trust-section__inner reveal" :class="{ 'reveal--pending': pending }">
       <h2>{{ t('trust_section.title') }}</h2>
       <p>{{ t('trust_section.p1') }}</p>
       <p>{{ t('trust_section.p2') }}</p>

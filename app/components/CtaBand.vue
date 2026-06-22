@@ -1,10 +1,11 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const { target, pending } = useReveal()
 </script>
 
 <template>
   <section class="cta-band">
-    <div class="cta-band__inner">
+    <div ref="target" class="cta-band__inner reveal" :class="{ 'reveal--pending': pending }">
       <div class="cta-band__copy">
         <h2>{{ t('cta_band.title') }}</h2>
         <p>{{ t('cta_band.lead') }}</p>

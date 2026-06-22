@@ -241,3 +241,15 @@ a {
   background: var(--color-accent);
   flex-shrink: 0;
 }
+
+/* useReveal composable adds/removes .reveal--pending; default (no JS,
+   reduced-motion, or already-visible on load) is just the plain
+   element with no offset, so content is never hidden behind JS */
+.reveal {
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.reveal.reveal--pending {
+  opacity: 0;
+  transform: translateY(12px);
+}

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const { target, pending } = useReveal()
 
 const steps = [
   { id: 1, icon: 'tabler:search' },
@@ -11,7 +12,7 @@ const steps = [
 
 <template>
   <section id="how-it-works" class="how-it-works">
-    <div class="how-it-works__inner">
+    <div ref="target" class="how-it-works__inner reveal" :class="{ 'reveal--pending': pending }">
       <h2>{{ t('how_it_works.title') }}</h2>
 
       <ol class="how-it-works__list">

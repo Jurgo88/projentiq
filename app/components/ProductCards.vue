@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
+const { target, pending } = useReveal()
 
 const localeMap: Record<string, string> = { sk: 'sk-SK', cs: 'cs-CZ', en: 'en-US' }
 
@@ -22,7 +23,7 @@ function examples(id: number) {
 
 <template>
   <section id="solutions" class="products">
-    <div class="products__inner">
+    <div ref="target" class="products__inner reveal" :class="{ 'reveal--pending': pending }">
       <h2>{{ t('products.title') }}</h2>
 
       <div id="pricing" class="products__grid">

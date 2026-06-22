@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const { target, pending } = useReveal()
 
 const items = [
   { id: 1, icon: 'tabler:database' },
@@ -11,7 +12,7 @@ const items = [
 
 <template>
   <section id="why" class="why">
-    <div class="why__inner">
+    <div ref="target" class="why__inner reveal" :class="{ 'reveal--pending': pending }">
       <h2>{{ t('why.title') }}</h2>
 
       <ul class="why__list">
