@@ -33,28 +33,28 @@ onUnmounted(() => {
     <div class="site-header__inner">
       <NuxtLink :to="localePath('index')" class="site-header__logo">Projent<span class="site-header__logo-accent">IQ</span></NuxtLink>
 
-      <button
-        type="button"
-        class="site-header__menu-toggle"
-        :aria-label="mobileMenuOpen ? t('nav.menu_close') : t('nav.menu_open')"
-        :aria-expanded="mobileMenuOpen"
-        aria-controls="site-header-nav"
-        @click="mobileMenuOpen = !mobileMenuOpen"
-      >
-        <Icon v-show="mobileMenuOpen" name="tabler:x" aria-hidden="true" />
-        <Icon v-show="!mobileMenuOpen" name="tabler:menu-2" aria-hidden="true" />
-      </button>
-
       <nav id="site-header-nav" class="site-header__nav" :class="{ 'is-open': mobileMenuOpen }" :aria-label="t('nav.main_label')">
         <a href="#solutions" @click="closeMenu">{{ t('nav.solutions') }}</a>
         <a href="#pricing" @click="closeMenu">{{ t('nav.pricing') }}</a>
         <a href="#references" @click="closeMenu">{{ t('nav.references') }}</a>
+        <a href="#demo" class="site-header__nav-cta btn-primary" @click="closeMenu">{{ t('nav.cta_demo') }}</a>
       </nav>
 
       <div class="site-header__actions">
         <LangSwitcher />
         <ThemeToggle />
-        <a href="#demo" class="btn-primary">{{ t('nav.cta_demo') }}</a>
+        <a href="#demo" class="site-header__cta btn-primary">{{ t('nav.cta_demo') }}</a>
+        <button
+          type="button"
+          class="site-header__menu-toggle"
+          :aria-label="mobileMenuOpen ? t('nav.menu_close') : t('nav.menu_open')"
+          :aria-expanded="mobileMenuOpen"
+          aria-controls="site-header-nav"
+          @click="mobileMenuOpen = !mobileMenuOpen"
+        >
+          <Icon v-show="mobileMenuOpen" name="tabler:x" aria-hidden="true" />
+          <Icon v-show="!mobileMenuOpen" name="tabler:menu-2" aria-hidden="true" />
+        </button>
       </div>
     </div>
   </header>
@@ -150,6 +150,10 @@ onUnmounted(() => {
   box-shadow: none;
 }
 
+.site-header__nav-cta {
+  display: none;
+}
+
 .site-header__menu-toggle {
   display: none;
   align-items: center;
@@ -178,10 +182,11 @@ onUnmounted(() => {
   }
 
   .site-header__actions {
-    flex-basis: 100%;
-    flex-wrap: wrap;
-    row-gap: 0.5rem;
-    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+  .site-header__cta {
+    display: none;
   }
 
   .site-header__nav {
@@ -207,15 +212,12 @@ onUnmounted(() => {
     border-bottom: 1px solid var(--color-border);
   }
 
-  .site-header__nav a:last-child {
+  .site-header__nav .site-header__nav-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.75rem;
+    padding: 0.7rem 0;
     border-bottom: none;
-  }
-}
-
-@media (max-width: 26rem) {
-  .site-header__actions .btn-primary {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.85rem;
   }
 }
 </style>
