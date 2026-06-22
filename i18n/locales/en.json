@@ -40,19 +40,28 @@
     "lead": "We design AI agents, knowledge systems, and automations that help teams find information, process documents, and handle repetitive tasks.",
     "cta_contact": "Contact us",
     "trust_microcopy": "Free demo on your own data · no obligation",
-    "panel_caption": "Interface preview — illustrative data",
     "panel": {
-      "live_badge": "Preview",
-      "kind_agent": "AI agent",
-      "kind_search": "Search",
-      "kind_automation": "Automation",
-      "kind_document": "Document",
-      "row_agent": "Answered a question about order status",
-      "row_search": "Found a contract by keyword",
-      "row_automation": "Processed an email order",
-      "row_document": "Invoice — Drevo Wholesale Ltd.",
-      "status_done": "Done",
-      "status_review": "In progress"
+      "tab_before": "← Before",
+      "tab_after": "After →",
+      "disclaimer": "Times are illustrative — real results depend on your process",
+
+      "invoices_label": "Invoices",
+      "invoices_before": "Manual entry into accounting",
+      "invoices_before_meta": "~3 hrs/day",
+      "invoices_after": "AI extracts data, you approve",
+      "invoices_after_meta": "~8 sec/invoice",
+
+      "contracts_label": "Contracts",
+      "contracts_before": "Searching a shared drive",
+      "contracts_before_meta": "~20 min/query",
+      "contracts_after": "Assistant answers with a citation",
+      "contracts_after_meta": "~4 sec/query",
+
+      "orders_label": "Orders",
+      "orders_before": "Manual entry from emails",
+      "orders_before_meta": "every day",
+      "orders_after": "Agent processes and logs it",
+      "orders_after_meta": "automatically"
     },
     "rotator": {
       "item_1": "Extracts amounts, tax IDs, and due dates from invoices.",
