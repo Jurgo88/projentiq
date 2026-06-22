@@ -1,11 +1,22 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-const panelItems = [
-  { icon: 'tabler:robot', kindKey: 'hero.panel.kind_agent', textKey: 'hero.panel.row_agent', statusKey: 'hero.panel.status_done' },
-  { icon: 'tabler:search', kindKey: 'hero.panel.kind_search', textKey: 'hero.panel.row_search', statusKey: 'hero.panel.status_done' },
-  { icon: 'tabler:settings-automation', kindKey: 'hero.panel.kind_automation', textKey: 'hero.panel.row_automation', statusKey: 'hero.panel.status_review' },
-  { icon: 'tabler:file-text', kindKey: 'hero.panel.kind_document', textKey: 'hero.panel.row_document', statusKey: 'hero.panel.status_done' }
+const baRows = [
+  {
+    labelKey: 'hero.panel.invoices_label',
+    beforeKey: 'hero.panel.invoices_before', beforeMetaKey: 'hero.panel.invoices_before_meta',
+    afterKey:  'hero.panel.invoices_after',  afterMetaKey:  'hero.panel.invoices_after_meta'
+  },
+  {
+    labelKey: 'hero.panel.contracts_label',
+    beforeKey: 'hero.panel.contracts_before', beforeMetaKey: 'hero.panel.contracts_before_meta',
+    afterKey:  'hero.panel.contracts_after',  afterMetaKey:  'hero.panel.contracts_after_meta'
+  },
+  {
+    labelKey: 'hero.panel.orders_label',
+    beforeKey: 'hero.panel.orders_before', beforeMetaKey: 'hero.panel.orders_before_meta',
+    afterKey:  'hero.panel.orders_after',  afterMetaKey:  'hero.panel.orders_after_meta'
+  }
 ]
 
 const rotatingPhrases = computed(() => [
@@ -59,30 +70,33 @@ onUnmounted(stopRotation)
       </div>
 
       <div class="hero__visual" aria-hidden="true">
-        <div class="hero-panel">
-          <div class="hero-panel__header">
-            <p class="hero-panel__caption">{{ t('hero.panel_caption') }}</p>
-            <span class="hero-panel__live">
-              <span class="hero-panel__live-dot" />
-              {{ t('hero.panel.live_badge') }}
-            </span>
+        <div class="hero-ba">
+          <div class="hero-ba__header">
+            <span class="hero-ba__tab hero-ba__tab--before">{{ t('hero.panel.tab_before') }}</span>
+            <span class="hero-ba__tab hero-ba__tab--after">{{ t('hero.panel.tab_after') }}</span>
           </div>
-          <ul class="hero-panel__list">
-            <li v-for="(item, i) in panelItems" :key="i" class="hero-panel__row">
-              <Icon :name="item.icon" class="hero-panel__icon" />
-              <span class="hero-panel__body">
-                <span class="hero-panel__kind">{{ t(item.kindKey) }}</span>
-                <span class="hero-panel__text">{{ t(item.textKey) }}</span>
-              </span>
-              <span
-                class="hero-panel__status"
-                :class="{ 'is-review': item.statusKey.endsWith('status_review') }"
-              >
-                <span class="hero-panel__status-dot" />
-                {{ t(item.statusKey) }}
-              </span>
-            </li>
-          </ul>
+
+          <div class="hero-ba__grid">
+            <div class="hero-ba__col hero-ba__col--before">
+              <div v-for="(row, i) in baRows" :key="`b-${i}`" class="hero-ba__row hero-ba__row--before">
+                <p class="hero-ba__label">{{ t(row.labelKey) }}</p>
+                <p class="hero-ba__text">{{ t(row.beforeKey) }}</p>
+                <p class="hero-ba__meta">{{ t(row.beforeMetaKey) }}</p>
+              </div>
+            </div>
+            <div class="hero-ba__col hero-ba__col--after">
+              <div v-for="(row, i) in baRows" :key="`a-${i}`" class="hero-ba__row hero-ba__row--after">
+                <p class="hero-ba__label">{{ t(row.labelKey) }}</p>
+                <p class="hero-ba__text">{{ t(row.afterKey) }}</p>
+                <p class="hero-ba__meta">{{ t(row.afterMetaKey) }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-ba__footer">
+            <Icon name="tabler:info-circle" class="hero-ba__footer-icon" />
+            {{ t('hero.panel.disclaimer') }}
+          </div>
         </div>
       </div>
     </div>
@@ -195,155 +209,143 @@ onUnmounted(stopRotation)
   color: var(--color-text-muted);
 }
 
-.hero-panel {
+.hero-ba {
   background: var(--color-surface-1);
   border: 1px solid var(--color-border);
   border-radius: var(--r-lg);
-  padding: 1.25rem;
+  overflow: hidden;
   box-shadow: var(--sh-lg), var(--hairline-top);
 }
 
-.hero-panel__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin: 0 0 1rem;
+.hero-ba__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--color-border);
 }
 
-.hero-panel__caption {
-  margin: 0;
-  font-family: var(--font-mono);
-  font-size: var(--fs-xs);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-wide);
-  color: var(--color-text-muted);
-}
-
-.hero-panel__live {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.2rem 0.55rem;
-  border-radius: var(--r-full);
-  background: var(--color-success-soft);
-  color: var(--color-success);
+.hero-ba__tab {
+  padding: 0.6rem 1rem;
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
   font-weight: var(--fw-semibold);
-  white-space: nowrap;
+  text-align: center;
+  letter-spacing: 0.04em;
 }
 
-.hero-panel__live-dot {
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 50%;
-  background: currentColor;
-  animation: hero-pulse 1.8s ease-in-out infinite;
+.hero-ba__tab--before {
+  background: var(--color-surface-2);
+  color: var(--color-text-muted);
 }
 
-@keyframes hero-pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.35;
-  }
+.hero-ba__tab--after {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  border-left: 1px solid var(--color-accent-border);
 }
 
-.hero-panel__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-panel__row {
+.hero-ba__grid {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 0.75rem;
-  align-items: center;
-  padding: 0.65rem 0.5rem;
-  border-bottom: 1px solid var(--color-border);
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-ba__col {
+  padding: 0.875rem;
+}
+
+.hero-ba__col--before {
+  border-right: 1px solid var(--color-border);
+}
+
+.hero-ba__row {
+  padding: 0.625rem;
   border-radius: var(--r-sm);
-  font-size: 0.85rem;
-  transition: background-color 0.15s ease;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--color-border);
 }
 
-.hero-panel__row:last-child {
-  border-bottom: none;
+.hero-ba__row:last-child {
+  margin-bottom: 0;
 }
 
-.hero-panel__row:hover {
+.hero-ba__row--before {
   background: var(--color-surface-2);
 }
 
-.hero-panel__icon {
-  width: 18px;
-  height: 18px;
-  color: var(--color-accent);
-  flex-shrink: 0;
+.hero-ba__row--after {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent-border);
 }
 
-.hero-panel__body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  min-width: 0;
-}
-
-.hero-panel__kind {
+.hero-ba__label {
+  margin: 0 0 0.25rem;
   font-family: var(--font-mono);
-  font-size: var(--fs-xs);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.hero-ba__row--before .hero-ba__label {
   color: var(--color-text-muted);
 }
 
-.hero-panel__text {
-  font-weight: var(--fw-medium);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.hero-panel__status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.2rem 0.5rem;
-  border-radius: var(--r-full);
-  background: var(--color-success-soft);
-  color: var(--color-success);
-  font-size: 0.75rem;
-  font-weight: var(--fw-semibold);
-  white-space: nowrap;
-}
-
-.hero-panel__status-dot {
-  width: 0.35rem;
-  height: 0.35rem;
-  border-radius: 50%;
-  background: currentColor;
-  flex-shrink: 0;
-}
-
-.hero-panel__status.is-review {
-  background: var(--color-accent-soft);
+.hero-ba__row--after .hero-ba__label {
   color: var(--color-accent);
+}
+
+.hero-ba__text {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: var(--fw-medium);
+  line-height: 1.35;
+  color: var(--color-text-muted);
+}
+
+.hero-ba__row--after .hero-ba__text {
+  color: var(--color-text);
+}
+
+.hero-ba__meta {
+  margin: 0.2rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+.hero-ba__row--before .hero-ba__meta {
+  color: var(--color-text-muted);
+}
+
+.hero-ba__row--after .hero-ba__meta {
+  color: var(--color-success);
+}
+
+.hero-ba__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.875rem;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface-2);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+}
+
+.hero-ba__footer-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--color-accent);
+  flex-shrink: 0;
 }
 
 @media (max-width: 56rem) {
   .hero__inner {
     grid-template-columns: 1fr;
   }
+}
 
-  .hero-panel__row {
-    grid-template-columns: auto 1fr;
-  }
-
-  .hero-panel__status {
-    grid-column: 1 / -1;
-    justify-self: start;
+@media (max-width: 40rem) {
+  .hero__visual {
+    display: none;
   }
 }
 </style>

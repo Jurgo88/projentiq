@@ -40,19 +40,28 @@
     "lead": "Navrhujeme AI agenty, znalostní systémy a automatizace, které pomáhají týmům vyhledávat informace, zpracovávat dokumenty a provádět opakující se úkoly.",
     "cta_contact": "Kontaktovat nás",
     "trust_microcopy": "Bezplatná ukázka na vašich datech · bez závazku",
-    "panel_caption": "Ukázka rozhraní — ilustrační data",
     "panel": {
-      "live_badge": "Ukázka",
-      "kind_agent": "AI agent",
-      "kind_search": "Vyhledávání",
-      "kind_automation": "Automatizace",
-      "kind_document": "Dokument",
-      "row_agent": "Odpověděl na otázku o stavu objednávky",
-      "row_search": "Našel smlouvu podle klíčových slov",
-      "row_automation": "Zpracoval e-mailovou objednávku",
-      "row_document": "Faktura — Velkoobchod Dřevo s.r.o.",
-      "status_done": "Hotovo",
-      "status_review": "Probíhá"
+      "tab_before": "← Předtím",
+      "tab_after": "Potom →",
+      "disclaimer": "Časy jsou ilustrační — reálné výsledky závisí na procesu",
+
+      "invoices_label": "Faktury",
+      "invoices_before": "Ruční přepis do účetnictví",
+      "invoices_before_meta": "~3 hod./den",
+      "invoices_after": "AI vytáhne údaje, vy schválíte",
+      "invoices_after_meta": "~8 sek./faktura",
+
+      "contracts_label": "Smlouvy",
+      "contracts_before": "Hledání na sdíleném disku",
+      "contracts_before_meta": "~20 min./dotaz",
+      "contracts_after": "Asistent odpoví s citací",
+      "contracts_after_meta": "~4 sek./dotaz",
+
+      "orders_label": "Objednávky",
+      "orders_before": "Ruční zadávání z e-mailů",
+      "orders_before_meta": "každý den",
+      "orders_after": "Agent zpracuje a zaeviduje",
+      "orders_after_meta": "automaticky"
     },
     "rotator": {
       "item_1": "Vytěží částky, IČO a splatnost z faktur.",
