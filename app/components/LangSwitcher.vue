@@ -28,8 +28,8 @@ const switchLocalePath = useSwitchLocalePath()
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 2.25rem;
-  height: 2.25rem;
+  min-width: 2.75rem;
+  height: 2.75rem;
   padding: 0 0.4rem;
   border: 1px solid var(--color-border);
   border-radius: 6px;

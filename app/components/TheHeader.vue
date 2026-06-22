@@ -3,17 +3,28 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 
 const isScrolled = ref(false)
+const mobileMenuOpen = ref(false)
 
 function onScroll() {
   isScrolled.value = window.scrollY > 10
 }
 
+function closeMenu() {
+  mobileMenuOpen.value = false
+}
+
+function onKeydown(e: KeyboardEvent) {
+  if (e.key === 'Escape') mobileMenuOpen.value = false
+}
+
 onMounted(() => {
   window.addEventListener('scroll', onScroll, { passive: true })
+  window.addEventListener('keydown', onKeydown)
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', onScroll)
+  window.removeEventListener('keydown', onKeydown)
 })
 </script>
 
@@ -22,10 +33,22 @@ onUnmounted(() => {
     <div class="site-header__inner">
       <NuxtLink :to="localePath('index')" class="site-header__logo">Projent<span class="site-header__logo-accent">IQ</span></NuxtLink>
 
-      <nav class="site-header__nav" :aria-label="t('nav.main_label')">
-        <a href="#solutions">{{ t('nav.solutions') }}</a>
-        <a href="#pricing">{{ t('nav.pricing') }}</a>
-        <a href="#references">{{ t('nav.references') }}</a>
+      <button
+        type="button"
+        class="site-header__menu-toggle"
+        :aria-label="mobileMenuOpen ? t('nav.menu_close') : t('nav.menu_open')"
+        :aria-expanded="mobileMenuOpen"
+        aria-controls="site-header-nav"
+        @click="mobileMenuOpen = !mobileMenuOpen"
+      >
+        <Icon v-show="mobileMenuOpen" name="tabler:x" aria-hidden="true" />
+        <Icon v-show="!mobileMenuOpen" name="tabler:menu-2" aria-hidden="true" />
+      </button>
+
+      <nav id="site-header-nav" class="site-header__nav" :class="{ 'is-open': mobileMenuOpen }" :aria-label="t('nav.main_label')">
+        <a href="#solutions" @click="closeMenu">{{ t('nav.solutions') }}</a>
+        <a href="#pricing" @click="closeMenu">{{ t('nav.pricing') }}</a>
+        <a href="#references" @click="closeMenu">{{ t('nav.references') }}</a>
       </nav>
 
       <div class="site-header__actions">
@@ -125,5 +148,74 @@ onUnmounted(() => {
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   box-shadow: none;
+}
+
+.site-header__menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-sm);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.site-header__menu-toggle:hover {
+  border-color: var(--color-accent);
+}
+
+.site-header__menu-toggle :deep(svg) {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 56rem) {
+  .site-header__menu-toggle {
+    display: inline-flex;
+  }
+
+  .site-header__actions {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    justify-content: flex-end;
+  }
+
+  .site-header__nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.25rem 1.5rem 1rem;
+    background: var(--color-surface-1);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .site-header__nav.is-open {
+    display: flex;
+  }
+
+  .site-header__nav a {
+    padding: 0.85rem 0;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .site-header__nav a:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 26rem) {
+  .site-header__actions .btn-primary {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
 }
 </style>
