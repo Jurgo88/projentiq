@@ -10,9 +10,14 @@ const items = [1, 2, 3, 4]
       <h2>{{ t('faq.title') }}</h2>
 
       <div class="faq__list">
-        <details v-for="item in items" :key="item" class="faq__item">
-          <summary>{{ t(`faq.q${item}`) }}</summary>
-          <p>{{ t(`faq.a${item}`) }}</p>
+        <details v-for="item in items" :key="item" class="faq__item" :open="item === 1">
+          <summary>
+            {{ t(`faq.q${item}`) }}
+            <Icon name="tabler:chevron-down" class="faq__chevron" aria-hidden="true" />
+          </summary>
+          <div class="faq__content">
+            <p>{{ t(`faq.a${item}`) }}</p>
+          </div>
         </details>
       </div>
     </div>
@@ -21,7 +26,8 @@ const items = [1, 2, 3, 4]
 
 <style scoped>
 .faq {
-  padding: 4rem 1.5rem;
+  padding: var(--section-y) 1.5rem;
+  background: var(--color-surface-1);
 }
 
 .faq__inner {
@@ -35,21 +41,35 @@ const items = [1, 2, 3, 4]
 }
 
 .faq__list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--color-surface-2);
 }
 
 .faq__item {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 10px;
-  padding: 1rem 1.25rem;
+  display: grid;
+  grid-template-rows: auto 0fr;
+  border-bottom: 1px solid var(--color-border);
+  transition: grid-template-rows 0.25s ease;
+}
+
+.faq__item:last-child {
+  border-bottom: none;
+}
+
+.faq__item[open] {
+  grid-template-rows: auto 1fr;
 }
 
 .faq__item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   list-style: none;
 }
 
@@ -57,21 +77,26 @@ const items = [1, 2, 3, 4]
   display: none;
 }
 
-.faq__item summary::before {
-  content: '+';
-  display: inline-block;
-  width: 1rem;
+.faq__chevron {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
   color: var(--color-accent);
-  font-weight: 700;
+  transition: transform 0.25s ease;
 }
 
-.faq__item[open] summary::before {
-  content: '−';
+.faq__item[open] .faq__chevron {
+  transform: rotate(180deg);
 }
 
-.faq__item p {
-  margin: 0.75rem 0 0;
-  padding-left: 1rem;
+.faq__content {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.faq__content p {
+  margin: 0;
+  padding: 0 1.25rem 1.1rem;
   color: var(--color-text-muted);
   font-size: 0.92rem;
 }

@@ -26,7 +26,10 @@
     "tagline": "AI automatizácia spracovania dokladov, znalostných báz a procesov pre malé a stredné firmy na Slovensku a v Česku.",
     "address_placeholder": "Sídlo: TODO — doplniť reálnu adresu",
     "ico_placeholder": "IČO: TODO — doplniť",
-    "gdpr_link": "Ochrana osobných údajov a cookies"
+    "gdpr_link": "Ochrana osobných údajov a cookies",
+    "solutions_heading": "Riešenia",
+    "company_heading": "Firma",
+    "contact_heading": "Kontakt"
   },
   "hero": {
     "eyebrow": "AI Agenti · RAG · Automatizácia",
@@ -92,8 +95,8 @@
     "title": "Prečo ProjentIQ",
     "item_1_title": "Pracujeme s vašimi dátami",
     "item_1_desc": "AI riešenia sú postavené na dokumentoch, systémoch a informáciách, ktoré už vo firme používate.",
-    "item_2_title": "Riešenie na mieru",
-    "item_2_desc": "Každá firma funguje inak. Návrh prispôsobujeme konkrétnemu procesu.",
+    "item_2_title": "Prispôsobené vášmu procesu",
+    "item_2_desc": "Každá firma funguje inak. Návrh staviame na vašich konkrétnych dátach a procesoch.",
     "item_3_title": "Najprv ukážka, potom rozhodnutie",
     "item_3_desc": "Pred objednávkou vidíte riešenie na vlastných dátach.",
     "item_4_title": "Integrácia na existujúce systémy",

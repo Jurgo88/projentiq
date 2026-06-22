@@ -16,7 +16,8 @@ const { t } = useI18n()
 
 <style scoped>
 .trust-section {
-  padding: 4rem 1.5rem;
+  padding: calc(var(--section-y) * 1.1) 1.5rem;
+  background: var(--color-surface-2);
 }
 
 .trust-section__inner {
@@ -26,15 +27,16 @@ const { t } = useI18n()
 }
 
 .trust-section h2 {
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
-  margin: 0 0 1.5rem;
+  font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 1.75rem;
 }
 
 .trust-section p {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.85rem;
   color: var(--color-text-muted);
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: var(--lh-base);
 }
 
 .trust-section p:last-child {
