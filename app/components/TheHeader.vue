@@ -33,18 +33,6 @@ onUnmounted(() => {
     <div class="site-header__inner">
       <NuxtLink :to="localePath('index')" class="site-header__logo">Projent<span class="site-header__logo-accent">IQ</span></NuxtLink>
 
-      <button
-        type="button"
-        class="site-header__menu-toggle"
-        :aria-label="mobileMenuOpen ? t('nav.menu_close') : t('nav.menu_open')"
-        :aria-expanded="mobileMenuOpen"
-        aria-controls="site-header-nav"
-        @click="mobileMenuOpen = !mobileMenuOpen"
-      >
-        <Icon v-show="mobileMenuOpen" name="tabler:x" aria-hidden="true" />
-        <Icon v-show="!mobileMenuOpen" name="tabler:menu-2" aria-hidden="true" />
-      </button>
-
       <nav id="site-header-nav" class="site-header__nav" :class="{ 'is-open': mobileMenuOpen }" :aria-label="t('nav.main_label')">
         <a href="#solutions" @click="closeMenu">{{ t('nav.solutions') }}</a>
         <a href="#pricing" @click="closeMenu">{{ t('nav.pricing') }}</a>
@@ -56,6 +44,17 @@ onUnmounted(() => {
         <LangSwitcher />
         <ThemeToggle />
         <a href="#demo" class="site-header__cta btn-primary">{{ t('nav.cta_demo') }}</a>
+        <button
+          type="button"
+          class="site-header__menu-toggle"
+          :aria-label="mobileMenuOpen ? t('nav.menu_close') : t('nav.menu_open')"
+          :aria-expanded="mobileMenuOpen"
+          aria-controls="site-header-nav"
+          @click="mobileMenuOpen = !mobileMenuOpen"
+        >
+          <Icon v-show="mobileMenuOpen" name="tabler:x" aria-hidden="true" />
+          <Icon v-show="!mobileMenuOpen" name="tabler:menu-2" aria-hidden="true" />
+        </button>
       </div>
     </div>
   </header>
