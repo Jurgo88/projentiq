@@ -1,7 +1,12 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-const steps = [1, 2, 3, 4]
+const steps = [
+  { id: 1, icon: 'tabler:search' },
+  { id: 2, icon: 'tabler:bulb' },
+  { id: 3, icon: 'tabler:rocket' },
+  { id: 4, icon: 'tabler:trending-up' }
+]
 </script>
 
 <template>
@@ -10,10 +15,13 @@ const steps = [1, 2, 3, 4]
       <h2>{{ t('how_it_works.title') }}</h2>
 
       <ol class="how-it-works__list">
-        <li v-for="step in steps" :key="step" class="how-it-works__step">
-          <span class="how-it-works__number" aria-hidden="true">{{ step }}</span>
-          <h3>{{ t(`how_it_works.step_${step}_title`) }}</h3>
-          <p>{{ t(`how_it_works.step_${step}_desc`) }}</p>
+        <li v-for="step in steps" :key="step.id" class="how-it-works__step">
+          <span class="how-it-works__token" aria-hidden="true">
+            <Icon :name="step.icon" class="how-it-works__icon" />
+            <span class="how-it-works__number">{{ step.id }}</span>
+          </span>
+          <h3>{{ t(`how_it_works.step_${step.id}_title`) }}</h3>
+          <p>{{ t(`how_it_works.step_${step.id}_desc`) }}</p>
         </li>
       </ol>
     </div>
@@ -22,11 +30,12 @@ const steps = [1, 2, 3, 4]
 
 <style scoped>
 .how-it-works {
-  padding: 4rem 1.5rem;
+  padding: var(--section-y) 1.5rem;
+  background: var(--color-bg);
 }
 
 .how-it-works__inner {
-  max-width: 72rem;
+  max-width: var(--container);
   margin: 0 auto;
 }
 
@@ -45,24 +54,41 @@ const steps = [1, 2, 3, 4]
 }
 
 .how-it-works__step {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 1.5rem;
+  position: relative;
 }
 
-.how-it-works__number {
+.how-it-works__token {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--r-md);
+  background: var(--color-accent-soft);
+  margin-bottom: 1rem;
+}
+
+.how-it-works__icon {
+  width: 22px;
+  height: 22px;
+  color: var(--color-accent);
+}
+
+.how-it-works__number {
+  position: absolute;
+  top: -0.4rem;
+  right: -0.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 50%;
   background: var(--color-accent-strong);
   color: #fff;
-  font-weight: 700;
-  font-size: 0.9rem;
-  margin-bottom: 0.75rem;
+  font-size: 0.65rem;
+  font-weight: var(--fw-bold);
 }
 
 .how-it-works__step h3 {
@@ -74,6 +100,17 @@ const steps = [1, 2, 3, 4]
   margin: 0;
   color: var(--color-text-muted);
   font-size: 0.9rem;
+}
+
+@media (min-width: 56.01rem) {
+  .how-it-works__step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    left: 3rem;
+    right: -1.5rem;
+    border-top: 2px dashed var(--color-border-strong);
+  }
 }
 
 @media (max-width: 56rem) {
