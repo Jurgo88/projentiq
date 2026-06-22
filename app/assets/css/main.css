@@ -115,6 +115,8 @@
 
 html {
   color-scheme: dark;
+  /* keeps anchor-linked section headings clear of the sticky header */
+  scroll-padding-top: 5rem;
 }
 
 html.light {

@@ -23,8 +23,8 @@ function toggle() {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
   background: none;
   border: 1px solid var(--color-border);
   border-radius: 6px;
