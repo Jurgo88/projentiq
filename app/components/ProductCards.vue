@@ -33,7 +33,7 @@ function examples(id: number) {
           class="products__card"
           :class="{ 'is-flagship': card.flagship }"
         >
-          <p v-if="card.flagship" class="products__badge">{{ t('products.flagship_badge') }}</p>
+          <!-- <p v-if="card.flagship" class="products__badge">{{ t('products.flagship_badge') }}</p> -->
           <span class="products__icon">
             <Icon :name="card.icon" aria-hidden="true" />
           </span>
@@ -116,7 +116,7 @@ function examples(id: number) {
   box-shadow: var(--sh-glow), var(--hairline-top);
 }
 
-.products__badge {
+/* .products__badge {
   align-self: flex-start;
   margin: 0 0 1rem;
   padding: 0.2rem 0.6rem;
@@ -128,7 +128,7 @@ function examples(id: number) {
   font-weight: var(--fw-semibold);
   text-transform: uppercase;
   letter-spacing: var(--tracking-wide);
-}
+} */
 
 .products__icon {
   display: inline-flex;
