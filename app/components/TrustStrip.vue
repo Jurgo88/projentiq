@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const { target, pending } = useReveal()
 
 const items = [
   { id: 1, icon: 'tabler:plug-connected' },
@@ -12,7 +13,7 @@ const items = [
 
 <template>
   <section class="trust-strip">
-    <ul class="trust-strip__list">
+    <ul ref="target" class="trust-strip__list reveal" :class="{ 'reveal--pending': pending }">
       <li v-for="item in items" :key="item.id" class="trust-strip__item">
         <Icon :name="item.icon" class="trust-strip__icon" />
         {{ t(`trust_strip.item_${item.id}`) }}

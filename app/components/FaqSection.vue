@@ -1,12 +1,13 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const { target, pending } = useReveal()
 
 const items = [1, 2, 3, 4]
 </script>
 
 <template>
   <section id="faq" class="faq">
-    <div class="faq__inner">
+    <div ref="target" class="faq__inner reveal" :class="{ 'reveal--pending': pending }">
       <h2>{{ t('faq.title') }}</h2>
 
       <div class="faq__list">

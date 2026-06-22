@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const { target, pending } = useReveal()
 
 const form = reactive({
   name: '',
@@ -56,7 +57,7 @@ async function onSubmit() {
 
 <template>
   <section id="demo" class="contact">
-    <div class="contact__inner">
+    <div ref="target" class="contact__inner reveal" :class="{ 'reveal--pending': pending }">
       <div class="contact__copy">
         <h2>{{ t('contact.title') }}</h2>
         <p class="contact__lead">{{ t('contact.lead') }}</p>
