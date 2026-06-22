@@ -57,8 +57,14 @@ async function onSubmit() {
 <template>
   <section id="demo" class="contact">
     <div class="contact__inner">
-      <h2>{{ t('contact.title') }}</h2>
-      <p class="contact__lead">{{ t('contact.lead') }}</p>
+      <div class="contact__copy">
+        <h2>{{ t('contact.title') }}</h2>
+        <p class="contact__lead">{{ t('contact.lead') }}</p>
+        <p class="contact__microcopy">
+          <Icon name="tabler:calendar-event" aria-hidden="true" />
+          {{ t('contact.success_message') }}
+        </p>
+      </div>
 
       <form
         name="contact"
@@ -160,28 +166,55 @@ async function onSubmit() {
 
 <style scoped>
 .contact {
-  padding: 4rem 1.5rem;
+  padding: var(--section-y) 1.5rem;
+  background: var(--color-bg);
 }
 
 .contact__inner {
-  max-width: 32rem;
+  max-width: var(--container);
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 3rem;
+  align-items: start;
 }
 
 .contact h2 {
   font-size: clamp(1.6rem, 3vw, 2.1rem);
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.75rem;
 }
 
 .contact__lead {
-  margin: 0 0 2rem;
+  margin: 0 0 1.5rem;
   color: var(--color-text-muted);
+}
+
+.contact__microcopy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+}
+
+.contact__microcopy :deep(svg) {
+  width: 16px;
+  height: 16px;
+  color: var(--color-accent);
+  flex-shrink: 0;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-lg);
+  padding: 1.75rem;
+  box-shadow: var(--sh-md), var(--hairline-top);
 }
 
 .contact-form__field {
@@ -192,19 +225,27 @@ async function onSubmit() {
 
 .contact-form__field label {
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
 }
 
 .contact-form__field input[type='text'],
 .contact-form__field input[type='email'],
 .contact-form__field textarea {
-  background: var(--color-bg);
+  background: var(--color-surface-2);
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--r-sm);
   padding: 0.6rem 0.75rem;
   color: var(--color-text);
   font-size: 0.95rem;
   font-family: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.contact-form__field input:focus-visible,
+.contact-form__field textarea:focus-visible {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
 }
 
 .contact-form__field input[aria-invalid='true'],
@@ -244,7 +285,7 @@ async function onSubmit() {
 }
 
 .contact-form button[type='submit'] {
-  align-self: flex-start;
+  width: 100%;
   border: none;
   cursor: pointer;
 }
@@ -252,5 +293,11 @@ async function onSubmit() {
 .contact-form button[type='submit']:disabled {
   opacity: 0.7;
   cursor: not-allowed;
+}
+
+@media (max-width: 56rem) {
+  .contact__inner {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

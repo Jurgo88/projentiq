@@ -19,14 +19,14 @@ const { t } = useI18n()
 
 <style scoped>
 .cta-band {
-  padding: 3.5rem 1.5rem;
-  background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  padding: calc(var(--section-y) * 0.85) 1.5rem;
+  background: var(--color-accent-soft);
+  border-top: 1px solid var(--color-accent-border);
+  border-bottom: 1px solid var(--color-accent-border);
 }
 
 .cta-band__inner {
-  max-width: 72rem;
+  max-width: var(--container);
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -41,12 +41,13 @@ const { t } = useI18n()
 
 .cta-band h2 {
   margin: 0 0 0.4rem;
-  font-size: clamp(1.4rem, 2.6vw, 1.8rem);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
 }
 
 .cta-band__copy p {
   margin: 0;
   color: var(--color-text-muted);
+  font-size: 1.05rem;
 }
 
 .cta-band__actions {

@@ -26,7 +26,10 @@
     "tagline": "AI automation for document processing, knowledge bases, and workflows — built for small and mid-sized businesses in Slovakia and Czechia.",
     "address_placeholder": "Registered address: TODO — add real address",
     "ico_placeholder": "Company ID: TODO — add real ID",
-    "gdpr_link": "Privacy & cookies"
+    "gdpr_link": "Privacy & cookies",
+    "solutions_heading": "Solutions",
+    "company_heading": "Company",
+    "contact_heading": "Contact"
   },
   "hero": {
     "eyebrow": "AI Agents · RAG · Automation",
@@ -92,8 +95,8 @@
     "title": "Why ProjentIQ",
     "item_1_title": "We work with your data",
     "item_1_desc": "AI solutions are built on the documents, systems, and information your company already uses.",
-    "item_2_title": "Tailored to your business",
-    "item_2_desc": "Every company works differently. We adapt the design to your specific process.",
+    "item_2_title": "Built around your process",
+    "item_2_desc": "Every company works differently. We build the design on your specific data and processes.",
     "item_3_title": "See it first, decide after",
     "item_3_desc": "Before you commit, you'll see the solution working on your own data.",
     "item_4_title": "Integrates with your existing systems",

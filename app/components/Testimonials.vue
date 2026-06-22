@@ -19,9 +19,10 @@ const testimonials: Testimonial[] = []
     <div class="testimonials__inner">
       <h2>{{ t('testimonials.title') }}</h2>
 
-      <p v-if="testimonials.length === 0" class="testimonials__placeholder">
-        {{ t('testimonials.coming_soon') }}
-      </p>
+      <div v-if="testimonials.length === 0" class="testimonials__placeholder">
+        <Icon name="tabler:quote" class="testimonials__placeholder-icon" aria-hidden="true" />
+        <p>{{ t('testimonials.coming_soon') }}</p>
+      </div>
 
       <ul v-else class="testimonials__list">
         <li v-for="(item, i) in testimonials" :key="i" class="testimonials__card">
@@ -36,11 +37,12 @@ const testimonials: Testimonial[] = []
 
 <style scoped>
 .testimonials {
-  padding: 4rem 1.5rem;
+  padding: var(--section-y) 1.5rem;
+  background: var(--color-bg);
 }
 
 .testimonials__inner {
-  max-width: 72rem;
+  max-width: var(--container);
   margin: 0 auto;
 }
 
@@ -50,6 +52,23 @@ const testimonials: Testimonial[] = []
 }
 
 .testimonials__placeholder {
+  max-width: 28rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--r-lg);
+  text-align: center;
+}
+
+.testimonials__placeholder-icon {
+  width: 26px;
+  height: 26px;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-subtle);
+}
+
+.testimonials__placeholder p {
+  margin: 0;
   color: var(--color-text-muted);
   font-size: 0.95rem;
 }
@@ -64,9 +83,9 @@ const testimonials: Testimonial[] = []
 }
 
 .testimonials__card {
-  background: var(--color-surface);
+  background: var(--color-surface-2);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
+  border-radius: var(--r-lg);
   padding: 1.5rem;
 }
 
