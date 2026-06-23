@@ -59,6 +59,7 @@ useHead(() => ({
   <TrustStrip />
   <HowItWorks />
   <ProductCards />
+  <InteractiveDemos />
   <WhyProjentIQ />
   <TrustSection />
   <Testimonials />
