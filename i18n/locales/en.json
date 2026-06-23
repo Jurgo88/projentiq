@@ -1,10 +1,11 @@
 {
   "nav": {
     "main_label": "Main navigation",
+    "how_it_works": "How it works",
     "solutions": "Solutions",
-    "pricing": "Pricing",
-    "references": "References",
-    "cta_demo": "Request a demo",
+    "demos": "Try it",
+    "faq": "FAQ",
+    "cta_demo": "Contact us",
     "menu_open": "Open menu",
     "menu_close": "Close menu"
   },
@@ -138,6 +139,64 @@
   "cta_band": {
     "title": "We'll show you on your own data.",
     "lead": "Send us the process or problem you want to solve. We'll design a concrete approach and demo the solution on real company data."
+  },
+  "demos": {
+    "eyebrow": "Try it out",
+    "title": "See how it works in practice",
+    "lead": "Click and see what the solutions actually do — using sample data.",
+    "tab_invoice": "Invoices",
+    "tab_rag": "Knowledge Base",
+    "tab_automation": "Automation",
+    "try_on_card": "Try the demo",
+    "sample_note": "Demo using sample data — nothing is sent.",
+    "btn_reset": "Reset",
+
+    "invoice": {
+      "title": "Sample invoice processing",
+      "sample_a": "Invoice A",
+      "sample_b": "Invoice B",
+      "run": "Process document",
+      "running": "Processing…",
+      "done": "Processed",
+      "out_caption": "Extracted data",
+      "status_wait": "waiting",
+      "status_proc": "processing",
+      "status_done": "done",
+      "empty": "Click \"Process document\" and watch what the system extracts.",
+      "result": "Ready to write to accounting",
+      "f_supplier": "Supplier",
+      "f_ico": "Company ID",
+      "f_date": "Date",
+      "f_base": "VAT base",
+      "f_vat": "VAT 23 %",
+      "f_total": "Total incl. VAT",
+      "f_due": "Due date"
+    },
+
+    "rag": {
+      "name": "Company assistant",
+      "status": "connected to your documents",
+      "docs_label": "Working with documents (sample)",
+      "empty": "Select a question below. The assistant will answer based on company documents.",
+      "suggest_label": "Try asking",
+      "answered": "answered"
+    },
+
+    "automation": {
+      "title": "Automation: order by email",
+      "scenario": "scenario: order arrives → agent processes it automatically",
+      "run": "Run automation",
+      "running": "Running…",
+      "done": "Done",
+      "log_caption": "Progress",
+      "log_empty": "Click \"Run automation\"…",
+      "result": "Done in 6 seconds — no human involvement.",
+      "n_mail": "Email received",
+      "n_agent": "Agent read it",
+      "n_record": "Record created",
+      "n_confirm": "Confirmation sent",
+      "note": "Illustrative workflow demo — we'll customise the steps to your process."
+    }
   },
   "contact": {
     "title": "Get in touch",

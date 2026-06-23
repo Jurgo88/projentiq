@@ -1,10 +1,11 @@
 {
   "nav": {
     "main_label": "Hlavná navigácia",
+    "how_it_works": "Ako to funguje",
     "solutions": "Riešenia",
-    "pricing": "Ceny",
-    "references": "Referencie",
-    "cta_demo": "Požiadať o demo",
+    "demos": "Ukážky",
+    "faq": "FAQ",
+    "cta_demo": "Napíšte nám",
     "menu_open": "Otvoriť menu",
     "menu_close": "Zatvoriť menu"
   },
@@ -38,7 +39,7 @@
     "title_main": "AI systémy, ktoré pracujú",
     "title_highlight": "s vašimi dátami.",
     "lead": "Navrhujeme AI agentov, znalostné systémy a automatizácie, ktoré pomáhajú tímom vyhľadávať informácie, spracovávať dokumenty a vykonávať opakujúce sa úlohy.",
-    "cta_contact": "Kontaktovať nás",
+    "cta_contact": "Napíšte nám",
     "trust_microcopy": "Bezplatné demo na vašich dátach · bez záväzku",
     "panel": {
       "tab_before": "← Predtým",
@@ -138,6 +139,64 @@
   "cta_band": {
     "title": "Ukážeme vám to na vašich dátach.",
     "lead": "Pošlite nám proces alebo problém, ktorý chcete riešiť. Navrhneme konkrétny postup a ukážku riešenia na reálnych firemných dátach."
+  },
+  "demos": {
+    "eyebrow": "Vyskúšajte si to",
+    "title": "Ako to funguje v praxi",
+    "lead": "Kliknite a pozrite, čo riešenia reálne robia — na vzorových dátach.",
+    "tab_invoice": "Faktúry",
+    "tab_rag": "Znalostná báza",
+    "tab_automation": "Automatizácia",
+    "try_on_card": "Vyskúšať ukážku",
+    "sample_note": "Ukážka na vzorových dátach — nič sa neodosiela.",
+    "btn_reset": "Znova",
+
+    "invoice": {
+      "title": "Skúšobné spracovanie faktúry",
+      "sample_a": "Faktúra A",
+      "sample_b": "Faktúra B",
+      "run": "Spracovať doklad",
+      "running": "Spracúvam…",
+      "done": "Spracované",
+      "out_caption": "Vyťažené údaje",
+      "status_wait": "čaká",
+      "status_proc": "spracúva sa",
+      "status_done": "hotovo",
+      "empty": "Kliknite na „Spracovať doklad\" a sledujte, čo systém vytiahne.",
+      "result": "Pripravené na zápis do účtovníctva",
+      "f_supplier": "Dodávateľ",
+      "f_ico": "IČO",
+      "f_date": "Dátum",
+      "f_base": "Základ DPH",
+      "f_vat": "DPH 23 %",
+      "f_total": "Suma s DPH",
+      "f_due": "Splatnosť"
+    },
+
+    "rag": {
+      "name": "Firemný asistent",
+      "status": "napojený na vaše dokumenty",
+      "docs_label": "Pracuje s dokumentmi (ukážka)",
+      "empty": "Vyberte otázku nižšie. Asistent odpovie na základe firemných dokumentov.",
+      "suggest_label": "Skúste sa opýtať",
+      "answered": "odpovedané"
+    },
+
+    "automation": {
+      "title": "Automatizácia: objednávka e-mailom",
+      "scenario": "scenár: príde objednávka → agent ju spracuje sám",
+      "run": "Spustiť automatizáciu",
+      "running": "Beží…",
+      "done": "Hotovo",
+      "log_caption": "Priebeh",
+      "log_empty": "Kliknite na „Spustiť automatizáciu\"…",
+      "result": "Hotovo za 6 sekúnd — bez zásahu človeka.",
+      "n_mail": "E-mail prijatý",
+      "n_agent": "Agent prečítal",
+      "n_record": "Záznam vytvorený",
+      "n_confirm": "Potvrdenie odoslané",
+      "note": "Ilustračná ukážka workflowu — konkrétne kroky prispôsobíme vášmu procesu."
+    }
   },
   "contact": {
     "title": "Ozvite sa nám",

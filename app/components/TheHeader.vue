@@ -34,9 +34,10 @@ onUnmounted(() => {
       <NuxtLink :to="localePath('index')" class="site-header__logo">Projent<span class="site-header__logo-accent">IQ</span></NuxtLink>
 
       <nav id="site-header-nav" class="site-header__nav" :class="{ 'is-open': mobileMenuOpen }" :aria-label="t('nav.main_label')">
+        <a href="#how-it-works" @click="closeMenu">{{ t('nav.how_it_works') }}</a>
         <a href="#solutions" @click="closeMenu">{{ t('nav.solutions') }}</a>
-        <a href="#pricing" @click="closeMenu">{{ t('nav.pricing') }}</a>
-        <a href="#references" @click="closeMenu">{{ t('nav.references') }}</a>
+        <a href="#demos" @click="closeMenu">{{ t('nav.demos') }}</a>
+        <a href="#faq" @click="closeMenu">{{ t('nav.faq') }}</a>
         <a href="#demo" class="site-header__nav-cta btn-primary" @click="closeMenu">{{ t('nav.cta_demo') }}</a>
       </nav>
 
