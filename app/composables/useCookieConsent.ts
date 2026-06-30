@@ -1,19 +1,26 @@
+const CONSENT_KEY = 'ph-consent'
+
 export function useCookieConsent() {
   const { $posthog } = useNuxtApp()
   const showBanner = ref(false)
 
   onMounted(() => {
-    const ph = $posthog()
-    showBanner.value = !ph.has_opted_in_capturing() && !ph.has_opted_out_capturing()
+    showBanner.value = localStorage.getItem(CONSENT_KEY) === null
+    // if user already declined in a previous visit, honour it in PostHog too
+    if (localStorage.getItem(CONSENT_KEY) === 'no') {
+      try { $posthog()?.opt_out_capturing() } catch {}
+    }
   })
 
   function accept() {
-    $posthog().opt_in_capturing()
+    localStorage.setItem(CONSENT_KEY, 'yes')
+    try { $posthog()?.opt_in_capturing() } catch {}
     showBanner.value = false
   }
 
   function decline() {
-    $posthog().opt_out_capturing()
+    localStorage.setItem(CONSENT_KEY, 'no')
+    try { $posthog()?.opt_out_capturing() } catch {}
     showBanner.value = false
   }
 
