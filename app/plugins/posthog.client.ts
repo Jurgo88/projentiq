@@ -3,10 +3,8 @@ import posthog from 'posthog-js'
 export default defineNuxtPlugin({
   name: 'posthog',
   async setup() {
-    const runtimeConfig = useRuntimeConfig()
-
-    const posthogClient = posthog.init(runtimeConfig.public.posthogPublicKey, {
-      api_host: runtimeConfig.public.posthogHost,
+    const posthogClient = posthog.init(import.meta.env.VITE_POSTHOG_KEY, {
+      api_host: import.meta.env.VITE_POSTHOG_HOST,
       capture_pageview: false,
       capture_pageleave: true,
       loaded: (ph) => {
