@@ -1,5 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      posthogPublicKey: '',
+      posthogHost: ''
+    }
+  },
+
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   ssr: true,
