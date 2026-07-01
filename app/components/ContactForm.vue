@@ -37,19 +37,21 @@ async function onSubmit() {
     name: form.name,
     company: form.company,
     email: form.email,
-    message: form.message
+    message: form.message,
+    consent: form.consent ? 'yes' : 'no'
   }).toString()
 
   try {
-    const response = await fetch(window.location.pathname, {
+    const response = await fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body
     })
 
-    if (!response.ok) throw new Error('submit failed')
+    if (!response.ok) throw new Error(`Netlify Forms responded with ${response.status}`)
     status.value = 'success'
-  } catch {
+  } catch (err) {
+    console.error('[ContactForm] submit error:', err)
     status.value = 'error'
   }
 }
