@@ -1,6 +1,14 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
+const trustItems = [
+  { id: 1, icon: 'tabler:plug-connected' },
+  { id: 2, icon: 'tabler:lock' },
+  { id: 3, icon: 'tabler:presentation' },
+  { id: 4, icon: 'tabler:world' },
+  { id: 5, icon: 'tabler:clock' }
+]
+
 const baRows = [
   {
     labelKey: 'hero.panel.invoices_label',
@@ -66,7 +74,12 @@ onUnmounted(stopRotation)
           <a href="#demo" class="btn-primary">{{ t('nav.cta_demo') }}</a>
           <a href="#demo" class="btn-secondary">{{ t('hero.cta_contact') }}</a>
         </div>
-        <p class="hero__trust-microcopy">{{ t('hero.trust_microcopy') }}</p>
+        <ul class="hero__trust-strip" aria-label="Kľúčové vlastnosti">
+          <li v-for="item in trustItems" :key="item.id">
+            <Icon :name="item.icon" aria-hidden="true" />
+            {{ t(`trust_strip.item_${item.id}`) }}
+          </li>
+        </ul>
       </div>
 
       <div class="hero__visual" aria-hidden="true">
@@ -202,11 +215,29 @@ onUnmounted(stopRotation)
   margin: 0 0 1rem;
 }
 
-.hero__trust-microcopy {
+.hero__trust-strip {
+  list-style: none;
   margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.hero__trust-strip li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
   color: var(--color-text-muted);
+}
+
+.hero__trust-strip .icon {
+  width: 14px;
+  height: 14px;
+  color: var(--color-accent);
+  flex-shrink: 0;
 }
 
 .hero-ba {

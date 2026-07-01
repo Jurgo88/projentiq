@@ -56,12 +56,10 @@ useHead(() => ({
 
 <template>
   <HeroSection />
-  <TrustStrip />
-  <HowItWorks />
-  <ProductCards />
-  <InteractiveDemos />
-  <WhyProjentIQ />
   <TrustSection />
+  <HowItWorks />
+  <InteractiveDemos />
+  <ProductCards />
   <Testimonials />
   <FaqSection />
   <CtaBand />
