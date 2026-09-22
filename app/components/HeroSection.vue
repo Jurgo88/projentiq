@@ -64,7 +64,7 @@ onUnmounted(stopRotation)
         </p>
         <div class="hero__cta">
           <a href="#demo" class="btn-primary">{{ t('nav.cta_demo') }}</a>
-          <a href="#demo" class="btn-secondary">{{ t('hero.cta_contact') }}</a>
+          <a href="#demos" class="btn-secondary">{{ t('hero.cta_try') }}</a>
         </div>
         <p class="hero__trust-microcopy">{{ t('hero.trust_microcopy') }}</p>
       </div>

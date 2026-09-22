@@ -5,7 +5,7 @@
     "solutions": "Řešení",
     "demos": "Ukázky",
     "faq": "FAQ",
-    "cta_demo": "Napište nám",
+    "cta_demo": "Chci demo zdarma",
     "menu_open": "Otevřít menu",
     "menu_close": "Zavřít menu"
   },
@@ -46,7 +46,7 @@
     "title_main": "AI systémy pro firmy, které pracují",
     "title_highlight": "s vašimi daty.",
     "lead": "Navrhujeme AI agenty, znalostní systémy a automatizace, které pomáhají týmům vyhledávat informace, zpracovávat dokumenty a provádět opakující se úkoly.",
-    "cta_contact": "Napište nám",
+    "cta_try": "Vyzkoušet ukázku",
     "trust_microcopy": "Bezplatná ukázka na vašich datech · bez závazku",
     "panel": {
       "tab_before": "← Předtím",
@@ -144,7 +144,8 @@
   },
   "cta_band": {
     "title": "Ukážeme vám to na vašich datech.",
-    "lead": "Pošlete nám proces nebo problém, který chcete řešit. Navrhneme konkrétní postup a ukázku řešení na reálných firemních datech."
+    "lead": "Pošlete nám proces nebo problém, který chcete řešit. Navrhneme konkrétní postup a ukázku řešení na reálných firemních datech.",
+    "email": "Napsat e-mail"
   },
   "demos": {
     "eyebrow": "Vyzkoušejte si to",

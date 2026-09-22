@@ -12,7 +12,7 @@ const { target, pending } = useReveal()
       </div>
       <div class="cta-band__actions">
         <a href="#demo" class="btn-primary">{{ t('nav.cta_demo') }}</a>
-        <a href="#demo" class="btn-secondary">{{ t('hero.cta_contact') }}</a>
+        <a :href="`mailto:${COMPANY.email}`" class="btn-secondary">{{ t('cta_band.email') }}</a>
       </div>
     </div>
   </section>
