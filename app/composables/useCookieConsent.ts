@@ -2,7 +2,8 @@ const CONSENT_KEY = 'ph-consent'
 
 export function useCookieConsent() {
   const { $posthog } = useNuxtApp()
-  const showBanner = ref(false)
+  // zdieľaný stav — reset() z inej stránky musí otvoriť lištu v CookieConsent
+  const showBanner = useState('cookie-consent-banner', () => false)
 
   onMounted(() => {
     showBanner.value = localStorage.getItem(CONSENT_KEY) === null
@@ -24,5 +25,12 @@ export function useCookieConsent() {
     showBanner.value = false
   }
 
-  return { showBanner, accept, decline }
+  // zmena voľby (stránka ochrany osobných údajov) — zabudne voľbu
+  // a znovu zobrazí lištu
+  function reset() {
+    localStorage.removeItem(CONSENT_KEY)
+    showBanner.value = true
+  }
+
+  return { showBanner, accept, decline, reset }
 }

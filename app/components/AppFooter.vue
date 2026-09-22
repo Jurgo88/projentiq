@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const { t, locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
+const localePath = useLocalePath()
+// odkazy na sekcie musia fungovať aj z podstránok (napr. ochrana údajov)
+const homePath = computed(() => localePath('index'))
 const year = new Date().getFullYear()
 </script>
 
@@ -10,31 +13,32 @@ const year = new Date().getFullYear()
       <div class="site-footer__brand">
         <strong class="site-footer__logo">Projent<span class="site-footer__logo-accent">IQ</span></strong>
         <p class="site-footer__tagline">{{ t('footer.tagline') }}</p>
-        <!-- TODO: doplniť reálne sídlo a IČO -->
-        <p>{{ t('footer.address_placeholder') }}</p>
-        <p>{{ t('footer.ico_placeholder') }}</p>
+        <p class="site-footer__company">
+          {{ t('footer.operator') }} {{ COMPANY.legalName }}<br />
+          {{ COMPANY.street }}, {{ COMPANY.postalCode }} {{ COMPANY.city }}<br />
+          {{ t('footer.ico_label') }}: {{ COMPANY.ico }} · {{ t('footer.dic_label') }}: {{ COMPANY.dic }}
+        </p>
       </div>
 
       <nav class="site-footer__col" :aria-label="t('footer.solutions_heading')">
         <p class="site-footer__heading">{{ t('footer.solutions_heading') }}</p>
-        <a href="#solutions">{{ t('products.card_1_title') }}</a>
-        <a href="#solutions">{{ t('products.card_2_title') }}</a>
-        <a href="#solutions">{{ t('products.card_3_title') }}</a>
+        <a :href="`${homePath}#solutions`">{{ t('products.card_1_title') }}</a>
+        <a :href="`${homePath}#solutions`">{{ t('products.card_2_title') }}</a>
+        <a :href="`${homePath}#solutions`">{{ t('products.card_3_title') }}</a>
       </nav>
 
       <nav class="site-footer__col" :aria-label="t('footer.company_heading')">
         <p class="site-footer__heading">{{ t('footer.company_heading') }}</p>
-        <a href="#how-it-works">{{ t('how_it_works.title') }}</a>
-        <a href="#why">{{ t('why.title') }}</a>
-        <a href="#faq">{{ t('faq.title') }}</a>
+        <a :href="`${homePath}#how-it-works`">{{ t('how_it_works.title') }}</a>
+        <a :href="`${homePath}#why`">{{ t('why.title') }}</a>
+        <a :href="`${homePath}#faq`">{{ t('faq.title') }}</a>
       </nav>
 
       <nav class="site-footer__col" :aria-label="t('footer.contact_heading')">
         <p class="site-footer__heading">{{ t('footer.contact_heading') }}</p>
-        <a href="mailto:info@projentiq.com">info@projentiq.com</a>
-        <a href="#demo">{{ t('nav.cta_demo') }}</a>
-        <!-- TODO: vytvoriť stránku GDPR/cookies, zatiaľ placeholder odkaz -->
-        <a href="#">{{ t('footer.gdpr_link') }}</a>
+        <a :href="`mailto:${COMPANY.email}`">{{ COMPANY.email }}</a>
+        <a :href="`${homePath}#demo`">{{ t('nav.cta_demo') }}</a>
+        <NuxtLink :to="localePath('privacy')">{{ t('footer.gdpr_link') }}</NuxtLink>
       </nav>
 
       <div class="site-footer__bottom">
@@ -102,6 +106,12 @@ const year = new Date().getFullYear()
   color: var(--color-text);
   font-size: 0.8rem;
   font-weight: var(--fw-semibold);
+}
+
+.site-footer__brand .site-footer__company {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
 }
 
 .site-footer__col a {

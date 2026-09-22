@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
+// odkazy na sekcie musia fungovať aj z podstránok (napr. ochrana údajov)
+const homePath = computed(() => localePath('index'))
 
 const isScrolled = ref(false)
 const mobileMenuOpen = ref(false)
@@ -34,17 +36,17 @@ onUnmounted(() => {
       <NuxtLink :to="localePath('index')" class="site-header__logo">Projent<span class="site-header__logo-accent">IQ</span></NuxtLink>
 
       <nav id="site-header-nav" class="site-header__nav" :class="{ 'is-open': mobileMenuOpen }" :aria-label="t('nav.main_label')">
-        <a href="#how-it-works" @click="closeMenu">{{ t('nav.how_it_works') }}</a>
-        <a href="#solutions" @click="closeMenu">{{ t('nav.solutions') }}</a>
-        <a href="#demos" @click="closeMenu">{{ t('nav.demos') }}</a>
-        <a href="#faq" @click="closeMenu">{{ t('nav.faq') }}</a>
-        <a href="#demo" class="site-header__nav-cta btn-primary" @click="closeMenu">{{ t('nav.cta_demo') }}</a>
+        <a :href="`${homePath}#how-it-works`" @click="closeMenu">{{ t('nav.how_it_works') }}</a>
+        <a :href="`${homePath}#solutions`" @click="closeMenu">{{ t('nav.solutions') }}</a>
+        <a :href="`${homePath}#demos`" @click="closeMenu">{{ t('nav.demos') }}</a>
+        <a :href="`${homePath}#faq`" @click="closeMenu">{{ t('nav.faq') }}</a>
+        <a :href="`${homePath}#demo`" class="site-header__nav-cta btn-primary" @click="closeMenu">{{ t('nav.cta_demo') }}</a>
       </nav>
 
       <div class="site-header__actions">
         <LangSwitcher />
         <ThemeToggle />
-        <a href="#demo" class="site-header__cta btn-primary">{{ t('nav.cta_demo') }}</a>
+        <a :href="`${homePath}#demo`" class="site-header__cta btn-primary">{{ t('nav.cta_demo') }}</a>
         <button
           type="button"
           class="site-header__menu-toggle"

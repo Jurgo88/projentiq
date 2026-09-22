@@ -48,14 +48,24 @@ useHead(() => ({
           {
             '@type': 'Organization',
             '@id': ORG_ID,
-            name: 'ProjentIQ',
+            name: COMPANY.brand,
+            legalName: COMPANY.legalName,
             url: `${SITE_URL}/`,
             description: t('footer.tagline'),
-            email: 'info@projentiq.com',
+            email: COMPANY.email,
+            taxID: COMPANY.dic,
+            identifier: { '@type': 'PropertyValue', propertyID: 'IČO', value: COMPANY.ico },
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: COMPANY.street,
+              postalCode: COMPANY.postalCode,
+              addressLocality: COMPANY.city,
+              addressCountry: COMPANY.country
+            },
             contactPoint: {
               '@type': 'ContactPoint',
               contactType: 'sales',
-              email: 'info@projentiq.com',
+              email: COMPANY.email,
               areaServed: ['SK', 'CZ'],
               availableLanguage: ['sk', 'cs', 'en']
             }

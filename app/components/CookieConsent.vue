@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const localePath = useLocalePath()
 const { showBanner, accept, decline } = useCookieConsent()
 </script>
 
@@ -12,7 +13,7 @@ const { showBanner, accept, decline } = useCookieConsent()
   >
     <p class="cookie-consent__text">
       {{ t('cookie.message') }}
-      <a href="#">{{ t('footer.gdpr_link') }}</a>
+      <NuxtLink :to="localePath('privacy')">{{ t('footer.gdpr_link') }}</NuxtLink>
     </p>
     <div class="cookie-consent__actions">
       <button type="button" class="btn-secondary" @click="decline">
