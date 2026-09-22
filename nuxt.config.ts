@@ -23,12 +23,23 @@ export default defineNuxtConfig({
   app: {
     head: {
       viewport: 'width=device-width, initial-scale=1',
-      meta: [{ name: 'theme-color', content: '#0a0a0f' }]
+      meta: [{ name: 'theme-color', content: '#0a0a0f' }],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
     }
   },
 
+  // Netlify servíruje cs/index.html ako /cs/ a /cs presmeruje (301) —
+  // canonical, hreflang, sitemap aj interné odkazy musia mať lomku na konci
   site: {
-    url: 'https://projentiq.com'
+    url: 'https://projentiq.com',
+    name: 'ProjentIQ',
+    trailingSlash: true
+  },
+
+  experimental: {
+    defaults: {
+      nuxtLink: { trailingSlash: 'append' }
+    }
   },
 
   colorMode: {
@@ -41,6 +52,7 @@ export default defineNuxtConfig({
     baseUrl: 'https://projentiq.com',
     defaultLocale: 'sk',
     strategy: 'prefix_except_default',
+    trailingSlash: true,
     // spec časť 2: žiadny vynútený redirect/switch podľa Accept-Language —
     // jazyk si používateľ vyberá explicitne cez LangSwitcher
     detectBrowserLanguage: false,

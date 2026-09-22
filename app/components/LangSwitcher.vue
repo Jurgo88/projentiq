@@ -48,7 +48,8 @@ onUnmounted(() => {
       <Icon name="tabler:chevron-down" class="lang-switcher__chevron" :class="{ 'is-open': isOpen }" aria-hidden="true" />
     </button>
 
-    <ul v-if="isOpen" class="lang-switcher__menu" role="listbox" :aria-label="t('lang.switch_label')">
+    <!-- v-show (nie v-if): odkazy na jazykové verzie musia byť v HTML aj pre crawlery -->
+    <ul v-show="isOpen" class="lang-switcher__menu" role="listbox" :aria-label="t('lang.switch_label')">
       <li v-for="l in locales" :key="l.code" role="presentation">
         <NuxtLink
           :to="switchLocalePath(l.code)"
