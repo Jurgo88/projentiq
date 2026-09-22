@@ -15,7 +15,6 @@ const year = new Date().getFullYear()
         <p class="site-footer__tagline">{{ t('footer.tagline') }}</p>
         <p class="site-footer__company">
           {{ t('footer.operator') }} {{ COMPANY.legalName }}<br />
-          {{ COMPANY.street }}, {{ COMPANY.postalCode }} {{ COMPANY.city }}<br />
           {{ t('footer.ico_label') }}: {{ COMPANY.ico }} · {{ t('footer.dic_label') }}: {{ COMPANY.dic }}
         </p>
       </div>
