@@ -15,6 +15,17 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  // Bez explicitných defaults @nuxt/fonts žiada od Google Fonts iba hrúbku
+  // 400 (+ kurzívu a všetky abecedy) a 600/700 prehliadač stučňuje umelo.
+  // Inter aj JetBrains Mono sú variabilné — jeden súbor pokryje 400–700.
+  fonts: {
+    defaults: {
+      weights: ['400 700'],
+      styles: ['normal'],
+      subsets: ['latin', 'latin-ext']
+    }
+  },
+
   icon: {
     provider: 'server',
     serverBundle: { collections: ['tabler'] }
