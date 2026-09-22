@@ -1,4 +1,16 @@
 User-Agent: *
 Disallow:
 
+# AI vyhľadávače a asistenti — zámerne povolené (citovanie v AI odpovediach, issue #55)
+User-Agent: GPTBot
+User-Agent: OAI-SearchBot
+User-Agent: ChatGPT-User
+User-Agent: ClaudeBot
+User-Agent: Claude-SearchBot
+User-Agent: Claude-User
+User-Agent: PerplexityBot
+User-Agent: Google-Extended
+User-Agent: Applebot-Extended
+Disallow:
+
 Sitemap: https://projentiq.com/sitemap_index.xml

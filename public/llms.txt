@@ -1,0 +1,33 @@
+# ProjentIQ
+
+> ProjentIQ navrhuje a nasadzuje AI agentov, RAG znalostné systémy a automatizáciu procesov pre malé a stredné firmy na Slovensku a v Česku. Riešenia sú postavené na vlastných dokumentoch, dátach a systémoch firmy; spracovanie prebieha v rámci EÚ, prípadne priamo na infraštruktúre klienta.
+
+## Služby
+
+- **AI Agenti**: AI asistenti napojení na dokumenty, dáta a firemné systémy (interný asistent, zákaznícka podpora, obchodný a operačný asistent).
+- **RAG znalostné systémy**: AI chatboty a asistenti, ktorí odpovedajú na základe internej dokumentácie firmy, s citáciou zdroja.
+- **Automatizácia procesov**: spracovanie faktúr a iných dokladov, e-mailov, generovanie reportov a synchronizácia dát.
+
+## Integrácie
+
+- Účtovné systémy: Pohoda, Omega, iDoklad a ďalšie cez API alebo import.
+- Ďalšie systémy: ERP, CRM, SharePoint, Google Drive, e-mail, databázy, API.
+
+## Spolupráca
+
+1. Analýza procesu: identifikácia opakujúcich sa a časovo náročných úloh.
+2. Návrh riešenia podľa dát a procesov klienta.
+3. Pilotné nasadenie na reálnych dokumentoch; prvé funkčné demo zvyčajne do dvoch týždňov.
+4. Produkčné používanie po schválení.
+
+Sporné polia sú vždy zvýraznené na kontrolu a nič sa nezapíše bez schválenia človekom.
+
+## Stránky
+
+- [ProjentIQ (slovensky)](https://projentiq.com/)
+- [ProjentIQ (česky)](https://projentiq.com/cs/)
+- [ProjentIQ (English)](https://projentiq.com/en/)
+
+## Kontakt
+
+- E-mail: info@projentiq.com
