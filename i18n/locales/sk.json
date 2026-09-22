@@ -37,7 +37,7 @@
   },
   "cookie": {
     "aria_label": "Súhlas s používaním cookies",
-    "message": "Na analýzu návštevnosti používame PostHog (cookies a nahrávanie relácie). Spustíme ho iba s vaším súhlasom, ktorý môžete kedykoľvek odvolať.",
+    "message": "Používame cookies na analýzu návštevnosti, aby sme pochopili, ako web funguje. Pokračovaním súhlasíte, prípadne môžete sledovanie odmietnuť.",
     "accept": "Prijať",
     "decline": "Odmietnuť"
   },

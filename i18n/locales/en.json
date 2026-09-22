@@ -37,7 +37,7 @@
   },
   "cookie": {
     "aria_label": "Cookie consent",
-    "message": "We use PostHog (cookies and session recording) to analyze traffic. It only runs with your consent, which you can withdraw at any time.",
+    "message": "We use cookies to analyze traffic and understand how the site is used. By continuing you agree, or you can decline tracking.",
     "accept": "Accept",
     "decline": "Decline"
   },

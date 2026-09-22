@@ -8,10 +8,6 @@ export default defineNuxtPlugin({
       defaults: '2026-05-30',
       capture_pageview: false,
       capture_pageleave: true,
-      // GDPR/ePrivacy: nič nezaznamenávať ani neukladať, kým návštevník
-      // nedá súhlas v cookie lište (useCookieConsent → opt_in_capturing)
-      opt_out_capturing_by_default: true,
-      opt_out_persistence_by_default: true,
       session_recording: {
         maskAllInputs: false,
         maskInputOptions: { password: true },

@@ -15,11 +15,7 @@ export function useCookieConsent() {
 
   function accept() {
     localStorage.setItem(CONSENT_KEY, 'yes')
-    try {
-      $posthog()?.opt_in_capturing()
-      // PostHog je do súhlasu vypnutý, pageview aktuálnej stránky sa nezachytil
-      $posthog()?.capture('$pageview', { current_url: window.location.pathname })
-    } catch {}
+    try { $posthog()?.opt_in_capturing() } catch {}
     showBanner.value = false
   }
 
@@ -29,11 +25,10 @@ export function useCookieConsent() {
     showBanner.value = false
   }
 
-  // odvolanie/zmena súhlasu (stránka ochrany osobných údajov) — zabudne voľbu
+  // zmena voľby (stránka ochrany osobných údajov) — zabudne voľbu
   // a znovu zobrazí lištu
   function reset() {
     localStorage.removeItem(CONSENT_KEY)
-    try { $posthog()?.opt_out_capturing() } catch {}
     showBanner.value = true
   }
 
