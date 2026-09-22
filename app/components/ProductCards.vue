@@ -59,7 +59,7 @@ function examples(id: number) {
 
       <div class="products__notes">
         <p class="products__pilot">
-          <Icon name="tabler:flask" aria-hidden="true" />
+          <Icon name="tabler:flask" class="products__pilot-icon" aria-hidden="true" />
           <span>{{ t('products.pilot_note', { price: formatPrice(PRICING.pilot) }) }}</span>
         </p>
         <p class="products__vat">{{ t('products.price_note') }}</p>
@@ -219,11 +219,10 @@ function examples(id: number) {
   text-align: left;
 }
 
-.products__pilot :deep(svg) {
+.products__pilot-icon {
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  margin-top: 0.15rem;
+  margin-top: 0.1rem;
+  font-size: 20px;
   color: var(--color-accent);
 }
 

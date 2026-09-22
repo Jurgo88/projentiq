@@ -35,9 +35,10 @@ const areaServed = [
 
 const faqIds = [1, 2, 3, 4]
 
-// ceny z utils/pricing.ts: jednorazová implementácia + mesačná prevádzka (bez DPH)
+// ceny z utils/pricing.ts: jednorazová implementácia + mesačná prevádzka
+// (konečné ceny — neplatiteľ DPH, preto bez valueAddedTaxIncluded)
 function serviceOffer(setup: number, monthly: number) {
-  const base = { '@type': 'UnitPriceSpecification', priceCurrency: PRICING.currency, valueAddedTaxIncluded: false }
+  const base = { '@type': 'UnitPriceSpecification', priceCurrency: PRICING.currency }
   return {
     '@type': 'Offer',
     price: setup,

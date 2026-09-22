@@ -8,7 +8,7 @@
 - **RAG znalostné systémy**: AI chatboty a asistenti, ktorí odpovedajú na základe internej dokumentácie firmy, s citáciou zdroja.
 - **Automatizácia procesov**: spracovanie faktúr a iných dokladov, e-mailov, generovanie reportov a synchronizácia dát.
 
-## Ceny (EUR bez DPH)
+## Ceny (EUR, konečné – nie sme platiteľom DPH)
 
 - Demo na dátach klienta: zdarma.
 - Pilot s pevnou cenou (jeden proces, 2–3 týždne): 990 €, odpočíta sa z ceny implementácie.
