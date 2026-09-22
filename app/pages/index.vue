@@ -33,10 +33,26 @@ const areaServed = [
   { '@type': 'Country', name: 'Czech Republic' }
 ]
 
-// TODO: po potvrdení reálnych cien (ProductCards.vue) doplniť ku každej
-// službe `offers` s priceSpecification — placeholder sumy do schémy nedávať
-const serviceIds = [1, 2, 3]
 const faqIds = [1, 2, 3, 4]
+
+// ceny z utils/pricing.ts: jednorazová implementácia + mesačná prevádzka (bez DPH)
+function serviceOffer(setup: number, monthly: number) {
+  const base = { '@type': 'UnitPriceSpecification', priceCurrency: PRICING.currency, valueAddedTaxIncluded: false }
+  return {
+    '@type': 'Offer',
+    price: setup,
+    priceCurrency: PRICING.currency,
+    priceSpecification: [
+      { ...base, price: setup, description: 'Implementation (one-time, from)' },
+      {
+        ...base,
+        price: monthly,
+        description: 'Operation and support (monthly, from)',
+        referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' }
+      }
+    ]
+  }
+}
 
 useHead(() => ({
   script: [
@@ -78,13 +94,14 @@ useHead(() => ({
             inLanguage: inLanguage.value,
             publisher: { '@id': ORG_ID }
           },
-          ...serviceIds.map((id) => ({
+          ...PRICING.services.map(({ id, setup, monthly }) => ({
             '@type': 'Service',
             name: t(`products.card_${id}_title`),
             serviceType: t(`products.card_${id}_title`),
             description: t(`products.card_${id}_desc`),
             provider: { '@id': ORG_ID },
-            areaServed
+            areaServed,
+            offers: serviceOffer(setup, monthly)
           })),
           {
             '@type': 'FAQPage',

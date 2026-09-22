@@ -8,13 +8,14 @@ function formatPrice(value: number) {
   return value.toLocaleString(localeMap[locale.value] ?? 'sk-SK')
 }
 
-// TODO: placeholder jednorazové ceny za nasadenie (copy spec časť 5) —
-// potvrdiť reálne sumy aj menu pre CS trh (€ vs Kč) pred spustením.
-const cards = [
-  { id: 1, flagship: true, price: 2000, icon: 'tabler:robot' },
-  { id: 2, flagship: false, price: 4000, icon: 'tabler:brain' },
-  { id: 3, flagship: false, price: 8000, icon: 'tabler:settings-automation' }
-]
+const icons: Record<number, string> = {
+  1: 'tabler:robot',
+  2: 'tabler:brain',
+  3: 'tabler:settings-automation'
+}
+
+// poradie a ceny z utils/pricing.ts — vstupný produkt (automatizácia) prvý a zvýraznený
+const cards = PRICING.services.map((s, i) => ({ ...s, flagship: i === 0, icon: icons[s.id] }))
 
 function examples(id: number) {
   return t(`products.card_${id}_examples`).split(' · ')
@@ -43,13 +44,25 @@ function examples(id: number) {
             <li v-for="example in examples(card.id)" :key="example" class="products__tag">{{ example }}</li>
           </ul>
           <p class="products__price">
-            {{ t('products.price_from') }} <strong>{{ formatPrice(card.price) }} {{ t('products.price_currency') }}</strong>
+            {{ t('products.price_from') }} <strong>{{ formatPrice(card.setup) }} {{ t('products.price_currency') }}</strong>
+            {{ t('products.price_one_time') }}
+            <span class="products__monthly">
+              + {{ t('products.price_from') }} {{ formatPrice(card.monthly) }} {{ t('products.price_currency') }} {{ t('products.price_monthly') }}
+            </span>
           </p>
           <a href="#demo" class="products__cta">
             {{ t('nav.cta_demo') }}
             <Icon name="tabler:arrow-right" aria-hidden="true" />
           </a>
         </article>
+      </div>
+
+      <div class="products__notes">
+        <p class="products__pilot">
+          <Icon name="tabler:flask" aria-hidden="true" />
+          <span>{{ t('products.pilot_note', { price: formatPrice(PRICING.pilot) }) }}</span>
+        </p>
+        <p class="products__vat">{{ t('products.price_note') }}</p>
       </div>
     </div>
   </section>
@@ -182,6 +195,42 @@ function examples(id: number) {
   font-size: 1.1rem;
   font-weight: var(--fw-semibold);
   color: var(--color-accent);
+}
+
+.products__monthly {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+.products__notes {
+  margin-top: 1.75rem;
+  text-align: center;
+}
+
+.products__pilot {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  max-width: 44rem;
+  margin: 0;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.products__pilot :deep(svg) {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.15rem;
+  color: var(--color-accent);
+}
+
+.products__vat {
+  margin: 0.6rem 0 0;
+  color: var(--color-text-subtle);
+  font-size: 0.8rem;
 }
 
 .products__cta {
