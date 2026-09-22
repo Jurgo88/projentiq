@@ -8,6 +8,15 @@
 - **RAG znalostné systémy**: AI chatboty a asistenti, ktorí odpovedajú na základe internej dokumentácie firmy, s citáciou zdroja.
 - **Automatizácia procesov**: spracovanie faktúr a iných dokladov, e-mailov, generovanie reportov a synchronizácia dát.
 
+## Ceny (EUR, konečné – nie sme platiteľom DPH)
+
+- Demo na dátach klienta: zdarma.
+- Pilot s pevnou cenou (jeden proces, 2–3 týždne): 990 €, odpočíta sa z ceny implementácie.
+- Automatizácia procesov a dokladov: od 2 500 € jednorazovo + od 149 € mesačne.
+- RAG znalostný systém: od 3 500 € jednorazovo + od 199 € mesačne.
+- AI agent na mieru: od 5 000 € jednorazovo + od 290 € mesačne.
+- Mesačný poplatok zahŕňa prevádzku, náklady na AI, monitoring a podporu.
+
 ## Integrácie
 
 - Účtovné systémy: Pohoda, Omega, iDoklad a ďalšie cez API alebo import.
