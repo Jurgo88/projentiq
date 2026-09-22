@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 const year = new Date().getFullYear()
 </script>
 
@@ -36,7 +37,20 @@ const year = new Date().getFullYear()
         <a href="#">{{ t('footer.gdpr_link') }}</a>
       </nav>
 
-      <p class="site-footer__copy">&copy; {{ year }} ProjentIQ</p>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">&copy; {{ year }} ProjentIQ</p>
+        <nav class="site-footer__langs" :aria-label="t('lang.switch_label')">
+          <NuxtLink
+            v-for="l in locales"
+            :key="l.code"
+            :to="switchLocalePath(l.code)"
+            :hreflang="l.language"
+            :aria-current="l.code === locale ? 'true' : undefined"
+          >
+            {{ l.name }}
+          </NuxtLink>
+        </nav>
+      </div>
     </div>
   </footer>
 </template>
@@ -98,12 +112,34 @@ const year = new Date().getFullYear()
   color: var(--color-text);
 }
 
-.site-footer__copy {
+.site-footer__bottom {
   grid-column: 1 / -1;
-  margin: 1rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  margin-top: 1rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--color-border);
   font-size: 0.8rem;
+}
+
+.site-footer__copy {
+  margin: 0;
+}
+
+.site-footer__langs {
+  display: flex;
+  gap: 1rem;
+}
+
+.site-footer__langs a {
+  color: var(--color-text-muted);
+}
+
+.site-footer__langs a:hover,
+.site-footer__langs a[aria-current='true'] {
+  color: var(--color-text);
 }
 
 @media (max-width: 56rem) {

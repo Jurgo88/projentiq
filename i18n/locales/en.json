@@ -10,9 +10,9 @@
     "menu_close": "Close menu"
   },
   "meta": {
-    "title": "Projentiq – AI agents, knowledge systems, and process automation",
-    "description": "Projentiq helps companies deploy AI agents, RAG knowledge systems, and automations built on their own data and processes.",
-    "service_name": "AI agents, knowledge systems, and process automation"
+    "title": "AI Agents & Process Automation for Businesses – ProjentIQ",
+    "description": "We automate invoice, email, and document processing with AI agents. Integrates with Pohoda, Omega, and iDoklad. A demo on your own data within 2 weeks.",
+    "og_image_alt": "ProjentIQ – AI agents, knowledge systems, and process automation for businesses"
   },
   "a11y": {
     "skip_link": "Skip to content"
@@ -42,7 +42,7 @@
   },
   "hero": {
     "eyebrow": "AI Agents · RAG · Automation",
-    "title_main": "AI systems that work",
+    "title_main": "AI systems for businesses that work",
     "title_highlight": "with your data.",
     "lead": "We design AI agents, knowledge systems, and automations that help teams find information, process documents, and handle repetitive tasks.",
     "cta_contact": "Contact us",

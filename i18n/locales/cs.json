@@ -10,9 +10,9 @@
     "menu_close": "Zavřít menu"
   },
   "meta": {
-    "title": "Projentiq – AI agenti, znalostní systémy a automatizace procesů",
-    "description": "Projentiq pomáhá firmám zavádět AI agenty, RAG znalostní systémy a automatizace postavené na vlastních datech a procesech.",
-    "service_name": "AI agenti, znalostní systémy a automatizace procesů"
+    "title": "AI agenti a automatizace procesů pro firmy – ProjentIQ",
+    "description": "Automatizujeme zpracování faktur, e-mailů a dokumentů pomocí AI agentů. Napojení na Pohodu, Omegu či iDoklad. Demo na vašich datech do 2 týdnů.",
+    "og_image_alt": "ProjentIQ – AI agenti, znalostní systémy a automatizace procesů pro firmy"
   },
   "a11y": {
     "skip_link": "Přeskočit na obsah"
@@ -42,7 +42,7 @@
   },
   "hero": {
     "eyebrow": "AI Agenti · RAG · Automatizace",
-    "title_main": "AI systémy, které pracují",
+    "title_main": "AI systémy pro firmy, které pracují",
     "title_highlight": "s vašimi daty.",
     "lead": "Navrhujeme AI agenty, znalostní systémy a automatizace, které pomáhají týmům vyhledávat informace, zpracovávat dokumenty a provádět opakující se úkoly.",
     "cta_contact": "Napište nám",
