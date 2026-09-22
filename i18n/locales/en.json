@@ -34,6 +34,12 @@
     "company_heading": "Company",
     "contact_heading": "Contact"
   },
+  "cookie": {
+    "aria_label": "Cookie consent",
+    "message": "We use cookies to analyze traffic and understand how the site is used. By continuing you agree, or you can decline tracking.",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
   "hero": {
     "eyebrow": "AI Agents · RAG · Automation",
     "title_main": "AI systems that work",

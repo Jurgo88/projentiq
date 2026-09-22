@@ -34,6 +34,12 @@
     "company_heading": "Firma",
     "contact_heading": "Kontakt"
   },
+  "cookie": {
+    "aria_label": "Souhlas s používáním cookies",
+    "message": "Používáme cookies k analýze návštěvnosti, abychom pochopili, jak web funguje. Pokračováním souhlasíte, případně můžete sledování odmítnout.",
+    "accept": "Přijmout",
+    "decline": "Odmítnout"
+  },
   "hero": {
     "eyebrow": "AI Agenti · RAG · Automatizace",
     "title_main": "AI systémy, které pracují",
