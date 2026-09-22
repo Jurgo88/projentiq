@@ -5,7 +5,7 @@
     "solutions": "Solutions",
     "demos": "Try it",
     "faq": "FAQ",
-    "cta_demo": "Contact us",
+    "cta_demo": "Get a free demo",
     "menu_open": "Open menu",
     "menu_close": "Close menu"
   },
@@ -46,7 +46,7 @@
     "title_main": "AI systems for businesses that work",
     "title_highlight": "with your data.",
     "lead": "We design AI agents, knowledge systems, and automations that help teams find information, process documents, and handle repetitive tasks.",
-    "cta_contact": "Contact us",
+    "cta_try": "Try the demo",
     "trust_microcopy": "Free demo on your own data · no obligation",
     "panel": {
       "tab_before": "← Before",
@@ -148,7 +148,8 @@
   },
   "cta_band": {
     "title": "We'll show you on your own data.",
-    "lead": "Send us the process or problem you want to solve. We'll design a concrete approach and demo the solution on real company data."
+    "lead": "Send us the process or problem you want to solve. We'll design a concrete approach and demo the solution on real company data.",
+    "email": "Send an email"
   },
   "demos": {
     "eyebrow": "Try it out",
