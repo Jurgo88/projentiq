@@ -10,22 +10,17 @@ interface Testimonial {
 }
 
 // TODO: po prvých reálnych referenciách sem doplniť záznamy.
-// NEVYMÝŠĽAŤ citáty ani mená — kým je pole prázdne, sekcia zobrazuje
-// placeholder text (spec časť 6, bod 6).
+// NEVYMÝŠĽAŤ citáty ani mená — kým je pole prázdne, sekcia sa nevykreslí
+// (prázdny placeholder oslaboval dôveru aj SEO, issue #51).
 const testimonials: Testimonial[] = []
 </script>
 
 <template>
-  <section id="references" class="testimonials">
+  <section v-if="testimonials.length" id="references" class="testimonials">
     <div ref="target" class="testimonials__inner reveal" :class="{ 'reveal--pending': pending }">
       <h2>{{ t('testimonials.title') }}</h2>
 
-      <div v-if="testimonials.length === 0" class="testimonials__placeholder">
-        <Icon name="tabler:quote" class="testimonials__placeholder-icon" aria-hidden="true" />
-        <p>{{ t('testimonials.coming_soon') }}</p>
-      </div>
-
-      <ul v-else class="testimonials__list">
+      <ul class="testimonials__list">
         <li v-for="(item, i) in testimonials" :key="i" class="testimonials__card">
           <blockquote>{{ item.quote }}</blockquote>
           <p class="testimonials__author">{{ item.name }} — {{ item.company }}</p>
@@ -50,28 +45,6 @@ const testimonials: Testimonial[] = []
 .testimonials h2 {
   font-size: clamp(1.6rem, 3vw, 2.1rem);
   margin: 0 0 1.5rem;
-}
-
-.testimonials__placeholder {
-  max-width: 28rem;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem;
-  border: 1px dashed var(--color-border-strong);
-  border-radius: var(--r-lg);
-  text-align: center;
-}
-
-.testimonials__placeholder-icon {
-  width: 26px;
-  height: 26px;
-  margin-bottom: 0.75rem;
-  color: var(--color-text-subtle);
-}
-
-.testimonials__placeholder p {
-  margin: 0;
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
 }
 
 .testimonials__list {
