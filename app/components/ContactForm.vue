@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const localePath = useLocalePath()
 const { target, pending } = useReveal()
 
 const form = reactive({
@@ -149,7 +150,7 @@ async function onSubmit() {
               :aria-describedby="errors.consent ? 'cf-consent-error' : undefined"
             />
             <label for="cf-consent">
-              {{ t('contact.consent_pre') }}<a href="#">{{ t('contact.consent_link') }}</a>{{ t('contact.consent_post') }}
+              {{ t('contact.consent_pre') }}<NuxtLink :to="localePath('privacy')" target="_blank">{{ t('contact.consent_link') }}</NuxtLink>{{ t('contact.consent_post') }}
             </label>
             <p v-if="errors.consent" id="cf-consent-error" class="contact-form__error">{{ errors.consent }}</p>
           </div>

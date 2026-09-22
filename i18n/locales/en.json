@@ -27,8 +27,9 @@
   "footer": {
     "links_label": "Links",
     "tagline": "AI automation for document processing, knowledge bases, and workflows — built for small and mid-sized businesses in Slovakia and Czechia.",
-    "address_placeholder": "Registered address: TODO — add real address",
-    "ico_placeholder": "Company ID: TODO — add real ID",
+    "operator": "Operated by",
+    "ico_label": "Company ID",
+    "dic_label": "Tax ID",
     "gdpr_link": "Privacy & cookies",
     "solutions_heading": "Solutions",
     "company_heading": "Company",
@@ -36,7 +37,7 @@
   },
   "cookie": {
     "aria_label": "Cookie consent",
-    "message": "We use cookies to analyze traffic and understand how the site is used. By continuing you agree, or you can decline tracking.",
+    "message": "We use PostHog (cookies and session recording) to analyze traffic. It only runs with your consent, which you can withdraw at any time.",
     "accept": "Accept",
     "decline": "Decline"
   },
@@ -222,5 +223,12 @@
     "error_email": "Enter a valid email address.",
     "error_consent": "You need to agree to data processing before sending.",
     "error_generic": "Something went wrong. Please try again or email us at info{'@'}projentiq.com."
+  },
+  "privacy": {
+    "title": "Privacy & cookies",
+    "meta_description": "How AJRONIK s.r.o. (ProjentIQ) processes personal data from the contact form and analytics, which cookies we use, and what your rights are.",
+    "effective": "Effective from",
+    "change_consent": "Change cookie settings",
+    "consent_reset": "Your choice has been reset. Please choose again in the banner below."
   }
 }

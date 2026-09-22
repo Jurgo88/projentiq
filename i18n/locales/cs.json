@@ -27,8 +27,9 @@
   "footer": {
     "links_label": "Odkazy",
     "tagline": "AI automatizace zpracování dokladů, znalostních bází a procesů pro malé a střední firmy na Slovensku a v Česku.",
-    "address_placeholder": "Sídlo: TODO — doplnit skutečnou adresu",
-    "ico_placeholder": "IČO: TODO — doplnit",
+    "operator": "Provozovatel:",
+    "ico_label": "IČO",
+    "dic_label": "DIČ",
     "gdpr_link": "Ochrana osobních údajů a cookies",
     "solutions_heading": "Řešení",
     "company_heading": "Firma",
@@ -36,7 +37,7 @@
   },
   "cookie": {
     "aria_label": "Souhlas s používáním cookies",
-    "message": "Používáme cookies k analýze návštěvnosti, abychom pochopili, jak web funguje. Pokračováním souhlasíte, případně můžete sledování odmítnout.",
+    "message": "K analýze návštěvnosti používáme PostHog (cookies a nahrávání relace). Spustíme ho pouze s vaším souhlasem, který můžete kdykoli odvolat.",
     "accept": "Přijmout",
     "decline": "Odmítnout"
   },
@@ -222,5 +223,12 @@
     "error_email": "Zadejte platný e-mail.",
     "error_consent": "Pro odeslání je potřeba souhlas se zpracováním údajů.",
     "error_generic": "Něco se pokazilo. Zkuste to znovu nebo nám napište na info{'@'}projentiq.com."
+  },
+  "privacy": {
+    "title": "Ochrana osobních údajů a cookies",
+    "meta_description": "Jak AJRONIK s.r.o. (ProjentIQ) zpracovává osobní údaje z kontaktního formuláře a analytiky, jaké cookies používáme a jaká máte práva.",
+    "effective": "Účinné od",
+    "change_consent": "Změnit nastavení cookies",
+    "consent_reset": "Nastavení bylo zrušeno. Vyberte novou volbu v liště dole."
   }
 }
