@@ -1,7 +1,7 @@
-const CONSENT_KEY = 'ph-consent'
+export const CONSENT_KEY = 'ph-consent'
 
 export function useCookieConsent() {
-  const { $posthog } = useNuxtApp()
+  const { $posthog, $gtag } = useNuxtApp()
   // zdieľaný stav — reset() z inej stránky musí otvoriť lištu v CookieConsent
   const showBanner = useState('cookie-consent-banner', () => false)
 
@@ -13,15 +13,22 @@ export function useCookieConsent() {
     }
   })
 
+  // GA4 beží v Consent Mode — až tento update mu povolí zapisovať cookies
+  function setGtagConsent(state: 'granted' | 'denied') {
+    try { $gtag?.()?.('consent', 'update', { analytics_storage: state }) } catch {}
+  }
+
   function accept() {
     localStorage.setItem(CONSENT_KEY, 'yes')
     try { $posthog()?.opt_in_capturing() } catch {}
+    setGtagConsent('granted')
     showBanner.value = false
   }
 
   function decline() {
     localStorage.setItem(CONSENT_KEY, 'no')
     try { $posthog()?.opt_out_capturing() } catch {}
+    setGtagConsent('denied')
     showBanner.value = false
   }
 
