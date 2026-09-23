@@ -2,6 +2,7 @@
 const { t, locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 const localePath = useLocalePath()
+const { remember } = useLocaleCookie()
 // odkazy na sekcie musia fungovať aj z podstránok (napr. ochrana údajov)
 const homePath = computed(() => localePath('index'))
 const year = new Date().getFullYear()
@@ -49,6 +50,7 @@ const year = new Date().getFullYear()
             :to="switchLocalePath(l.code)"
             :hreflang="l.language"
             :aria-current="l.code === locale ? 'true' : undefined"
+            @click="remember(l.code)"
           >
             {{ l.name }}
           </NuxtLink>

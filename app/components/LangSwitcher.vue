@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { locale, locales, t } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
+const { remember } = useLocaleCookie()
 
 const isOpen = ref(false)
 const root = ref<HTMLElement | null>(null)
@@ -57,7 +58,7 @@ onUnmounted(() => {
           :class="{ 'is-active': l.code === locale }"
           role="option"
           :aria-selected="l.code === locale"
-          @click="close"
+          @click="remember(l.code); close()"
         >
           {{ l.name }}
         </NuxtLink>

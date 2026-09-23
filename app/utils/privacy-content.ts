@@ -4,10 +4,11 @@
 // Obsah zodpovedá tomu, čo web reálne robí: Netlify Forms (kontaktný
 // formulár), Netlify + Cloudflare (hosting/CDN), PostHog EU (analytika
 // a nahrávanie relácií — beží od načítania stránky, kým návštevník v lište
-// neklikne „Odmietnuť“), localStorage (voľba v lište, téma).
+// neklikne „Odmietnuť“), localStorage (voľba v lište, téma) a cookie
+// s voľbou jazyka (projentiq_locale, číta ju edge function na "/").
 // Pri zmene nástrojov treba text aktualizovať aj s dátumom účinnosti.
 
-export const PRIVACY_EFFECTIVE_DATE = '2026-09-22'
+export const PRIVACY_EFFECTIVE_DATE = '2026-09-24'
 
 export interface PrivacySection {
   heading: string
@@ -49,6 +50,7 @@ export const PRIVACY_CONTENT: Record<string, PrivacySection[]> = {
       items: [
         'ph-consent (localStorage, nevyhnutné): pamätá si vašu voľbu v cookie lište, bez expirácie.',
         'nuxt-color-mode (localStorage, nevyhnutné): pamätá si zvolený svetlý alebo tmavý režim, bez expirácie.',
+        'projentiq_locale (cookie, nevyhnutné): pamätá si jazyk, ktorý ste si zvolili v prepínači, aby vás web pri ďalšej návšteve nepresmeroval inam. Platnosť 1 rok.',
         'ph_… (cookie a localStorage, analytické, kým ich neodmietnete): identifikátor návštevníka a relácie nástroja PostHog, platnosť do 1 roka.'
       ],
       paragraphs: [
@@ -115,6 +117,7 @@ export const PRIVACY_CONTENT: Record<string, PrivacySection[]> = {
       items: [
         'ph-consent (localStorage, nezbytné): pamatuje si vaši volbu v cookie liště, bez expirace.',
         'nuxt-color-mode (localStorage, nezbytné): pamatuje si zvolený světlý nebo tmavý režim, bez expirace.',
+        'projentiq_locale (cookie, nezbytné): pamatuje si jazyk, který jste zvolili v přepínači, aby vás web při další návštěvě nepřesměroval jinam. Platnost 1 rok.',
         'ph_… (cookie a localStorage, analytické, dokud je neodmítnete): identifikátor návštěvníka a relace nástroje PostHog, platnost až 1 rok.'
       ],
       paragraphs: [
@@ -181,6 +184,7 @@ export const PRIVACY_CONTENT: Record<string, PrivacySection[]> = {
       items: [
         'ph-consent (localStorage, strictly necessary): remembers your choice in the cookie banner, no expiry.',
         'nuxt-color-mode (localStorage, strictly necessary): remembers your light or dark mode preference, no expiry.',
+        'projentiq_locale (cookie, strictly necessary): remembers the language you picked in the switcher, so the site does not redirect you elsewhere on your next visit. Valid for 1 year.',
         'ph_… (cookie and localStorage, analytics, until you decline): PostHog visitor and session identifier, valid for up to 1 year.'
       ],
       paragraphs: [

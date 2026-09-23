@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@iconify-json/tabler": "^1.2.35",
+    "@netlify/edge-functions": "^4.0.0",
     "@nuxt/fonts": "^0.14.0",
     "@nuxt/icon": "^2.2.3",
     "@nuxt/image": "^2.0.0",

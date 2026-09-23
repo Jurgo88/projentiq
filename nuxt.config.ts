@@ -61,16 +61,17 @@ export default defineNuxtConfig({
 
   i18n: {
     baseUrl: 'https://projentiq.com',
-    defaultLocale: 'sk',
+    // angličtina je default → žije na / a je zároveň x-default pre hreflang
+    defaultLocale: 'en',
     strategy: 'prefix_except_default',
     trailingSlash: true,
-    // spec časť 2: žiadny vynútený redirect/switch podľa Accept-Language —
-    // jazyk si používateľ vyberá explicitne cez LangSwitcher
+    // detekciu jazyka rieši netlify/edge-functions/locale-router.ts, nie klient —
+    // web je staticky generovaný, klientský redirect by blikol zlým jazykom
     detectBrowserLanguage: false,
     locales: [
+      { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
       { code: 'sk', language: 'sk-SK', name: 'Slovensky', file: 'sk.json' },
-      { code: 'cs', language: 'cs-CZ', name: 'Česky', file: 'cs.json' },
-      { code: 'en', language: 'en-US', name: 'English', file: 'en.json' }
+      { code: 'cs', language: 'cs-CZ', name: 'Česky', file: 'cs.json' }
     ]
   }
 })

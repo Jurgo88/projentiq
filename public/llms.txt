@@ -33,9 +33,9 @@ Sporné polia sú vždy zvýraznené na kontrolu a nič sa nezapíše bez schvá
 
 ## Stránky
 
-- [ProjentIQ (slovensky)](https://projentiq.com/)
+- [ProjentIQ (English)](https://projentiq.com/)
+- [ProjentIQ (slovensky)](https://projentiq.com/sk/)
 - [ProjentIQ (česky)](https://projentiq.com/cs/)
-- [ProjentIQ (English)](https://projentiq.com/en/)
 
 ## Kontakt
 
