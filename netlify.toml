@@ -4,3 +4,21 @@
 
 [build.environment]
   NODE_VERSION = "24"
+
+# Migrácia na defaultLocale = 'en' (angličtina sa presunula z /en/ na /,
+# slovenčina z / pod /sk/). Staré URL sú indexované — 301 prenesie autoritu.
+# Poradie je dôležité: Netlify berie prvé pravidlo, ktoré sedí.
+
+[[redirects]]
+  from = "/ochrana-osobnych-udajov/*"
+  to = "/sk/ochrana-osobnych-udajov/"
+  status = 301
+
+[[redirects]]
+  from = "/en/*"
+  to = "/:splat"
+  status = 301
+
+# Koreň "/" sa nepresmerúva — len zmenil jazyk. Detekciu pre sk/cs rieši
+# netlify/edge-functions/locale-router.ts (Netlify ho načíta automaticky,
+# cestu si deklaruje sám cez `export const config`).

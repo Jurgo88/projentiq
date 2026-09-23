@@ -10,7 +10,7 @@ defineI18nRoute({
 const { t, locale } = useI18n()
 const { reset } = useCookieConsent()
 
-const sections = computed(() => PRIVACY_CONTENT[locale.value] ?? PRIVACY_CONTENT.sk)
+const sections = computed(() => PRIVACY_CONTENT[locale.value] ?? PRIVACY_CONTENT.en)
 const effectiveDate = computed(() =>
   new Date(PRIVACY_EFFECTIVE_DATE).toLocaleDateString(locale.value, { day: 'numeric', month: 'long', year: 'numeric' })
 )
