@@ -135,6 +135,20 @@
   "testimonials": {
     "title": "What our clients say"
   },
+  "case_studies": {
+    "section_title": "What we've built",
+    "eyebrow": "Case study",
+    "read_more": "Read the case study",
+    "back": "Back to home",
+    "metrics_label": "Results in numbers",
+    "brief_heading": "The brief",
+    "delivered_heading": "What we delivered",
+    "process_heading": "How we built it",
+    "stack_heading": "Technology",
+    "cta_title": "Have your own idea for an app, or a process you want to simplify?",
+    "cta_lead": "We'll show you how we would build it.",
+    "cta_button": "Get in touch"
+  },
   "faq": {
     "title": "Frequently asked questions",
     "q1": "How is our data protected?",

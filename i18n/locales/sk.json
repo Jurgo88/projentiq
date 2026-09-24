@@ -135,6 +135,20 @@
   "testimonials": {
     "title": "Skúsenosti klientov"
   },
+  "case_studies": {
+    "section_title": "Čo sme postavili",
+    "eyebrow": "Referencia",
+    "read_more": "Pozrieť referenciu",
+    "back": "Späť na úvod",
+    "metrics_label": "Výsledky v číslach",
+    "brief_heading": "Zadanie",
+    "delivered_heading": "Čo sme dodali",
+    "process_heading": "Ako sme stavali",
+    "stack_heading": "Technológie",
+    "cta_title": "Máte vlastný nápad na aplikáciu alebo proces, ktorý chcete zjednodušiť?",
+    "cta_lead": "Ukážeme vám, ako by sme ho postavili.",
+    "cta_button": "Ozvite sa"
+  },
   "faq": {
     "title": "Časté otázky",
     "q1": "Ako sú chránené naše dáta?",
