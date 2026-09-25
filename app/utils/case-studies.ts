@@ -36,7 +36,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       sk: {
         title: 'Predplatiteľská webová aplikácia pre zahraničného klienta',
         lead: 'Od zadania po produkčnú prevádzku: aplikácia s dvoma typmi používateľov, predplatným, komunikáciou v reálnom čase a moderovaním obsahu, ktorú si ľudia inštalujú priamo do telefónu.',
-        cardLead: 'Mobilná aplikácia s predplatným, komunikáciou v reálnom čase a administráciou, vyvíjaná s AI agentmi. 1000+ používateľov zo 70+ krajín za prvý týždeň prevádzky.',
+        cardLead: 'Mobilná aplikácia s predplatným, komunikáciou v reálnom čase a administráciou, vyvíjaná s AI agentmi.',
         metrics: [
           { value: '1000+', label: 'používateľov za prvý týždeň prevádzky' },
           { value: '70+', label: 'krajín' },
@@ -64,7 +64,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       cs: {
         title: 'Předplatitelská webová aplikace pro zahraničního klienta',
         lead: 'Od zadání po produkční provoz: aplikace se dvěma typy uživatelů, předplatným, komunikací v reálném čase a moderováním obsahu, kterou si lidé instalují přímo do telefonu.',
-        cardLead: 'Mobilní aplikace s předplatným, komunikací v reálném čase a administrací, vyvíjená s AI agenty. 1000+ uživatelů ze 70+ zemí za první týden provozu.',
+        cardLead: 'Mobilní aplikace s předplatným, komunikací v reálném čase a administrací, vyvíjená s AI agenty.',
         metrics: [
           { value: '1000+', label: 'uživatelů za první týden provozu' },
           { value: '70+', label: 'zemí' },
@@ -92,7 +92,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       en: {
         title: 'Subscription web app for an international client',
         lead: 'From brief to production: an app with two types of users, subscriptions, real-time communication and content moderation, installed by people straight to their phones.',
-        cardLead: 'A mobile app with subscriptions, real-time communication and an admin panel, built with AI agents. 1,000+ users from 70+ countries in the first week of operation.',
+        cardLead: 'A mobile app with subscriptions, real-time communication and an admin panel, built with AI agents.',
         metrics: [
           { value: '1,000+', label: 'users in the first week of operation' },
           { value: '70+', label: 'countries' },

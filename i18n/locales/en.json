@@ -4,6 +4,7 @@
     "how_it_works": "How it works",
     "solutions": "Solutions",
     "demos": "Try it",
+    "case_studies": "Case studies",
     "faq": "FAQ",
     "cta_demo": "Get a free demo",
     "menu_open": "Open menu",
@@ -136,7 +137,8 @@
     "title": "What our clients say"
   },
   "case_studies": {
-    "section_title": "What we've built",
+    "section_title": "From our work",
+    "section_lead": "One project from brief to production, with numbers from live operation.",
     "eyebrow": "Case study",
     "read_more": "Read the case study",
     "back": "Back to home",

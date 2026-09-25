@@ -4,6 +4,7 @@
     "how_it_works": "Jak to funguje",
     "solutions": "Řešení",
     "demos": "Ukázky",
+    "case_studies": "Reference",
     "faq": "FAQ",
     "cta_demo": "Chci demo zdarma",
     "menu_open": "Otevřít menu",
@@ -136,7 +137,8 @@
     "title": "Zkušenosti klientů"
   },
   "case_studies": {
-    "section_title": "Co jsme postavili",
+    "section_title": "Z naší praxe",
+    "section_lead": "Jeden projekt od zadání po produkci, s čísly z ostrého provozu.",
     "eyebrow": "Reference",
     "read_more": "Zobrazit referenci",
     "back": "Zpět na úvod",
