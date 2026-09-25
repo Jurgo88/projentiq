@@ -4,6 +4,7 @@
     "how_it_works": "Jak to funguje",
     "solutions": "Řešení",
     "demos": "Ukázky",
+    "case_studies": "Reference",
     "faq": "FAQ",
     "cta_demo": "Chci demo zdarma",
     "menu_open": "Otevřít menu",
@@ -134,6 +135,21 @@
   },
   "testimonials": {
     "title": "Zkušenosti klientů"
+  },
+  "case_studies": {
+    "section_title": "Z naší praxe",
+    "section_lead": "Jeden projekt od zadání po produkci, s čísly z ostrého provozu.",
+    "eyebrow": "Reference",
+    "read_more": "Zobrazit referenci",
+    "back": "Zpět na úvod",
+    "metrics_label": "Výsledky v číslech",
+    "brief_heading": "Zadání",
+    "delivered_heading": "Co jsme dodali",
+    "process_heading": "Jak jsme stavěli",
+    "stack_heading": "Technologie",
+    "cta_title": "Máte vlastní nápad na aplikaci nebo proces, který chcete zjednodušit?",
+    "cta_lead": "Ukážeme vám, jak bychom ho postavili.",
+    "cta_button": "Ozvěte se"
   },
   "faq": {
     "title": "Časté otázky",

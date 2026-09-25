@@ -126,6 +126,7 @@ useHead(() => ({
   <HowItWorks />
   <ProductCards />
   <InteractiveDemos />
+  <CaseStudies />
   <WhyProjentIQ />
   <TrustSection />
   <Testimonials />
