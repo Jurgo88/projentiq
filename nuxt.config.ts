@@ -26,9 +26,18 @@ export default defineNuxtConfig({
     }
   },
 
+  // Web je statický (nuxt generate) — /api/_nuxt_icon na Netlify neexistuje.
+  // Ikony, ktoré sa nevykreslili pri prerenderi, by sa po klientskej navigácii
+  // načítavali z API a skončili 404. Preto ich pribalíme do klienta: scanner
+  // ich nájde vo .vue aj .ts (utils/case-studies.ts) — názvy musia byť celé
+  // reťazce 'tabler:…', nie skladané za behu.
   icon: {
     provider: 'server',
-    serverBundle: { collections: ['tabler'] }
+    serverBundle: { collections: ['tabler'] },
+    clientBundle: {
+      scan: { globInclude: ['app/**/*.{vue,ts}'] },
+      sizeLimitKb: 64
+    }
   },
 
   app: {
