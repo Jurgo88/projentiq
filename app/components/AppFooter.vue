@@ -32,6 +32,7 @@ const year = new Date().getFullYear()
         <a :href="`${homePath}#how-it-works`">{{ t('how_it_works.title') }}</a>
         <a :href="`${homePath}#why`">{{ t('why.title') }}</a>
         <a :href="`${homePath}#faq`">{{ t('faq.title') }}</a>
+        <NuxtLink :to="localePath('blog')">{{ t('nav.blog') }}</NuxtLink>
       </nav>
 
       <nav class="site-footer__col" :aria-label="t('footer.contact_heading')">

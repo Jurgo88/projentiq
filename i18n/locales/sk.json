@@ -5,6 +5,7 @@
     "solutions": "Riešenia",
     "demos": "Ukážky",
     "case_studies": "Referencie",
+    "blog": "Blog",
     "faq": "FAQ",
     "cta_demo": "Chcem demo zdarma",
     "menu_open": "Otvoriť menu",
@@ -149,6 +150,17 @@
     "stack_heading": "Technológie",
     "cta_title": "Máte vlastný nápad na aplikáciu alebo proces, ktorý chcete zjednodušiť?",
     "cta_lead": "Ukážeme vám, ako by sme ho postavili.",
+    "cta_button": "Ozvite sa"
+  },
+  "blog": {
+    "title": "Blog",
+    "lead": "Skúsenosti z vývoja aplikácií: ako používame AI, na čo si dávame pozor a prečo.",
+    "meta_description": "Články ProjentIQ o AI, vývoji aplikácií a bezpečnosti — z praxe, zrozumiteľne.",
+    "read_more": "Čítať článok",
+    "reading_time": "{n} min čítania",
+    "back": "Všetky články",
+    "cta_title": "Chcete vedieť, ako je na tom vaša aplikácia?",
+    "cta_lead": "Pozrieme sa na ňu a povieme vám, kde sú riziká.",
     "cta_button": "Ozvite sa"
   },
   "faq": {

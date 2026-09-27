@@ -5,6 +5,7 @@
     "solutions": "Solutions",
     "demos": "Try it",
     "case_studies": "Case studies",
+    "blog": "Blog",
     "faq": "FAQ",
     "cta_demo": "Get a free demo",
     "menu_open": "Open menu",
@@ -149,6 +150,17 @@
     "stack_heading": "Technology",
     "cta_title": "Have your own idea for an app, or a process you want to simplify?",
     "cta_lead": "We'll show you how we would build it.",
+    "cta_button": "Get in touch"
+  },
+  "blog": {
+    "title": "Blog",
+    "lead": "Lessons from building applications: how we use AI, what we watch out for, and why.",
+    "meta_description": "ProjentIQ articles on AI, app development and security — practical and clear.",
+    "read_more": "Read article",
+    "reading_time": "{n} min read",
+    "back": "All articles",
+    "cta_title": "Want to know how your application holds up?",
+    "cta_lead": "We'll take a look and tell you where the risks are.",
     "cta_button": "Get in touch"
   },
   "faq": {
