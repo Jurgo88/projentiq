@@ -101,6 +101,8 @@ useHead(() => ({
           </li>
         </ul>
       </section>
+
+      <p v-if="content.takeaway" class="post__takeaway">{{ content.takeaway }}</p>
     </div>
 
     <section class="post__cta">
@@ -211,6 +213,18 @@ useHead(() => ({
 .post__list strong {
   color: var(--color-text);
   font-weight: var(--fw-semibold);
+}
+
+.post__takeaway {
+  margin: 2.75rem 0 0;
+  padding: 1.5rem 1.75rem;
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-accent-border);
+  border-radius: var(--r-md);
+  color: var(--color-text);
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-base);
 }
 
 .post__cta {

@@ -154,7 +154,7 @@
   },
   "blog": {
     "title": "Blog",
-    "lead": "Poznámky z praxe: AI, vývoj a bezpečnost bez marketingových slibů.",
+    "lead": "Zkušenosti z vývoje aplikací: jak používáme AI, na co si dáváme pozor a proč.",
     "meta_description": "Články ProjentIQ o AI, vývoji aplikací a bezpečnosti — z praxe, srozumitelně.",
     "read_more": "Číst článek",
     "reading_time": "{n} min čtení",

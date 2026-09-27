@@ -13,6 +13,8 @@ export interface BlogPostContent {
   title: string
   perex: string
   sections: BlogSection[]
+  // Zvýraznený záverečný odsek pod sekciami (bez nadpisu).
+  takeaway?: string
 }
 
 export interface BlogPost {
@@ -71,12 +73,9 @@ export const BLOG_POSTS: BlogPost[] = [
               { title: 'Kritický nález blokuje nasadenie', text: 'Kým nie je opravený, zmena nejde do produkcie.' },
               { title: 'Kontrola bezpečnostným expertom', text: 'Pred nasadením prejde aplikáciu náš bezpečnostný expert a hľadá všetky možné chyby: v kóde, v databáze, v nastaveniach aj v tom, čo AI nevidí.' }
             ]
-          },
-          {
-            heading: 'Záver',
-            paragraphs: ['AI je výborný nástroj na písanie aj kontrolu kódu. Nie je to však záruka bezpečnosti. Keď vám AI povie, že je všetko v poriadku, berte to ako prvý názor. Posledné slovo má u nás vždy bezpečnostný expert.']
           }
-        ]
+        ],
+        takeaway: 'AI je výborný nástroj na písanie aj kontrolu kódu. Nie je to však záruka bezpečnosti. Keď vám AI povie, že je všetko v poriadku, berte to ako prvý názor. Posledné slovo má u nás vždy bezpečnostný expert.'
       },
       cs: {
         title: 'AI řekla, že je kód bezpečný. Proč jí to nestačí věřit',
@@ -111,12 +110,9 @@ export const BLOG_POSTS: BlogPost[] = [
               { title: 'Kritický nález blokuje nasazení', text: 'Dokud není opravený, změna nejde do produkce.' },
               { title: 'Kontrola bezpečnostním expertem', text: 'Před nasazením projde aplikaci náš bezpečnostní expert a hledá všechny možné chyby: v kódu, v databázi, v nastavení i v tom, co AI nevidí.' }
             ]
-          },
-          {
-            heading: 'Závěr',
-            paragraphs: ['AI je výborný nástroj na psaní i kontrolu kódu. Není to však záruka bezpečnosti. Když vám AI řekne, že je vše v pořádku, berte to jako první názor. Poslední slovo má u nás vždy bezpečnostní expert.']
           }
-        ]
+        ],
+        takeaway: 'AI je výborný nástroj na psaní i kontrolu kódu. Není to však záruka bezpečnosti. Když vám AI řekne, že je vše v pořádku, berte to jako první názor. Poslední slovo má u nás vždy bezpečnostní expert.'
       },
       en: {
         title: 'The AI said the code is secure. Why that isn’t enough',
@@ -151,12 +147,9 @@ export const BLOG_POSTS: BlogPost[] = [
               { title: 'A critical finding blocks deployment', text: 'Until it is fixed, the change does not go to production.' },
               { title: 'Review by a security expert', text: 'Before deployment, our security expert goes through the application looking for every possible issue: in the code, the database, the configuration, and in what AI can’t see.' }
             ]
-          },
-          {
-            heading: 'Conclusion',
-            paragraphs: ['AI is an excellent tool for writing and reviewing code. It is not a guarantee of security. When AI tells you everything is fine, treat it as a first opinion. With us, the final word always belongs to a security expert.']
           }
-        ]
+        ],
+        takeaway: 'AI is an excellent tool for writing and reviewing code. It is not a guarantee of security. When AI tells you everything is fine, treat it as a first opinion. With us, the final word always belongs to a security expert.'
       }
     }
   }

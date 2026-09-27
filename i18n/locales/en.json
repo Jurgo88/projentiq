@@ -154,7 +154,7 @@
   },
   "blog": {
     "title": "Blog",
-    "lead": "Notes from practice: AI, development and security without the marketing promises.",
+    "lead": "Lessons from building applications: how we use AI, what we watch out for, and why.",
     "meta_description": "ProjentIQ articles on AI, app development and security — practical and clear.",
     "read_more": "Read article",
     "reading_time": "{n} min read",
