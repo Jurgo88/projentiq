@@ -74,7 +74,7 @@ const cards = computed(() =>
 }
 
 .case-studies h2 {
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-size: var(--fs-2xl);
   margin: 0 0 0.75rem;
 }
 
@@ -140,7 +140,7 @@ const cards = computed(() =>
 }
 
 .case-studies__card h3 {
-  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+  font-size: var(--fs-xl);
   line-height: var(--lh-snug);
   margin: 0 0 0.85rem;
 }
@@ -164,6 +164,7 @@ const cards = computed(() =>
 .case-studies__lead {
   margin: 0 0 1.5rem;
   color: var(--color-text-muted);
+  font-size: var(--fs-base);
   line-height: var(--lh-base);
 }
 
@@ -173,7 +174,7 @@ const cards = computed(() =>
   gap: 0.4rem;
   color: var(--color-accent);
   font-weight: var(--fw-semibold);
-  font-size: 0.95rem;
+  font-size: var(--fs-base);
 }
 
 .case-studies__more :deep(svg) {

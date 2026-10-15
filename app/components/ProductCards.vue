@@ -41,27 +41,33 @@ function examples(id: number) {
           <h3>{{ t(`products.card_${card.id}_title`) }}</h3>
           <p class="products__desc">{{ t(`products.card_${card.id}_desc`) }}</p>
           <ul class="products__tags">
-            <li v-for="example in examples(card.id)" :key="example" class="products__tag">{{ example }}</li>
+            <li v-for="item in examples(card.id)" :key="item" class="products__tag">{{ item }}</li>
           </ul>
           <p class="products__price">
             {{ t('products.price_from') }} <strong>{{ formatPrice(card.setup) }} {{ t('products.price_currency') }}</strong>
-            {{ t('products.price_one_time') }}
             <span class="products__monthly">
-              + {{ t('products.price_from') }} {{ formatPrice(card.monthly) }} {{ t('products.price_currency') }} {{ t('products.price_monthly') }}
+              {{ t('products.price_or') }} {{ t('products.price_from') }} <strong>{{ formatPrice(card.monthly) }} {{ t('products.price_currency') }}</strong> {{ t('products.price_monthly') }}
             </span>
           </p>
           <a href="#demo" class="products__cta">
             {{ t('nav.cta_demo') }}
-            <Icon name="tabler:arrow-right" aria-hidden="true" />
           </a>
         </article>
       </div>
 
       <div class="products__notes">
-        <p class="products__pilot">
-          <Icon name="tabler:flask" class="products__pilot-icon" aria-hidden="true" />
-          <span>{{ t('products.pilot_note', { price: formatPrice(PRICING.pilot) }) }}</span>
-        </p>
+        <section class="products__pilot" :aria-label="t('products.pilot_title')">
+          <div class="products__pilot-content">
+            <p class="products__pilot-eyebrow">{{ t('products.pilot_label') }}</p>
+            <h3>{{ t('products.pilot_title') }}</h3>
+            <p class="products__pilot-desc">{{ t('products.pilot_desc') }}</p>
+            <p class="products__pilot-credit">{{ t('products.pilot_credit') }}</p>
+          </div>
+          <div class="products__pilot-price">
+            <!-- <span>{{ t('products.price_fixed') }}</span> -->
+            <strong>{{ formatPrice(PRICING.pilot) }} {{ t('products.price_currency') }}</strong>
+          </div>
+        </section>
         <p class="products__vat">{{ t('products.price_note') }}</p>
       </div>
     </div>
@@ -80,7 +86,7 @@ function examples(id: number) {
 }
 
 .products h2 {
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-size: var(--fs-2xl);
   margin: 0 0 2rem;
 }
 
@@ -158,12 +164,12 @@ function examples(id: number) {
 
 .products__card h3 {
   margin: 0 0 0.6rem;
-  font-size: 1.15rem;
+  font-size: var(--fs-lg);
 }
 
 .products__desc {
   margin: 0 0 1rem;
-  font-size: 0.92rem;
+  font-size: var(--fs-base);
 }
 
 .products__tags {
@@ -180,7 +186,7 @@ function examples(id: number) {
   border-radius: var(--r-full);
   background: var(--color-surface-3);
   color: var(--color-text-muted);
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
 }
 
 .products__price {
@@ -199,63 +205,121 @@ function examples(id: number) {
 
 .products__monthly {
   display: block;
-  margin-top: 0.3rem;
+  margin-top: 0.55rem;
   color: var(--color-text-muted);
-  font-size: 0.8rem;
+  font-size: var(--fs-sm);
+}
+
+.products__monthly strong {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
 }
 
 .products__notes {
-  margin-top: 1.75rem;
-  text-align: center;
+  margin-top: 3rem;
 }
 
 .products__pilot {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  max-width: 44rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 1rem;
+  width: 100%;
   margin: 0;
-  font-size: 0.95rem;
-  text-align: left;
+  padding: 1.75rem 2rem;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--hairline-top);
 }
 
-.products__pilot-icon {
-  flex-shrink: 0;
-  margin-top: 0.1rem;
-  font-size: 20px;
+.products__pilot-content {
+  min-width: 0;
+}
+
+.products__pilot-eyebrow {
+  margin: 0 0 1.25rem;
   color: var(--color-accent);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.6em;
+  text-transform: uppercase;
+}
+
+.products__pilot h3 {
+  margin: 0 0 0.4rem;
+  font-size: var(--fs-lg);
+}
+
+.products__pilot-desc,
+.products__pilot-credit {
+  margin: 0;
+  font-size: var(--fs-base);
+}
+
+.products__pilot-credit {
+  margin-top: 0.4rem;
+  color: var(--color-text-muted);
+}
+
+.products__pilot-price {
+  display: grid;
+  gap: 0.15rem;
+  justify-items: end;
+  white-space: nowrap;
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+.products__pilot-price strong {
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: var(--fw-semibold);
 }
 
 .products__vat {
-  margin: 0.6rem 0 0;
-  color: var(--color-text-subtle);
-  font-size: 0.8rem;
+  margin: 1.5rem 0 0;
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
 }
 
 .products__cta {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.35rem;
+  justify-content: center;
+  width: 100%;
+  min-height: 2.75rem;
   margin-top: 0.85rem;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--color-accent-border);
+  border-radius: var(--r-md);
   color: var(--color-accent);
-  font-size: 0.9rem;
+  font-size: var(--fs-base);
   font-weight: var(--fw-semibold);
   text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
-.products__cta :deep(svg) {
-  width: 16px;
-  height: 16px;
-  transition: transform 0.15s ease;
-}
-
-.products__cta:hover :deep(svg) {
-  transform: translateX(2px);
+.products__cta:hover {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
 }
 
 @media (max-width: 56rem) {
   .products__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 38rem) {
+  .products__pilot {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  .products__pilot-price {
+    justify-items: start;
   }
 }
 </style>

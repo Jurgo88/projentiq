@@ -184,7 +184,7 @@ async function onSubmit() {
 }
 
 .contact h2 {
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-size: var(--fs-2xl);
   margin: 0 0 0.75rem;
 }
 
@@ -266,13 +266,13 @@ async function onSubmit() {
 
 .contact-form__field--checkbox label {
   font-weight: 400;
-  font-size: 0.85rem;
+  font-size: var(--fs-xs);
 }
 
 .contact-form__error {
   margin: 0;
   color: #e5484d;
-  font-size: 0.8rem;
+  font-size: var(--fs-xs);
 }
 
 .contact-form__error--generic {
