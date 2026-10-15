@@ -106,13 +106,13 @@ const year = new Date().getFullYear()
 .site-footer__heading {
   margin: 0 0 0.2rem;
   color: var(--color-text);
-  font-size: 0.8rem;
+  font-size: var(--fs-xs);
   font-weight: var(--fw-semibold);
 }
 
 .site-footer__brand .site-footer__company {
   margin-top: 1rem;
-  font-size: 0.8rem;
+  font-size: var(--fs-xs);
   line-height: 1.6;
 }
 
@@ -133,7 +133,7 @@ const year = new Date().getFullYear()
   margin-top: 1rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--color-border);
-  font-size: 0.8rem;
+  font-size: var(--fs-xs);
 }
 
 .site-footer__copy {

@@ -181,7 +181,7 @@ useHead(() => ({
 }
 
 .case-study h1 {
-  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+  font-size: var(--fs-3xl);
   letter-spacing: var(--tracking-tight);
   line-height: var(--lh-tight);
   margin: 0 0 1rem;
@@ -221,7 +221,7 @@ useHead(() => ({
 
 .case-study__metric dd {
   margin: 0;
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-size: var(--fs-2xl);
   font-weight: var(--fw-bold);
   letter-spacing: var(--tracking-tight);
   background: var(--gradient-text);
@@ -247,16 +247,16 @@ useHead(() => ({
 }
 
 .case-study__section h2 {
-  font-size: clamp(1.4rem, 2.6vw, 1.8rem);
+  font-size: var(--fs-content-h2);
   margin: 0 0 1.25rem;
 }
 
 .case-study__section > p {
-  max-width: 46rem;
+  max-width: 68ch;
   margin: 0;
   color: var(--color-text-muted);
-  font-size: 1.05rem;
-  line-height: var(--lh-base);
+  font-size: var(--fs-md);
+  line-height: var(--lh-reading);
 }
 
 .case-study__delivered {
@@ -276,14 +276,14 @@ useHead(() => ({
 }
 
 .case-study__delivered h3 {
-  font-size: 1.05rem;
+  font-size: var(--fs-lg);
   margin: 0 0 0.5rem;
 }
 
 .case-study__delivered p {
   margin: 0;
   color: var(--color-text-muted);
-  font-size: 0.92rem;
+  font-size: var(--fs-base);
   line-height: var(--lh-base);
 }
 
@@ -340,14 +340,14 @@ useHead(() => ({
 }
 
 .case-study__step h3 {
-  font-size: 1.05rem;
+  font-size: var(--fs-lg);
   margin: 0 0 0.5rem;
 }
 
 .case-study__step p {
   margin: 0;
   color: var(--color-text-muted);
-  font-size: 0.9rem;
+  font-size: var(--fs-base);
   line-height: var(--lh-base);
 }
 
@@ -397,7 +397,7 @@ useHead(() => ({
 
 .case-study__cta h2 {
   max-width: 36rem;
-  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  font-size: var(--fs-content-h2);
   margin: 0 0 0.5rem;
 }
 

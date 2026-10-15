@@ -76,7 +76,7 @@ useSeoMeta({
 }
 
 .blog h1 {
-  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  font-size: var(--fs-3xl);
   letter-spacing: var(--tracking-tight);
   margin: 0 0 0.75rem;
 }
@@ -143,7 +143,7 @@ useSeoMeta({
 }
 
 .blog__card h2 {
-  font-size: 1.2rem;
+  font-size: var(--fs-lg);
   line-height: var(--lh-snug);
   margin: 0 0 0.75rem;
 }
@@ -151,7 +151,7 @@ useSeoMeta({
 .blog__perex {
   margin: 0 0 1.25rem;
   color: var(--color-text-muted);
-  font-size: 0.95rem;
+  font-size: var(--fs-base);
   line-height: var(--lh-base);
 }
 
@@ -162,7 +162,7 @@ useSeoMeta({
   gap: 0.4rem;
   color: var(--color-accent);
   font-weight: var(--fw-semibold);
-  font-size: 0.95rem;
+  font-size: var(--fs-base);
 }
 
 @media (prefers-reduced-motion: reduce) {

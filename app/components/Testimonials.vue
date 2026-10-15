@@ -43,7 +43,7 @@ const testimonials: Testimonial[] = []
 }
 
 .testimonials h2 {
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-size: var(--fs-2xl);
   margin: 0 0 1.5rem;
 }
 
@@ -65,18 +65,18 @@ const testimonials: Testimonial[] = []
 
 .testimonials__card blockquote {
   margin: 0 0 0.75rem;
-  font-size: 0.95rem;
+  font-size: var(--fs-base);
 }
 
 .testimonials__author {
   margin: 0;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
 }
 
 .testimonials__result {
   margin: 0.25rem 0 0;
   color: var(--color-text-muted);
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
 }
 </style>

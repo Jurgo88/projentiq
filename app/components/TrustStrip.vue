@@ -46,7 +46,7 @@ const items = [
   align-items: center;
   gap: 0.45rem;
   color: var(--color-text-muted);
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
   font-weight: var(--fw-medium);
   white-space: nowrap;
 }

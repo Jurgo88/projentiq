@@ -129,7 +129,7 @@ useHead(() => ({
 
 <style scoped>
 .post__inner {
-  max-width: 46rem;
+  max-width: 68ch;
   margin: 0 auto;
 }
 
@@ -159,7 +159,7 @@ useHead(() => ({
 }
 
 .post h1 {
-  font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+  font-size: var(--fs-3xl);
   letter-spacing: var(--tracking-tight);
   line-height: var(--lh-tight);
   margin: 0 0 1rem;
@@ -204,15 +204,15 @@ useHead(() => ({
 }
 
 .post__section h2 {
-  font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+  font-size: var(--fs-content-h2);
   margin: 0 0 0.85rem;
 }
 
 .post__section p,
 .post__list li {
   color: var(--color-text-muted);
-  font-size: 1.05rem;
-  line-height: var(--lh-base);
+  font-size: var(--fs-md);
+  line-height: var(--lh-reading);
 }
 
 .post__section p {
@@ -244,7 +244,7 @@ useHead(() => ({
   border: 1px solid var(--color-accent-border);
   border-radius: var(--r-md);
   color: var(--color-text);
-  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  font-size: var(--fs-lg);
   font-weight: var(--fw-semibold);
   line-height: var(--lh-base);
 }
@@ -268,7 +268,7 @@ useHead(() => ({
 
 .post__cta h2 {
   max-width: 36rem;
-  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  font-size: var(--fs-content-h2);
   margin: 0 0 0.5rem;
 }
 

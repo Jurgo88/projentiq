@@ -66,14 +66,14 @@ useSeoMeta({
 }
 
 .legal h1 {
-  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-size: var(--fs-3xl);
   margin: 0 0 0.5rem;
 }
 
 .legal__meta {
   margin: 0 0 2.5rem;
-  color: var(--color-text-subtle);
-  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
 }
 
 .legal__section {
@@ -81,7 +81,7 @@ useSeoMeta({
 }
 
 .legal h2 {
-  font-size: 1.2rem;
+  font-size: var(--fs-lg);
   margin: 0 0 0.75rem;
 }
 

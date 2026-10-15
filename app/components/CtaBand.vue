@@ -42,13 +42,13 @@ const { target, pending } = useReveal()
 
 .cta-band h2 {
   margin: 0 0 0.4rem;
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-size: var(--fs-2xl);
 }
 
 .cta-band__copy p {
   margin: 0;
   color: var(--color-text-muted);
-  font-size: 1.05rem;
+  font-size: var(--fs-md);
 }
 
 .cta-band__actions {
