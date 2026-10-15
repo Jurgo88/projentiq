@@ -11,6 +11,7 @@ if (!post) {
 const localeMap: Record<string, string> = { sk: 'sk-SK', cs: 'cs-CZ', en: 'en-US' }
 const content = computed(() => post.content[locale.value as BlogLocale] ?? post.content.en)
 const imageAlt = computed(() => post.imageAlt[locale.value as BlogLocale] ?? post.imageAlt.en)
+const inlineImageAlt = computed(() => post.inlineImage?.alt[locale.value as BlogLocale] ?? post.inlineImage?.alt.en ?? '')
 const date = computed(() =>
   new Date(post.datePublished).toLocaleDateString(localeMap[locale.value] ?? 'en-US', {
     day: 'numeric',
@@ -91,16 +92,25 @@ useHead(() => ({
     <div class="post__inner post__body">
       <img :src="post.image" :alt="imageAlt" width="1200" height="630" class="post__img" />
 
-      <section v-for="section in content.sections" :key="section.heading" class="post__section">
-        <h2>{{ section.heading }}</h2>
-        <p v-for="p in section.paragraphs" :key="p">{{ p }}</p>
-        <ul v-if="section.items" class="post__list">
-          <li v-for="item in section.items" :key="item.text">
-            <strong v-if="item.title">{{ item.title }}:</strong>
-            {{ item.text }}
-          </li>
-        </ul>
-      </section>
+      <template v-for="(section, index) in content.sections" :key="section.heading">
+        <section class="post__section">
+          <h2>{{ section.heading }}</h2>
+          <p v-for="p in section.paragraphs" :key="p">{{ p }}</p>
+          <ul v-if="section.items" class="post__list">
+            <li v-for="item in section.items" :key="item.text">
+              <strong v-if="item.title">{{ item.title }}:</strong>
+              {{ item.text }}
+            </li>
+          </ul>
+        </section>
+
+        <figure
+          v-if="post.inlineImage && index + 1 === post.inlineImage.afterSection"
+          class="post__inline-image"
+        >
+          <img :src="post.inlineImage.src" :alt="inlineImageAlt" width="1200" height="630" loading="lazy" />
+        </figure>
+      </template>
 
       <p v-if="content.takeaway" class="post__takeaway">{{ content.takeaway }}</p>
     </div>
@@ -173,6 +183,18 @@ useHead(() => ({
   height: auto;
   aspect-ratio: 1200 / 630;
   margin: 0 0 2.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-md);
+}
+
+.post__inline-image {
+  margin: 0 0 2.25rem;
+}
+
+.post__inline-image img {
+  display: block;
+  width: 100%;
+  height: auto;
   border: 1px solid var(--color-border);
   border-radius: var(--r-md);
 }
