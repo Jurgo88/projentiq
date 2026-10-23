@@ -51,6 +51,9 @@ export interface BlogPostSource {
   }
   tags: string[]
   content: Record<BlogLocale, BlogPostContent>
+  // Zdroje pod článkom — pri aktuálnych témach a bezpečnostných upozorneniach.
+  // Label v jazyku zdroja, dátum ako YYYY-MM-DD (rovnaký pre všetky jazyky).
+  sources?: { label: string; url: string }[]
 }
 
 export interface BlogPost extends Omit<BlogPostSource, 'readingMinutes' | 'image'> {

@@ -26,5 +26,6 @@ Pravidlá písania: [guide.md](guide.md).
 
 ## Napísané
 
+- php2shell-what-businesses-should-do-now — PHP2Shell: kritická chyba v PHP a čo má vaša firma urobiť teraz (aktuálna téma mimo poradia)
 - ai-code-security — AI povedala, že je kód bezpečný. Prečo jej to nestačí veriť
 - how-to-choose-your-first-process-to-automate — Ako vybrať prvý proces na automatizáciu

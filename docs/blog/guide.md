@@ -40,7 +40,8 @@ Súbor `app/content/blog/<slug>.ts`, tvar podľa `BlogPostSource` v
 - **takeaway**: 1–3 vety, čo si má čitateľ zapamätať.
 - Dĺžka: ~400–600 slov v slovenčine. Čas čítania sa dopočíta sám.
 - **tags**: 2–4 z: `Automation`, `AI`, `Processes`, `Security`, `Documents`,
-  `Knowledge base`, `Data privacy`, `Pricing`, `Supabase`.
+  `Knowledge base`, `Data privacy`, `Pricing`, `Supabase`, `PHP`.
+- **sources**: pri aktuálnych témach povinné (pozri nižšie), inak vynechaj.
 
 ## Jazyky
 
@@ -89,6 +90,18 @@ klientoch, výsledkoch alebo tíme **nepíš**.
   princípy a odporúčanie poradiť sa s odborníkom; žiadne čísla článkov zákona.
 - Sľuby výsledkov („zaručene“, „bez chýb“, „100 %“).
 - Útoky na konkurenciu a konkrétne produkty.
+
+## Aktuálne témy (bezpečnostné incidenty, novinky)
+
+Vzor: `app/content/blog/php2shell-what-businesses-should-do-now.ts`.
+
+- Každé tvrdenie o udalosti musí mať zdroj v `sources`: najprv oficiálny
+  (výrobca, SK-CERT/NBÚ, NÚKIB, CERT-EU), potom bezpečnostné firmy. Label =
+  „Vydavateľ: názov, YYYY-MM-DD“.
+- Tu smieš menovať firmy a úrady, ktoré sú zdrojom faktu, a uviesť čísla
+  z týchto zdrojov (verzie, dátumy, skóre). Stále žiadne vymyslené čísla.
+- Ak sa zdroje rozchádzajú (napr. či sa chyba už zneužíva), napíš to.
+- Publikuj hneď: `datePublished` = deň zlúčenia, nie najbližší utorok.
 
 ## Titulný obrázok
 

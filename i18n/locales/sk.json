@@ -162,7 +162,8 @@
     "back": "Všetky články",
     "cta_title": "Chcete vedieť, ako je na tom vaša aplikácia?",
     "cta_lead": "Pozrieme sa na ňu a povieme vám, kde sú riziká.",
-    "cta_button": "Ozvite sa"
+    "cta_button": "Ozvite sa",
+    "sources": "Zdroje"
   },
   "faq": {
     "title": "Časté otázky",

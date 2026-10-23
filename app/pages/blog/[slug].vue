@@ -114,6 +114,15 @@ useHead(() => ({
       </template>
 
       <p v-if="content.takeaway" class="post__takeaway">{{ content.takeaway }}</p>
+
+      <section v-if="post.sources?.length" class="post__sources">
+        <h2>{{ t('blog.sources') }}</h2>
+        <ul>
+          <li v-for="source in post.sources" :key="source.url">
+            <a :href="source.url" target="_blank" rel="noopener">{{ source.label }}</a>
+          </li>
+        </ul>
+      </section>
     </div>
 
     <section class="post__cta">
@@ -248,6 +257,36 @@ useHead(() => ({
   font-size: var(--fs-lg);
   font-weight: var(--fw-semibold);
   line-height: var(--lh-base);
+}
+
+.post__sources {
+  margin-top: 2.5rem;
+}
+
+.post__sources h2 {
+  font-size: var(--fs-md);
+  margin: 0 0 0.75rem;
+}
+
+.post__sources ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.post__sources li {
+  margin-bottom: 0.4rem;
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-base);
+  overflow-wrap: anywhere;
+}
+
+.post__sources a {
+  color: inherit;
+}
+
+.post__sources a:hover {
+  color: var(--color-text);
 }
 
 .post__cta {
