@@ -9,6 +9,8 @@ import type { BlogLocale, BlogPost, BlogPostContent, BlogPostSource } from './bl
 // či je článok vonku, rozhoduje build, nie prehliadač: inak by sa zoznam
 // líšil od prerendrovaného HTML a budúci článok by nemal vygenerovanú stránku.
 declare const __BLOG_BUILD_DATE__: string
+// true v Netlify náhľade PR — naplánované články vidno pred zverejnením (aj v nuxt dev)
+declare const __BLOG_SHOW_SCHEDULED__: boolean
 
 const READING_WPM = 200
 
@@ -45,7 +47,7 @@ function toPost(path: string, { readingMinutes, ...source }: BlogPostSource): Bl
 
 export const BLOG_POSTS: BlogPost[] = Object.entries(sources)
   .map(([path, source]) => toPost(path, source))
-  .filter((post) => post.datePublished <= __BLOG_BUILD_DATE__)
+  .filter((post) => import.meta.dev || __BLOG_SHOW_SCHEDULED__ || post.datePublished <= __BLOG_BUILD_DATE__)
   .sort((a, b) => b.datePublished.localeCompare(a.datePublished) || a.slug.localeCompare(b.slug))
 
 export function findBlogPost(slug: string) {

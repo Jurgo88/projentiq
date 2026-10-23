@@ -61,11 +61,14 @@ export default defineNuxtConfig({
     trailingSlash: true
   },
 
-  // Články s budúcim datePublished sa zobrazia až v builde z toho dňa (UTC) —
-  // denný build spúšťa .github/workflows/blog-scheduled-publish.yml
+  // Články s budúcim datePublished sa na produkcii zobrazia až v builde z toho
+  // dňa (UTC) — denný build spúšťa .github/workflows/blog-scheduled-publish.yml.
+  // Netlify náhľady PR (CONTEXT deploy-preview/branch-deploy) ukazujú aj
+  // naplánované, aby sa článok dal skontrolovať pred zverejnením.
   vite: {
     define: {
-      __BLOG_BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10))
+      __BLOG_BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)),
+      __BLOG_SHOW_SCHEDULED__: JSON.stringify(['deploy-preview', 'branch-deploy'].includes(process.env.CONTEXT ?? ''))
     }
   },
 
