@@ -9,7 +9,7 @@ const posts = computed(() =>
     slug: post.slug,
     image: post.image,
     imageAlt: post.imageAlt[locale.value as BlogLocale] ?? post.imageAlt.en,
-    readingMinutes: post.readingMinutes,
+    readingMinutes: post.readingMinutes[locale.value as BlogLocale] ?? post.readingMinutes.en,
     datePublished: post.datePublished,
     date: new Date(post.datePublished).toLocaleDateString(localeMap[locale.value] ?? 'en-US', {
       day: 'numeric',

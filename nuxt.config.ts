@@ -61,6 +61,14 @@ export default defineNuxtConfig({
     trailingSlash: true
   },
 
+  // Články s budúcim datePublished sa zobrazia až v builde z toho dňa (UTC) —
+  // denný build spúšťa .github/workflows/blog-scheduled-publish.yml
+  vite: {
+    define: {
+      __BLOG_BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10))
+    }
+  },
+
   experimental: {
     defaults: {
       nuxtLink: { trailingSlash: 'append' }

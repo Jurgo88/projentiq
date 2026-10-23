@@ -11,7 +11,8 @@ if (!post) {
 const localeMap: Record<string, string> = { sk: 'sk-SK', cs: 'cs-CZ', en: 'en-US' }
 const content = computed(() => post.content[locale.value as BlogLocale] ?? post.content.en)
 const imageAlt = computed(() => post.imageAlt[locale.value as BlogLocale] ?? post.imageAlt.en)
-const inlineImageAlt = computed(() => post.inlineImage?.alt[locale.value as BlogLocale] ?? post.inlineImage?.alt.en ?? '')
+const readingMinutes = computed(() => post.readingMinutes[locale.value as BlogLocale] ?? post.readingMinutes.en)
+const inlineImageAlt =computed(() => post.inlineImage?.alt[locale.value as BlogLocale] ?? post.inlineImage?.alt.en ?? '')
 const date = computed(() =>
   new Date(post.datePublished).toLocaleDateString(localeMap[locale.value] ?? 'en-US', {
     day: 'numeric',
@@ -82,7 +83,7 @@ useHead(() => ({
         </NuxtLink>
         <p class="post__meta">
           <time :datetime="post.datePublished">{{ date }}</time>
-          · {{ t('blog.reading_time', { n: post.readingMinutes }) }}
+          · {{ t('blog.reading_time', { n: readingMinutes }) }}
         </p>
         <h1>{{ content.title }}</h1>
         <p class="post__perex">{{ content.perex }}</p>
