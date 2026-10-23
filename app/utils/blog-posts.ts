@@ -38,6 +38,7 @@ function toPost(path: string, { readingMinutes, ...source }: BlogPostSource): Bl
   return {
     ...source,
     slug,
+    image: source.image ?? `/blog/${slug}.png`,
     readingMinutes: { sk: minutes('sk'), cs: minutes('cs'), en: minutes('en') }
   }
 }
