@@ -160,8 +160,10 @@
     "read_more": "Read article",
     "reading_time": "{n} min read",
     "back": "All articles",
-    "cta_title": "Want to know how your application holds up?",
-    "cta_lead": "We'll take a look and tell you where the risks are.",
+    "cta_title": "Have your own idea for an app, or a process you want to simplify?",
+    "cta_lead": "We'll show you how we would build it.",
+    "cta_security_title": "Want to know how your application holds up?",
+    "cta_security_lead": "We'll take a look and tell you where the risks are.",
     "cta_button": "Get in touch",
     "sources": "Sources"
   },

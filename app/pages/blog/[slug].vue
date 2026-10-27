@@ -21,6 +21,7 @@ const date = computed(() =>
   })
 )
 const homePath = computed(() => localePath('index'))
+const isSecurityPost = post.tags.includes('Security')
 
 const SITE_URL = 'https://projentiq.com'
 const ORG_ID = `${SITE_URL}/#organization`
@@ -128,8 +129,8 @@ useHead(() => ({
     <section class="post__cta">
       <div class="post__cta-inner">
         <div>
-          <h2>{{ t('blog.cta_title') }}</h2>
-          <p>{{ t('blog.cta_lead') }}</p>
+          <h2>{{ isSecurityPost ? t('blog.cta_security_title') : t('blog.cta_title') }}</h2>
+          <p>{{ isSecurityPost ? t('blog.cta_security_lead') : t('blog.cta_lead') }}</p>
         </div>
         <a :href="`${homePath}#demo`" class="btn-primary">{{ t('blog.cta_button') }}</a>
       </div>
