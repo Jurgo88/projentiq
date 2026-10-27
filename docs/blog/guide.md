@@ -60,7 +60,7 @@ klientoch, výsledkoch alebo tíme **nepíš**.
 
 - Navrhujeme a nasadzujeme AI agentov, RAG znalostné systémy a automatizáciu
   procesov pre malé a stredné firmy na Slovensku a v Česku.
-- Riešenia stavíme na dokumentoch, dátach a systémoch, ktoré firma už používa.
+- Riešenia staviame na dokumentoch, dátach a systémoch, ktoré firma už používa.
 - Spracovanie prebieha v rámci EÚ a dokumenty klientov nezdieľame s tretími
   stranami. Riešenie vieme nasadiť aj priamo na infraštruktúru klienta.
 - Napájame sa na Pohodu, Omegu, iDoklad a ďalšie účtovné systémy cez API
@@ -131,5 +131,7 @@ otázka do diskusie, cesta k obrázku. Po slovensky, bez hashtagov a emoji.
 2. Každé tvrdenie o ProjentIQ je v zozname vyššie; v texte nie je žiadne
    číslo bez zdroja.
 3. `npm run blog:covers` prešiel a obrázok vyzerá dobre.
-4. `npm run generate` prešiel.
+4. Lokálne prešiel `npm run generate`. V cloude, kde chýba prístup ku Google
+   Fonts, stačí `npx tsc --noEmit -p .nuxt/tsconfig.app.json`; celý build
+   overí Netlify náhľad v PR.
 5. Všetky tri jazyky majú rovnaký počet sekcií a položiek.
