@@ -3,7 +3,7 @@ export default defineBlogPost({
   datePublished: '2026-11-03',
   cover: {
     tag: 'Automatizácia',
-    card: { badge: 'PO', label: 'Faktúry do Pohody', text: 'Kto skontroluje doklad, ktorý AI neprečíta?' },
+    card: { badge: 'AI', label: 'Faktúry do Pohody', text: 'Kto skontroluje doklad, ktorý AI neprečíta?' },
     headline: 'Najprv kontrola,',
     highlight: 'až potom zápis do Pohody.',
     footnote: 'Ako funguje tok faktúry a kde sú jeho limity.'
@@ -25,7 +25,7 @@ export default defineBlogPost({
           items: [
             { title: 'Doklad príde', text: 'z e-mailu, zdieľaného disku alebo skenera, ako PDF či obrázok.' },
             { title: 'Extrakcia', text: 'systém z dokladu prečíta dodávateľa, číslo, dátumy, sumy a položky.' },
-            { title: 'Kontrola spornej hodnoty', text: 'čo sa nedá prečítať alebo nesedí, sa označí.' },
+            { title: 'Kontrola sporných hodnôt', text: 'čo sa nedá prečítať alebo nesedí, sa označí.' },
             { title: 'Schválenie človekom', text: 'účtovník vidí doklad vedľa vyťažených údajov a potvrdí alebo opraví.' },
             { title: 'Zápis do Pohody', text: 'až schválený záznam sa odovzdá účtovnému systému.' }
           ]
@@ -50,7 +50,7 @@ export default defineBlogPost({
             { title: 'Zlá kvalita', text: 'rozmazaný sken, odfotený doklad pod uhlom, pečiatka cez text alebo ručné poznámky na okraji.' },
             { title: 'Neštandardné doklady', text: 'zahraničné faktúry, zálohové faktúry, dobropisy či zmluvné dokumenty s nezvyčajným rozložením.' },
             { title: 'Účtovné rozhodnutia', text: 'na ktorý účet a do akého obdobia doklad patrí, rozhoduje pravidlo firmy a účtovník, nie odhad modelu.' },
-            { title: 'Nový dodávateľ', text: 'prvé doklady od neznámeho dodávateľa potrebujú viac opráv, než tie od stálych.' }
+            { title: 'Nový dodávateľ', text: 'prvé doklady od neznámeho dodávateľa potrebujú viac opráv než tie od stálych.' }
           ]
         },
         {
@@ -62,10 +62,10 @@ export default defineBlogPost({
         },
         {
           heading: 'Ako to riešime my',
-          paragraphs: ['Na doklady, ktoré firma už používa, napájame spracovanie na Pohodu, Omegu, iDoklad a ďalšie účtovné systémy cez API alebo import. Sporné polia sú zvýraznené na kontrolu, nič sa nezapíše bez schválenia človekom a systém sa učí z opráv. Pred ostrým použitím ho vyskúšame v pilote na reálnych dokladoch.']
+          paragraphs: ['Spracovanie staviame na dokladoch a systémoch, ktoré firma už používa, a napájame ho na Pohodu, Omegu, iDoklad či iné účtovné systémy cez API alebo import. Sporné polia sú zvýraznené na kontrolu, nič sa nezapíše bez schválenia človekom a systém sa učí z opráv. Pred ostrým použitím ho vyskúšame v pilote na reálnych dokladoch.']
         }
       ],
-      takeaway: 'Dobrá automatizácia faktúr nehľadá doklady, ktoré treba obísť, ale ktoré treba ukázať človeku. Skúste to najprv na vzorke vlastných dokladov a sledujte najmä chyby, ktoré systém neoznačil.'
+      takeaway: 'Dobrá automatizácia faktúr človeka nevynecháva, ale presne mu ukáže, čo má skontrolovať. Skúste to najprv na vzorke vlastných dokladov a sledujte najmä chyby, ktoré systém neoznačil.'
     },
     cs: {
       title: 'Faktury do Pohody automaticky: jak to funguje a kde jsou limity',
@@ -77,7 +77,7 @@ export default defineBlogPost({
           items: [
             { title: 'Doklad dorazí', text: 'z e-mailu, sdíleného disku nebo skeneru, jako PDF či obrázek.' },
             { title: 'Extrakce', text: 'systém z dokladu přečte dodavatele, číslo, data, částky a položky.' },
-            { title: 'Kontrola sporné hodnoty', text: 'co nelze přečíst nebo nesedí, se označí.' },
+            { title: 'Kontrola sporných hodnot', text: 'co nelze přečíst nebo nesedí, se označí.' },
             { title: 'Schválení člověkem', text: 'účetní vidí doklad vedle vytěžených údajů a potvrdí nebo opraví.' },
             { title: 'Zápis do Pohody', text: 'teprve schválený záznam se předá účetnímu systému.' }
           ]
@@ -114,10 +114,10 @@ export default defineBlogPost({
         },
         {
           heading: 'Jak to řešíme my',
-          paragraphs: ['Nad doklady, které firma už používá, napojujeme zpracování na Pohodu, Omegu, iDoklad a další účetní systémy přes API nebo import. Sporná pole jsou zvýrazněná ke kontrole, nic se nezapíše bez schválení člověkem a systém se učí z oprav. Před ostrým použitím ho vyzkoušíme v pilotu na reálných dokladech.']
+          paragraphs: ['Zpracování stavíme na dokladech a systémech, které firma už používá, a napojujeme ho na Pohodu, Omegu, iDoklad či jiné účetní systémy přes API nebo import. Sporná pole jsou zvýrazněná ke kontrole, nic se nezapíše bez schválení člověkem a systém se učí z oprav. Před ostrým použitím ho vyzkoušíme v pilotu na reálných dokladech.']
         }
       ],
-      takeaway: 'Dobrá automatizace faktur nehledá doklady, které je třeba obejít, ale ty, které je třeba ukázat člověku. Zkuste to nejdřív na vzorku vlastních dokladů a sledujte hlavně chyby, které systém neoznačil.'
+      takeaway: 'Dobrá automatizace faktur člověka nevynechává, ale přesně mu ukáže, co má zkontrolovat. Zkuste to nejdřív na vzorku vlastních dokladů a sledujte hlavně chyby, které systém neoznačil.'
     },
     en: {
       title: 'Invoices into Pohoda automatically: how it works and where the limits are',
@@ -166,10 +166,10 @@ export default defineBlogPost({
         },
         {
           heading: 'How we approach it',
-          paragraphs: ['We connect processing to the documents a company already uses, and to Pohoda, Omega, iDoklad and other accounting systems via API or import. Doubtful fields are highlighted for review, nothing is written without approval by a person, and the system learns from corrections. Before live use, we try it in a pilot on real documents.']
+          paragraphs: ['We build processing on the documents and systems a company already uses and connect it to Pohoda, Omega, iDoklad or other accounting systems via API or import. Doubtful fields are highlighted for review, nothing is written without approval by a person, and the system learns from corrections. Before live use, we try it in a pilot on real documents.']
         }
       ],
-      takeaway: 'Good invoice automation does not look for documents it can get around, but for the ones that need to be shown to a person. Try it first on a batch of your own documents and pay most attention to the errors the system did not flag.'
+      takeaway: 'Good invoice automation doesn’t cut people out; it shows them exactly what to check. Try it first on a batch of your own documents and pay most attention to the errors the system did not flag.'
     }
   }
 })
