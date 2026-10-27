@@ -54,19 +54,16 @@
       "tab_before": "← Before",
       "tab_after": "After →",
       "disclaimer": "Times are illustrative — real results depend on your process",
-
       "invoices_label": "Invoices",
       "invoices_before": "Manual entry into accounting",
       "invoices_before_meta": "~3 hrs/day",
       "invoices_after": "AI extracts data, you approve",
       "invoices_after_meta": "~8 sec/invoice",
-
       "contracts_label": "Contracts",
       "contracts_before": "Searching a shared drive",
       "contracts_before_meta": "~20 min/query",
       "contracts_after": "Assistant answers with a citation",
       "contracts_after_meta": "~4 sec/query",
-
       "orders_label": "Orders",
       "orders_before": "Manual entry from emails",
       "orders_before_meta": "every day",
@@ -101,10 +98,9 @@
     "title": "Solutions & pricing",
     "price_from": "from",
     "price_currency": "€",
-    "price_one_time": "one-time",
     "price_monthly": "per month",
-    "pilot_note": "Not sure yet? Start with a fixed-price pilot for {price} € on a single process. We deduct it from the implementation price if you go ahead.",
-    "price_note": "We are not VAT-registered, so these are final prices. The monthly fee covers hosting, AI costs, monitoring, and support. The demo on your own data is free.",
+    "price_or": "or",
+    "price_note": "Prices are final; we are not VAT-registered. The monthly fee covers hosting, monitoring, basic support, and an agreed AI usage allowance. We approve any usage above the allowance or third-party licences in advance. We confirm the exact scope before work begins.",
     "flagship_badge": "Flagship product",
     "card_1_title": "AI Agents",
     "card_1_desc": "AI assistants connected to your documents, data, and company systems.",
@@ -114,7 +110,12 @@
     "card_2_examples": "Company knowledge base · Technical documentation · Internal processes · Customer support",
     "card_3_title": "Process Automation",
     "card_3_desc": "Automation of documents, emails, and repetitive tasks.",
-    "card_3_examples": "Invoice processing · Email processing · Report generation · Data synchronization"
+    "card_3_examples": "Invoice processing · Email processing · Report generation · Data synchronization",
+    "pilot_label": "Pilot version",
+    "pilot_title": "Validate the process before full implementation",
+    "pilot_desc": "We review selected input data for one agreed process and compare the result with a success measure set in advance. The pilot includes a limited demonstration, not full integrations or production deployment.",
+    "pilot_credit": "If you proceed, we deduct the full pilot fee from the implementation price.",
+    "price_fixed": "fixed price"
   },
   "why": {
     "title": "Why ProjentIQ",
@@ -161,7 +162,8 @@
     "back": "All articles",
     "cta_title": "Want to know how your application holds up?",
     "cta_lead": "We'll take a look and tell you where the risks are.",
-    "cta_button": "Get in touch"
+    "cta_button": "Get in touch",
+    "sources": "Sources"
   },
   "faq": {
     "title": "Frequently asked questions",
@@ -189,7 +191,6 @@
     "try_on_card": "Try the demo",
     "sample_note": "Demo using sample data — nothing is sent.",
     "btn_reset": "Reset",
-
     "invoice": {
       "title": "Sample invoice processing",
       "sample_a": "Invoice A",
@@ -211,7 +212,6 @@
       "f_total": "Total incl. VAT",
       "f_due": "Due date"
     },
-
     "rag": {
       "name": "Company assistant",
       "status": "connected to your documents",
@@ -220,7 +220,6 @@
       "suggest_label": "Try asking",
       "answered": "answered"
     },
-
     "automation": {
       "title": "Automation: order by email",
       "scenario": "scenario: order arrives → agent processes it automatically",

@@ -3,11 +3,11 @@
 // id = products.card_<id>_* v prekladoch.
 export const PRICING = {
   currency: 'EUR',
-  pilot: 990,
+  pilot: 490,
   services: [
-    { id: 3, setup: 2500, monthly: 149 }, // Automatizácia procesov / dokladov — vstupný produkt
-    { id: 2, setup: 3500, monthly: 199 }, // RAG znalostné systémy
-    { id: 1, setup: 5000, monthly: 290 } // AI agenti na mieru
+    { id: 3, setup: 990, monthly: 79 }, // Automatizácia jedného jasne ohraničeného procesu
+    { id: 2, setup: 1490, monthly: 99 }, // Znalostný systém nad dohodnutým zdrojom dokumentov
+    { id: 1, setup: 2500, monthly: 199 } // AI agent pre jeden pracovný proces
   ]
 } as const
 

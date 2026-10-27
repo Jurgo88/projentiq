@@ -54,19 +54,16 @@
       "tab_before": "← Předtím",
       "tab_after": "Potom →",
       "disclaimer": "Časy jsou ilustrační — reálné výsledky závisí na procesu",
-
       "invoices_label": "Faktury",
       "invoices_before": "Ruční přepis do účetnictví",
       "invoices_before_meta": "~3 hod./den",
       "invoices_after": "AI vytáhne údaje, vy schválíte",
       "invoices_after_meta": "~8 sek./faktura",
-
       "contracts_label": "Smlouvy",
       "contracts_before": "Hledání na sdíleném disku",
       "contracts_before_meta": "~20 min./dotaz",
       "contracts_after": "Asistent odpoví s citací",
       "contracts_after_meta": "~4 sek./dotaz",
-
       "orders_label": "Objednávky",
       "orders_before": "Ruční zadávání z e-mailů",
       "orders_before_meta": "každý den",
@@ -101,10 +98,9 @@
     "title": "Řešení a ceník",
     "price_from": "od",
     "price_currency": "€",
-    "price_one_time": "jednorázově",
     "price_monthly": "měsíčně",
-    "pilot_note": "Nejste si jistí? Začněte pilotem s pevnou cenou {price} € na jednom procesu. Při objednávce implementace ho odečteme z ceny.",
-    "price_note": "Nejsme plátci DPH, uvedené ceny jsou konečné. Měsíční poplatek zahrnuje provoz, náklady na AI, monitoring a podporu. Demo na vašich datech je zdarma.",
+    "price_or": "nebo",
+    "price_note": "Ceny jsou konečné, nejsme plátci DPH. Měsíční poplatek pokrývá hosting, monitoring, základní podporu a dohodnutý limit používání AI. Případné nadlimitní používání nebo licence třetích stran předem odsouhlasíme. Přesný rozsah potvrdíme před zahájením.",
     "flagship_badge": "Hlavní produkt",
     "card_1_title": "AI Agenti",
     "card_1_desc": "AI asistenti napojení na vaše dokumenty, data a firemní systémy.",
@@ -114,7 +110,12 @@
     "card_2_examples": "Firemní znalostní báze · Technická dokumentace · Interní procesy · Zákaznická podpora",
     "card_3_title": "Automatizace Procesů",
     "card_3_desc": "Automatizace dokumentů, e-mailů a opakujících se úkolů.",
-    "card_3_examples": "Zpracování faktur · Zpracování e-mailů · Generování reportů · Synchronizace dat"
+    "card_3_examples": "Zpracování faktur · Zpracování e-mailů · Generování reportů · Synchronizace dat",
+    "pilot_label": "Pilotní verze",
+    "pilot_title": "Nejprve ověření, potom plná implementace",
+    "pilot_desc": "U jednoho dohodnutého procesu ověříme vybraná vstupní data a výsledek porovnáme s kritériem úspěchu, které si stanovíme předem. Pilot zahrnuje omezenou ukázku, nikoli plné integrace nebo produkční nasazení.",
+    "pilot_credit": "Pokud se rozhodnete pokračovat, celou cenu pilotu odečteme z implementace.",
+    "price_fixed": "pevná cena"
   },
   "why": {
     "title": "Proč ProjentIQ",
@@ -161,7 +162,8 @@
     "back": "Všechny články",
     "cta_title": "Chcete vědět, jak je na tom vaše aplikace?",
     "cta_lead": "Podíváme se na ni a řekneme vám, kde jsou rizika.",
-    "cta_button": "Ozvěte se"
+    "cta_button": "Ozvěte se",
+    "sources": "Zdroje"
   },
   "faq": {
     "title": "Časté otázky",
@@ -189,7 +191,6 @@
     "try_on_card": "Vyzkoušet ukázku",
     "sample_note": "Ukázka na vzorových datech — nic se neodesílá.",
     "btn_reset": "Znovu",
-
     "invoice": {
       "title": "Zkušební zpracování faktury",
       "sample_a": "Faktura A",
@@ -211,7 +212,6 @@
       "f_total": "Částka s DPH",
       "f_due": "Splatnost"
     },
-
     "rag": {
       "name": "Firemní asistent",
       "status": "napojený na vaše dokumenty",
@@ -220,7 +220,6 @@
       "suggest_label": "Zkuste se zeptat",
       "answered": "odpovězeno"
     },
-
     "automation": {
       "title": "Automatizace: objednávka e-mailem",
       "scenario": "scénář: přijde objednávka → agent ji zpracuje sám",

@@ -121,12 +121,12 @@ defineExpose({ scrollToAndOpen })
 }
 
 .demos__header h2 {
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-size: var(--fs-2xl);
   margin: 0 0 1rem;
 }
 
 .demos__lead {
-  font-size: var(--fs-base);
+  font-size: var(--fs-md);
   color: var(--color-text-muted);
   margin: 0;
   line-height: var(--lh-base);

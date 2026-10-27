@@ -51,7 +51,7 @@ onUnmounted(stopRotation)
       <div class="hero__copy">
         <p class="eyebrow">{{ t('hero.eyebrow') }}</p>
         <h1>{{ t('hero.title_main') }} <span class="hero__title-gradient">{{ t('hero.title_highlight') }}</span></h1>
-        <p>{{ t('hero.lead') }}</p>
+        <p class="hero__lead">{{ t('hero.lead') }}</p>
         <p
           class="hero__rotator"
           aria-live="polite"
@@ -141,7 +141,7 @@ onUnmounted(stopRotation)
 }
 
 .hero__copy h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: var(--fs-3xl);
   margin: 0 0 1.25rem;
 }
 
@@ -158,9 +158,9 @@ onUnmounted(stopRotation)
   }
 }
 
-.hero__copy p {
+.hero__lead {
   color: var(--color-text-muted);
-  font-size: 1.05rem;
+  font-size: var(--fs-md);
   margin: 0 0 1.75rem;
   max-width: 38rem;
 }
@@ -172,7 +172,7 @@ onUnmounted(stopRotation)
   min-height: 1.4rem;
   margin: 0 0 1.75rem;
   color: var(--color-accent);
-  font-size: 0.95rem;
+  font-size: var(--fs-base);
   font-weight: var(--fw-semibold);
 }
 

@@ -28,7 +28,7 @@ const { target, pending } = useReveal()
 }
 
 .trust-section h2 {
-  font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+  font-size: var(--fs-2xl);
   letter-spacing: var(--tracking-tight);
   margin: 0 0 1.75rem;
 }
@@ -36,7 +36,7 @@ const { target, pending } = useReveal()
 .trust-section p {
   margin: 0 0 0.85rem;
   color: var(--color-text-muted);
-  font-size: 1.1rem;
+  font-size: var(--fs-md);
   line-height: var(--lh-base);
 }
 

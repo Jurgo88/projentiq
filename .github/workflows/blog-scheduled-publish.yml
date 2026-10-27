@@ -1,0 +1,37 @@
+# Naplánované články (datePublished v budúcnosti) sa objavia až v builde
+# z toho dňa. Každé ráno skontroluje, či má dnes niektorý článok vyjsť,
+# a ak áno, spustí Netlify build cez build hook.
+#
+# Nastavenie: Netlify → Site configuration → Build & deploy → Build hooks
+# (branch main) → URL ulož do GitHub secretu NETLIFY_BUILD_HOOK.
+
+name: Blog scheduled publish
+
+on:
+  schedule:
+    - cron: '0 5 * * *' # 05:00 UTC = 6:00/7:00 v SK
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for posts due today
+        id: due
+        run: |
+          today=$(date -u +%F)
+          if grep -l "datePublished: '$today'" app/content/blog/*.ts; then
+            echo "due=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No post scheduled for $today"
+          fi
+
+      - name: Trigger Netlify build
+        if: steps.due.outputs.due == 'true' || github.event_name == 'workflow_dispatch'
+        env:
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          test -n "$NETLIFY_BUILD_HOOK" || { echo "::error::Missing NETLIFY_BUILD_HOOK secret"; exit 1; }
+          curl -fsS -X POST -d '{}' "$NETLIFY_BUILD_HOOK"

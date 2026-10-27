@@ -40,7 +40,7 @@ const items = [
 }
 
 .why h2 {
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-size: var(--fs-2xl);
   margin: 0 0 2rem;
 }
 
@@ -67,14 +67,14 @@ const items = [
 }
 
 .why__item h3 {
-  font-size: 1.05rem;
+  font-size: var(--fs-lg);
   margin: 0 0 0.4rem;
 }
 
 .why__item p {
   margin: 0;
   color: var(--color-text-muted);
-  font-size: 0.92rem;
+  font-size: var(--fs-base);
 }
 
 @media (max-width: 40rem) {

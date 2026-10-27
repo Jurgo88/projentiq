@@ -11,7 +11,8 @@ if (!post) {
 const localeMap: Record<string, string> = { sk: 'sk-SK', cs: 'cs-CZ', en: 'en-US' }
 const content = computed(() => post.content[locale.value as BlogLocale] ?? post.content.en)
 const imageAlt = computed(() => post.imageAlt[locale.value as BlogLocale] ?? post.imageAlt.en)
-const inlineImageAlt = computed(() => post.inlineImage?.alt[locale.value as BlogLocale] ?? post.inlineImage?.alt.en ?? '')
+const readingMinutes = computed(() => post.readingMinutes[locale.value as BlogLocale] ?? post.readingMinutes.en)
+const inlineImageAlt =computed(() => post.inlineImage?.alt[locale.value as BlogLocale] ?? post.inlineImage?.alt.en ?? '')
 const date = computed(() =>
   new Date(post.datePublished).toLocaleDateString(localeMap[locale.value] ?? 'en-US', {
     day: 'numeric',
@@ -82,7 +83,7 @@ useHead(() => ({
         </NuxtLink>
         <p class="post__meta">
           <time :datetime="post.datePublished">{{ date }}</time>
-          · {{ t('blog.reading_time', { n: post.readingMinutes }) }}
+          · {{ t('blog.reading_time', { n: readingMinutes }) }}
         </p>
         <h1>{{ content.title }}</h1>
         <p class="post__perex">{{ content.perex }}</p>
@@ -113,6 +114,15 @@ useHead(() => ({
       </template>
 
       <p v-if="content.takeaway" class="post__takeaway">{{ content.takeaway }}</p>
+
+      <section v-if="post.sources?.length" class="post__sources">
+        <h2>{{ t('blog.sources') }}</h2>
+        <ul>
+          <li v-for="source in post.sources" :key="source.url">
+            <a :href="source.url" target="_blank" rel="noopener">{{ source.label }}</a>
+          </li>
+        </ul>
+      </section>
     </div>
 
     <section class="post__cta">
@@ -129,7 +139,7 @@ useHead(() => ({
 
 <style scoped>
 .post__inner {
-  max-width: 46rem;
+  max-width: 68ch;
   margin: 0 auto;
 }
 
@@ -159,7 +169,7 @@ useHead(() => ({
 }
 
 .post h1 {
-  font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+  font-size: var(--fs-3xl);
   letter-spacing: var(--tracking-tight);
   line-height: var(--lh-tight);
   margin: 0 0 1rem;
@@ -204,15 +214,15 @@ useHead(() => ({
 }
 
 .post__section h2 {
-  font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+  font-size: var(--fs-content-h2);
   margin: 0 0 0.85rem;
 }
 
 .post__section p,
 .post__list li {
   color: var(--color-text-muted);
-  font-size: 1.05rem;
-  line-height: var(--lh-base);
+  font-size: var(--fs-md);
+  line-height: var(--lh-reading);
 }
 
 .post__section p {
@@ -244,9 +254,39 @@ useHead(() => ({
   border: 1px solid var(--color-accent-border);
   border-radius: var(--r-md);
   color: var(--color-text);
-  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  font-size: var(--fs-lg);
   font-weight: var(--fw-semibold);
   line-height: var(--lh-base);
+}
+
+.post__sources {
+  margin-top: 2.5rem;
+}
+
+.post__sources h2 {
+  font-size: var(--fs-md);
+  margin: 0 0 0.75rem;
+}
+
+.post__sources ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.post__sources li {
+  margin-bottom: 0.4rem;
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-base);
+  overflow-wrap: anywhere;
+}
+
+.post__sources a {
+  color: inherit;
+}
+
+.post__sources a:hover {
+  color: var(--color-text);
 }
 
 .post__cta {
@@ -268,7 +308,7 @@ useHead(() => ({
 
 .post__cta h2 {
   max-width: 36rem;
-  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  font-size: var(--fs-content-h2);
   margin: 0 0 0.5rem;
 }
 
