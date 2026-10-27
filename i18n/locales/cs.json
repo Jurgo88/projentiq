@@ -160,8 +160,10 @@
     "read_more": "Číst článek",
     "reading_time": "{n} min čtení",
     "back": "Všechny články",
-    "cta_title": "Chcete vědět, jak je na tom vaše aplikace?",
-    "cta_lead": "Podíváme se na ni a řekneme vám, kde jsou rizika.",
+    "cta_title": "Máte vlastní nápad na aplikaci nebo proces, který chcete zjednodušit?",
+    "cta_lead": "Ukážeme vám, jak bychom ho postavili.",
+    "cta_security_title": "Chcete vědět, jak je na tom vaše aplikace?",
+    "cta_security_lead": "Podíváme se na ni a řekneme vám, kde jsou rizika.",
     "cta_button": "Ozvěte se",
     "sources": "Zdroje"
   },
