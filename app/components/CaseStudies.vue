@@ -60,7 +60,7 @@ const cards = computed(() =>
 <style scoped>
 .case-studies {
   padding: var(--section-y) 1.5rem;
-  background: var(--color-surface-1);
+  background: var(--color-bg);
 }
 
 .case-studies__inner {
