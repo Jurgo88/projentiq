@@ -23,7 +23,11 @@ export default defineNuxtConfig({
       weights: ['400 700'],
       styles: ['normal'],
       subsets: ['latin', 'latin-ext']
-    }
+    },
+    // Fonty s unicode-range modul predvolene nepreloaduje, takže prehliadač
+    // ich nájde až v CSS a text sa prekreslí z náhradného písma neskoro
+    // (LCP na mobile ~8 s, #8). Inter nesie všetok text nad prvou obrazovkou.
+    families: [{ name: 'Inter', preload: true }]
   },
 
   // Web je statický (nuxt generate) — /api/_nuxt_icon na Netlify neexistuje.
