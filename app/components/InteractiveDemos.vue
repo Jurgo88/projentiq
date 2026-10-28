@@ -105,7 +105,7 @@ defineExpose({ scrollToAndOpen })
 <style scoped>
 .demos {
   padding: var(--section-y) 1.5rem;
-  background: var(--color-bg);
+  background: var(--color-surface-1);
 }
 
 .demos__inner {

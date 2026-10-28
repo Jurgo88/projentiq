@@ -125,9 +125,9 @@ useHead(() => ({
   <HeroSection />
   <TrustStrip />
   <HowItWorks />
-  <ProductCards />
   <InteractiveDemos />
   <CaseStudies />
+  <ProductCards />
   <WhyProjentIQ />
   <Testimonials />
   <FaqSection />
