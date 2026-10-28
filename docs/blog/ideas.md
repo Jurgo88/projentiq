@@ -25,6 +25,7 @@ Pravidlá písania: [guide.md](guide.md).
 
 ## Napísané
 
+- mandatory-e-invoicing-slovakia-2027 — Povinná e-faktúra od 1. januára 2027: čo musí vaša firma urobiť (aktuálna téma mimo poradia, #59)
 - automatic-invoice-processing-into-pohoda — Faktúry do Pohody automaticky: ako to funguje a kde sú limity
 - php2shell-what-businesses-should-do-now — PHP2Shell: kritická chyba v PHP a čo má vaša firma urobiť teraz (aktuálna téma mimo poradia)
 - ai-code-security — AI povedala, že je kód bezpečný. Prečo jej to nestačí veriť
