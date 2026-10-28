@@ -343,9 +343,15 @@ onUnmounted(stopRotation)
   }
 }
 
+/* na mobile len prvý riadok (Faktúry) a menšie odsadenie — panel ostáva
+   ako vizuálny dôkaz pod tlačidlami, ale nezaberie celú obrazovku */
 @media (max-width: 40rem) {
-  .hero__visual {
+  .hero-ba__row:nth-child(n + 2) {
     display: none;
+  }
+
+  .hero-ba__col {
+    padding: 0.6rem;
   }
 }
 </style>

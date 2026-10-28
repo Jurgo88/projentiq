@@ -259,6 +259,8 @@
     "sending": "Odesílám…",
     "success_title": "Děkujeme!",
     "success_message": "Ozveme se vám do jednoho pracovního dne.",
+    "success_next": "Odpovím vám e-mailem a navrhnu termín krátkého dema.",
+    "success_alt": "Spěcháte? Napište přímo na",
     "error_required": "Toto pole je povinné.",
     "error_email": "Zadejte platný e-mail.",
     "error_consent": "Pro odeslání je potřeba souhlas se zpracováním údajů.",

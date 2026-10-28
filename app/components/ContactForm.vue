@@ -119,6 +119,11 @@ async function onSubmit() {
         <div v-if="status === 'success'" class="contact-form__success" role="status" aria-live="polite">
           <h3>{{ t('contact.success_title') }}</h3>
           <p>{{ t('contact.success_message') }}</p>
+          <p>{{ t('contact.success_next') }}</p>
+          <p class="contact-form__success-alt">
+            {{ t('contact.success_alt') }}
+            <a :href="`mailto:${COMPANY.email}`">{{ COMPANY.email }}</a>
+          </p>
         </div>
 
         <template v-else>
@@ -336,6 +341,11 @@ async function onSubmit() {
 
 .contact-form__success h3 {
   margin: 0 0 0.5rem;
+}
+
+.contact-form__success-alt {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
 }
 
 .contact-form__success p {
