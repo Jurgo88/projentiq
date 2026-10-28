@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
+const { $gtag, $posthog } = useNuxtApp()
 const localePath = useLocalePath()
 const { target, pending } = useReveal()
 
@@ -31,6 +32,20 @@ function validate() {
   return !errors.name && !errors.email && !errors.consent
 }
 
+// konverzia pre GA4 (odporúčaná udalosť generate_lead) a PostHog — bez
+// osobných údajov. Súhlas riešia pluginy: GA4 bez súhlasu pošle len
+// bezcookie ping, PostHog po odmietnutí neposiela nič.
+function trackLead() {
+  const props = {
+    form_name: 'contact',
+    language: locale.value,
+    has_company: Boolean(form.company.trim()),
+    has_message: Boolean(form.message.trim())
+  }
+  try { $gtag?.()?.('event', 'generate_lead', props) } catch {}
+  try { $posthog?.()?.capture('contact_form_submitted', props) } catch {}
+}
+
 async function onSubmit() {
   if (form.botField) return
 
@@ -56,6 +71,7 @@ async function onSubmit() {
 
     if (!response.ok) throw new Error(`Netlify Forms responded with ${response.status}`)
     status.value = 'success'
+    trackLead()
   } catch (err) {
     console.error('[ContactForm] submit error:', err)
     status.value = 'error'
