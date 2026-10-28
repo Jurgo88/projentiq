@@ -176,7 +176,17 @@
     "q3": "Koľko trvá nasadenie?",
     "a3": "Prvé funkčné demo na vašich dátach zvyčajne do dvoch týždňov. Plné nasadenie závisí od rozsahu.",
     "q4": "Čo ak doklad nerozpozná správne?",
-    "a4": "Sporné polia sú vždy zvýraznené na kontrolu a nič sa nezapíše bez vášho schválenia. Systém sa navyše učí z vašich opráv."
+    "a4": "Sporné polia sú vždy zvýraznené na kontrolu a nič sa nezapíše bez vášho schválenia. Systém sa navyše učí z vašich opráv.",
+    "q5": "Čo sa stane po pilote? Musíme pokračovať?",
+    "a5": "Nie. Pilot je samostatná zákazka za pevnú cenu. Výsledok vyhodnotíme podľa kritéria, ktoré si určíme vopred. Ak budete pokračovať, celú cenu pilotu odpočítame od implementácie.",
+    "q6": "Potrebujeme vlastného IT človeka?",
+    "a6": "Nie. Nasadenie a prevádzku zabezpečíme my. Od vás potrebujeme prístup k systémom a človeka, ktorý rozumie procesu.",
+    "q7": "Čo ak sa zmení náš proces alebo systém?",
+    "a7": "Drobné úpravy pokrýva mesačný poplatok. Väčšie zmeny vám vopred naceníme.",
+    "q8": "Čo sa stane s našimi dátami, ak spoluprácu ukončíme?",
+    "a8": "Dáta sú vždy vaše a pri ukončení spolupráce vám ich odovzdáme. Samotné riešenie, teda kód a konfigurácia, ostáva naše.",
+    "q9": "Ako sa nás týka AI Act?",
+    "a9": "Na začiatku spolupráce spolu posúdime, či a aké povinnosti z AI Actu sa vášho riešenia týkajú."
   },
   "cta_band": {
     "title": "Ukážeme vám to na vašich dátach.",
