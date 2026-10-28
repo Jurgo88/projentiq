@@ -35,7 +35,8 @@
     "gdpr_link": "Ochrana osobních údajů a cookies",
     "solutions_heading": "Řešení",
     "company_heading": "Firma",
-    "contact_heading": "Kontakt"
+    "contact_heading": "Kontakt",
+    "invoice_automation": "Automatizace faktur"
   },
   "cookie": {
     "aria_label": "Souhlas s používáním cookies",
@@ -111,6 +112,7 @@
     "card_3_title": "Automatizace procesů",
     "card_3_desc": "Automatizace dokumentů, e-mailů a opakujících se úkolů.",
     "card_3_examples": "Zpracování faktur · Zpracování e-mailů · Generování reportů · Synchronizace dat",
+    "card_3_more": "Více o automatizaci faktur",
     "pilot_label": "Pilotní verze",
     "pilot_title": "Nejprve ověření, potom plná implementace",
     "pilot_desc": "U jednoho dohodnutého procesu ověříme vybraná vstupní data a výsledek porovnáme s kritériem úspěchu, které si stanovíme předem. Pilot zahrnuje omezenou ukázku, nikoli plné integrace nebo produkční nasazení.",
