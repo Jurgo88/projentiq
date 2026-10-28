@@ -274,5 +274,9 @@
     "effective": "Effective from",
     "change_consent": "Change cookie settings",
     "consent_reset": "Your choice has been reset. Please choose again in the banner below."
+  },
+  "integrations": {
+    "nav": "Integrations",
+    "more": "More on accounting integrations"
   }
 }

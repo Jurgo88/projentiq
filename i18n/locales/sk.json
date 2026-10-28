@@ -274,5 +274,9 @@
     "effective": "Účinné od",
     "change_consent": "Zmeniť nastavenie cookies",
     "consent_reset": "Nastavenie bolo zrušené. Vyberte novú voľbu v lište dole."
+  },
+  "integrations": {
+    "nav": "Integrácie",
+    "more": "Viac o napojení na účtovné systémy"
   }
 }

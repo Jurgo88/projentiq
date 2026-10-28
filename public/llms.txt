@@ -39,6 +39,9 @@ Sporné polia sú vždy zvýraznené na kontrolu a nič sa nezapíše bez schvá
 - [Automatizácia faktúr (slovensky)](https://projentiq.com/sk/automatizacia-faktur/): spracovanie faktúr z e-mailu, skenov, fotiek aj ISDOC/XML, zápis do Pohody (XML import), Omegy (import), iDokladu (API) a ďalších systémov cez API.
 - [Invoice automation (English)](https://projentiq.com/invoice-automation/)
 - [Automatizace faktur (česky)](https://projentiq.com/cs/automatizace-faktur/)
+- [Integrácie (slovensky)](https://projentiq.com/sk/integracie/): zápis do Pohody (XML import), Omegy (import), iDokladu (API) a iných systémov cez API; prijaté a vydané faktúry, pokladničné doklady, objednávky a adresár.
+- [Integrations (English)](https://projentiq.com/integrations/)
+- [Integrace (česky)](https://projentiq.com/cs/integrace/)
 
 ## Kontakt
 
