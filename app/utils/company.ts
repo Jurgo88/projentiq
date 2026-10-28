@@ -10,5 +10,7 @@ export const COMPANY = {
   city: 'Topoľčany',
   country: 'SK',
   register: 'Obchodný register Okresného súdu Nitra, oddiel Sro, vložka č. 59882/N',
-  email: 'info@projentiq.com'
+  email: 'info@projentiq.com',
+  // kontaktná osoba pri formulári (ContactForm)
+  contactPerson: 'Juraj Paluš'
 } as const

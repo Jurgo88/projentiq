@@ -245,6 +245,7 @@
   "contact": {
     "title": "We'll show you on your own data.",
     "lead": "Send us the process or problem you want to solve. We'll design a concrete approach and demo the solution on real company data.",
+    "person_note": "I read every message myself and reply within one business day.",
     "email_alt": "Prefer email?",
     "name_label": "Full name",
     "company_label": "Company",
