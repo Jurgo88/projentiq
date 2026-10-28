@@ -3,6 +3,11 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 const { target, pending } = useReveal()
 
+const initials = COMPANY.contactPerson
+  .split(' ')
+  .map((part) => part[0])
+  .join('')
+
 const form = reactive({
   name: '',
   company: '',
@@ -64,10 +69,13 @@ async function onSubmit() {
       <div class="contact__copy">
         <h2>{{ t('contact.title') }}</h2>
         <p class="contact__lead">{{ t('contact.lead') }}</p>
-        <p class="contact__microcopy">
-          <Icon name="tabler:calendar-event" aria-hidden="true" />
-          {{ t('contact.success_message') }}
-        </p>
+        <div class="contact__person">
+          <span class="contact__avatar" aria-hidden="true">{{ initials }}</span>
+          <p>
+            <strong>{{ COMPANY.contactPerson }}</strong>
+            {{ t('contact.person_note') }}
+          </p>
+        </div>
         <p class="contact__email">
           {{ t('contact.email_alt') }}
           <a :href="`mailto:${COMPANY.email}`">{{ COMPANY.email }}</a>
@@ -197,27 +205,48 @@ async function onSubmit() {
   color: var(--color-text-muted);
 }
 
-.contact__microcopy {
+.contact__person {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-md);
+  background: var(--color-surface-1);
+}
+
+.contact__avatar {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--gradient-accent);
+  color: #fff;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.02em;
+}
+
+.contact__person p {
   margin: 0;
   color: var(--color-text-muted);
-  font-family: var(--font-mono);
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-base);
+}
+
+.contact__person strong {
+  display: block;
+  color: var(--color-text);
+  font-size: var(--fs-base);
 }
 
 .contact__email {
   margin: 1rem 0 0;
   color: var(--color-text-muted);
   font-size: var(--fs-sm);
-}
-
-.contact__microcopy :deep(svg) {
-  width: 16px;
-  height: 16px;
-  color: var(--color-accent);
-  flex-shrink: 0;
 }
 
 .contact-form {

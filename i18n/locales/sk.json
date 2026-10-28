@@ -245,6 +245,7 @@
   "contact": {
     "title": "Ukážeme vám to na vašich dátach.",
     "lead": "Pošlite nám proces alebo problém, ktorý chcete riešiť. Navrhneme konkrétny postup a ukážku riešenia na reálnych firemných dátach.",
+    "person_note": "Vašu správu si prečítam osobne a ozvem sa vám do jedného pracovného dňa.",
     "email_alt": "Radšej e-mailom?",
     "name_label": "Meno a priezvisko",
     "company_label": "Firma",
