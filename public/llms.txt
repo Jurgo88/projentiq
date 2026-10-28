@@ -4,7 +4,7 @@
 
 ## Služby
 
-- **AI Agenti**: AI asistenti napojení na dokumenty, dáta a firemné systémy (interný asistent, zákaznícka podpora, obchodný a operačný asistent).
+- **AI agenti**: AI asistenti napojení na dokumenty, dáta a firemné systémy (interný asistent, zákaznícka podpora, obchodný a operačný asistent).
 - **RAG znalostné systémy**: AI chatboty a asistenti, ktorí odpovedajú na základe internej dokumentácie firmy, s citáciou zdroja.
 - **Automatizácia procesov**: spracovanie faktúr a iných dokladov, e-mailov, generovanie reportov a synchronizácia dát.
 
