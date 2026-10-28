@@ -22,8 +22,8 @@ const year = new Date().getFullYear()
 
       <nav class="site-footer__col" :aria-label="t('footer.solutions_heading')">
         <p class="site-footer__heading">{{ t('footer.solutions_heading') }}</p>
-        <a :href="`${homePath}#solution-1`">{{ t('products.card_1_title') }}</a>
-        <a :href="`${homePath}#solution-2`">{{ t('products.card_2_title') }}</a>
+        <NuxtLink :to="localePath('ai-agents')">{{ t('products.card_1_title') }}</NuxtLink>
+        <NuxtLink :to="localePath('ai-chatbot')">{{ t('products.card_2_title') }}</NuxtLink>
         <a :href="`${homePath}#solution-3`">{{ t('products.card_3_title') }}</a>
         <NuxtLink :to="localePath('invoice-automation')">{{ t('footer.invoice_automation') }}</NuxtLink>
         <NuxtLink :to="localePath('integrations')">{{ t('integrations.nav') }}</NuxtLink>

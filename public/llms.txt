@@ -36,6 +36,8 @@ Sporné polia sú vždy zvýraznené na kontrolu a nič sa nezapíše bez schvá
 - [ProjentIQ (English)](https://projentiq.com/)
 - [ProjentIQ (slovensky)](https://projentiq.com/sk/)
 - [ProjentIQ (česky)](https://projentiq.com/cs/)
+- [AI chatbot pre firmy (slovensky)](https://projentiq.com/sk/ai-chatbot-pre-firmy/): odpovede z firemných dokumentov (PDF, Word, SharePoint, Google Drive, web, intranet, databázy cez API) s citáciou zdroja a prístupom podľa oprávnení; na webe, v Teams, Slacku alebo e-mailom.
+- [AI agenti (slovensky)](https://projentiq.com/sk/ai-agenti/): agenti pre e-maily, objednávky, zákaznícku podporu, reporty a synchronizáciu dát; postupujú podľa nastavených pravidiel, sporné prípady rieši človek.
 - [Automatizácia faktúr (slovensky)](https://projentiq.com/sk/automatizacia-faktur/): spracovanie faktúr z e-mailu, skenov, fotiek aj ISDOC/XML, zápis do Pohody (XML import), Omegy (import), iDokladu (API) a ďalších systémov cez API.
 - [Invoice automation (English)](https://projentiq.com/invoice-automation/)
 - [Automatizace faktur (česky)](https://projentiq.com/cs/automatizace-faktur/)
