@@ -198,9 +198,14 @@ useHead(() => ({
       </div>
     </section>
 
-    <section class="service__section">
+    <!-- kalkulácia a cena v jednej sekcii, aby sa pozadia sekcií striedali -->
+    <section id="kalkulacka" class="service__section">
       <div class="service__inner service__narrow">
-        <h2>{{ content.pricing.heading }}</h2>
+        <h2>{{ t('calculator.title') }}</h2>
+        <p class="service__text">{{ t('calculator.lead') }}</p>
+        <SavingsCalculator />
+
+        <h2 class="service__subsequent">{{ content.pricing.heading }}</h2>
         <p class="service__text service__text--strong">{{ pricingText }}</p>
         <p class="service__note">{{ content.pricing.note }}</p>
         <NuxtLink

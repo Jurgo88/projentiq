@@ -18,6 +18,12 @@ const form = reactive({
   botField: ''
 })
 
+// text z kalkulačky (SavingsCalculator) — prepíše len prázdnu správu
+const prefill = useState<string>('contact-prefill', () => '')
+watch(prefill, (text) => {
+  if (text && !form.message.trim()) form.message = text
+})
+
 const errors = reactive<{ name?: string; email?: string; consent?: string }>({})
 const status = ref<'idle' | 'sending' | 'success' | 'error'>('idle')
 
