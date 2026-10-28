@@ -46,7 +46,7 @@
   "hero": {
     "eyebrow": "AI agenti · RAG · Automatizace",
     "title_main": "AI systémy pro firmy, které pracují",
-    "title_highlight": "s vašimi daty.",
+    "title_highlight": "s vašimi daty.",
     "lead": "Navrhujeme AI agenty, znalostní systémy a automatizace, které pomáhají týmům vyhledávat informace, zpracovávat dokumenty a provádět opakující se úkoly.",
     "cta_try": "Vyzkoušet ukázku",
     "trust_microcopy": "Bezplatná ukázka na vašich datech · bez závazku",
@@ -95,7 +95,7 @@
     "step_4_desc": "Po schválení se systém stává součástí každodenního provozu."
   },
   "products": {
-    "title": "Řešení a ceník",
+    "title": "Řešení a ceník",
     "price_from": "od",
     "price_currency": "€",
     "price_monthly": "měsíčně",
@@ -119,7 +119,7 @@
   },
   "why": {
     "title": "Proč ProjentIQ",
-    "item_1_title": "Pracujeme s vašimi daty",
+    "item_1_title": "Pracujeme s vašimi daty",
     "item_1_desc": "AI řešení jsou postavená na dokumentech, systémech a informacích, které už ve firmě používáte.",
     "item_2_title": "Přizpůsobené vašemu procesu",
     "item_2_desc": "Každá firma funguje jinak. Návrh stavíme na vašich konkrétních datech a procesech.",
@@ -185,7 +185,7 @@
   },
   "demos": {
     "eyebrow": "Vyzkoušejte si to",
-    "title": "Jak to funguje v praxi",
+    "title": "Jak to funguje v praxi",
     "lead": "Klikněte a podívejte se, co řešení reálně dělají — na vzorových datech.",
     "tab_invoice": "Faktury",
     "tab_rag": "Znalostní báze",
