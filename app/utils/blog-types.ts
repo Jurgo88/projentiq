@@ -7,6 +7,8 @@ export interface BlogSection {
   heading: string
   paragraphs?: string[]
   items?: { title?: string; text: string }[]
+  // Položky ako číslovaný zoznam — keď záleží na poradí krokov.
+  ordered?: boolean
 }
 
 export interface BlogPostContent {

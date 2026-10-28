@@ -36,7 +36,12 @@ Súbor `app/content/blog/<slug>.ts`, tvar podľa `BlogPostSource` v
   meta description).
 - **sections**: 4–6 sekcií. Nadpis je tvrdenie alebo pokyn, nie jedno slovo.
   Odsek 2–4 vety. Zoznam (`items`) tam, kde ide o kroky alebo kritériá;
-  `title` položky bez dvojbodky (pridá ju šablóna).
+  `title` položky bez dvojbodky (pridá ju šablóna). Ak záleží na poradí
+  krokov, daj sekcii `ordered: true` (číslovaný zoznam) vo všetkých jazykoch.
+- **Formátovanie v texte** (odseky, `text` položiek, takeaway; nie v title,
+  perexe ani nadpisoch): `**tučné**` len výnimočne pre jedno kľúčové slovo,
+  `` `kód` `` pre príkazy, verzie a názvy súborov, `[text](https://…)` pre
+  odkaz na zdroj priamo v texte. Iné značky ani HTML šablóna nevykreslí.
 - **takeaway**: 1–3 vety, čo si má čitateľ zapamätať.
 - Dĺžka: ~400–600 slov v slovenčine. Čas čítania sa dopočíta sám.
 - **tags**: 2–4 z: `Automation`, `AI`, `Processes`, `Security`, `Documents`,
