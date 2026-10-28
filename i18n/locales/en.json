@@ -293,6 +293,14 @@
     "result_year": "Cost per year",
     "cta": "Check it on my documents",
     "note": "The calculation runs only in your browser; nothing is sent.",
-    "prefill": "We process about {invoices} invoices a month and entering one takes about {minutes} min. We are interested in automation."
+    "prefill": "We process about {invoices} invoices a month and entering one takes about {minutes} min. We are interested in automation.",
+    "nav": "Cost calculator",
+    "products_link": "What does manual invoice entry cost you today? Work it out in the calculator",
+    "page_link": "Open the calculator with a price comparison",
+    "compare_heading": "Compared with the price of automation",
+    "compare_monthly": "The monthly fee from {price} is {share} of what manual entry costs you today.",
+    "compare_monthly_over": "The monthly fee from {price} is higher than what manual entry costs you today. At this volume, automating entry alone does not pay off.",
+    "compare_setup": "The one-time implementation from {price} equals {months} months of manual entry cost.",
+    "compare_note": "The comparison uses the lowest price. Implementation and the monthly fee are alternatives; the exact price depends on scope."
   }
 }

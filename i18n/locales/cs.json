@@ -293,6 +293,14 @@
     "result_year": "Náklad ročně",
     "cta": "Ověřit na mých dokladech",
     "note": "Výpočet běží jen ve vašem prohlížeči, nic se neodesílá.",
-    "prefill": "Měsíčně zpracováváme přibližně {invoices} faktur, zápis jedné trvá asi {minutes} min. Zajímá nás automatizace."
+    "prefill": "Měsíčně zpracováváme přibližně {invoices} faktur, zápis jedné trvá asi {minutes} min. Zajímá nás automatizace.",
+    "nav": "Kalkulačka nákladů",
+    "products_link": "Kolik vás dnes stojí ruční přepis faktur? Spočítejte si to v kalkulačce",
+    "page_link": "Otevřít kalkulačku s porovnáním ceny",
+    "compare_heading": "Porovnání s cenou automatizace",
+    "compare_monthly": "Měsíční poplatek od {price} tvoří {share} dnešních nákladů na ruční zápis.",
+    "compare_monthly_over": "Měsíční poplatek od {price} je vyšší než dnešní náklady na ruční zápis. Při tomto objemu se automatizace samotného přepisu nevyplatí.",
+    "compare_setup": "Jednorázová implementace od {price} odpovídá nákladům na ruční zápis za {months} měs.",
+    "compare_note": "Porovnání počítá s nejnižší cenou. Implementace i měsíční poplatek jsou alternativy, přesnou cenu určí rozsah."
   }
 }

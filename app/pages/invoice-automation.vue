@@ -204,6 +204,10 @@ useHead(() => ({
         <h2>{{ t('calculator.title') }}</h2>
         <p class="service__text">{{ t('calculator.lead') }}</p>
         <SavingsCalculator />
+        <NuxtLink :to="localePath('invoice-cost-calculator')" class="service__related service__calc-link">
+          {{ t('calculator.page_link') }}
+          <Icon name="tabler:arrow-right" aria-hidden="true" />
+        </NuxtLink>
 
         <h2 class="service__subsequent">{{ content.pricing.heading }}</h2>
         <p class="service__text service__text--strong">{{ pricingText }}</p>
