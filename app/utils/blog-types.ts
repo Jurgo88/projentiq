@@ -55,6 +55,8 @@ export interface BlogReel {
 export interface BlogPostSource {
   // YYYY-MM-DD. Budúci dátum = článok čaká a vyjde pri prvom builde v ten deň.
   datePublished: string
+  // YYYY-MM-DD, len ak sa už publikovaný článok vecne zmenil (nie preklep).
+  dateModified?: string
   // Len ak treba prebiť automatický odhad (READING_WPM v blog-posts.ts).
   readingMinutes?: number
   // Slovenský obrázok, predvolene /blog/<slug>.png (výstup generátora

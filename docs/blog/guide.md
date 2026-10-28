@@ -123,6 +123,9 @@ textu).
 najnovšieho článku v `app/content/blog/`. Článok s budúcim dátumom vyjde sám
 ráno v ten deň (`.github/workflows/blog-scheduled-publish.yml`).
 
+Ak vecne meníš už publikovaný článok (nová informácia, oprava faktu),
+doplň `dateModified` = dnešný dátum. Pri preklepoch ho nemeň.
+
 ## Príspevok na Facebook
 
 `social/facebook-<slug>.md` podľa `social/facebook-first-process.md`:

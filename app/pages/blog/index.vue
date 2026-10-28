@@ -9,6 +9,7 @@ const posts = computed(() =>
     slug: post.slug,
     image: post.image[locale.value as BlogLocale] ?? post.image.en,
     imageAlt: post.imageAlt[locale.value as BlogLocale] ?? post.imageAlt.en,
+    category: post.cover?.[locale.value as BlogLocale]?.tag,
     readingMinutes: post.readingMinutes[locale.value as BlogLocale] ?? post.readingMinutes.en,
     datePublished: post.datePublished,
     date: new Date(post.datePublished).toLocaleDateString(localeMap[locale.value] ?? 'en-US', {
@@ -46,6 +47,7 @@ useSeoMeta({
           <NuxtLink :to="localePath({ name: 'blog-slug', params: { slug: post.slug } })" class="blog__card">
             <img :src="post.image" :alt="post.imageAlt" width="1200" height="630" loading="lazy" class="blog__img" />
             <div class="blog__card-body">
+              <p v-if="post.category" class="eyebrow">{{ post.category }}</p>
               <p class="blog__meta">
                 <time :datetime="post.datePublished">{{ post.date }}</time>
                 · {{ t('blog.reading_time', { n: post.readingMinutes }) }}
