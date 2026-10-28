@@ -30,6 +30,7 @@ function examples(id: number) {
       <div id="pricing" class="products__grid">
         <article
           v-for="card in cards"
+          :id="`solution-${card.id}`"
           :key="card.id"
           class="products__card"
           :class="{ 'is-flagship': card.flagship }"

@@ -4,18 +4,18 @@
 
 ## Služby
 
-- **AI Agenti**: AI asistenti napojení na dokumenty, dáta a firemné systémy (interný asistent, zákaznícka podpora, obchodný a operačný asistent).
+- **AI agenti**: AI asistenti napojení na dokumenty, dáta a firemné systémy (interný asistent, zákaznícka podpora, obchodný a operačný asistent).
 - **RAG znalostné systémy**: AI chatboty a asistenti, ktorí odpovedajú na základe internej dokumentácie firmy, s citáciou zdroja.
 - **Automatizácia procesov**: spracovanie faktúr a iných dokladov, e-mailov, generovanie reportov a synchronizácia dát.
 
 ## Ceny (EUR, konečné – nie sme platiteľom DPH)
 
 - Demo na dátach klienta: zdarma.
-- Pilot s pevnou cenou (jeden proces, 2–3 týždne): 990 €, odpočíta sa z ceny implementácie.
-- Automatizácia procesov a dokladov: od 2 500 € jednorazovo + od 149 € mesačne.
-- RAG znalostný systém: od 3 500 € jednorazovo + od 199 € mesačne.
-- AI agent na mieru: od 5 000 € jednorazovo + od 290 € mesačne.
-- Mesačný poplatok zahŕňa prevádzku, náklady na AI, monitoring a podporu.
+- Pilot s pevnou cenou (jeden dohodnutý proces, obmedzená ukážka bez plných integrácií a produkčného nasadenia): 490 €. Ak klient pokračuje, celá cena pilotu sa odpočíta z ceny implementácie.
+- Automatizácia jedného jasne ohraničeného procesu: od 990 € jednorazovo alebo od 79 € mesačne.
+- RAG znalostný systém nad dohodnutým zdrojom dokumentov: od 1 490 € jednorazovo alebo od 99 € mesačne.
+- AI agent pre jeden pracovný proces: od 2 500 € jednorazovo alebo od 199 € mesačne.
+- Mesačný poplatok pokrýva hosting, monitoring, základnú podporu a dohodnutý limit používania AI. Nadlimitné používanie alebo licencie tretích strán sa vopred odsúhlasia.
 
 ## Integrácie
 

@@ -83,6 +83,8 @@ onUnmounted(() => {
 
 .site-header__inner {
   max-width: var(--container);
+  /* padding mimo --container ako pri sekciách — logo lícuje s ich nadpismi */
+  box-sizing: content-box;
   margin: 0 auto;
   padding: 1.25rem 1.5rem;
   display: flex;

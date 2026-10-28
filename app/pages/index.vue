@@ -35,24 +35,25 @@ const areaServed = [
 
 const faqIds = [1, 2, 3, 4]
 
-// ceny z utils/pricing.ts: jednorazová implementácia + mesačná prevádzka
-// (konečné ceny — neplatiteľ DPH, preto bez valueAddedTaxIncluded)
-function serviceOffer(setup: number, monthly: number) {
-  const base = { '@type': 'UnitPriceSpecification', priceCurrency: PRICING.currency }
-  return {
-    '@type': 'Offer',
-    price: setup,
-    priceCurrency: PRICING.currency,
-    priceSpecification: [
-      { ...base, price: setup, description: 'Implementation (one-time, from)' },
-      {
-        ...base,
+// ceny z utils/pricing.ts: zákazník si vyberie jednorazovú implementáciu alebo
+// mesačný poplatok (konečné ceny — neplatiteľ DPH, preto bez valueAddedTaxIncluded)
+function serviceOffers(setup: number, monthly: number) {
+  const currency = PRICING.currency
+  return [
+    { '@type': 'Offer', description: 'One-time implementation, from', price: setup, priceCurrency: currency },
+    {
+      '@type': 'Offer',
+      description: 'Monthly fee, from',
+      price: monthly,
+      priceCurrency: currency,
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
         price: monthly,
-        description: 'Operation and support (monthly, from)',
+        priceCurrency: currency,
         referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' }
       }
-    ]
-  }
+    }
+  ]
 }
 
 useHead(() => ({
@@ -102,7 +103,7 @@ useHead(() => ({
             description: t(`products.card_${id}_desc`),
             provider: { '@id': ORG_ID },
             areaServed,
-            offers: serviceOffer(setup, monthly)
+            offers: serviceOffers(setup, monthly)
           })),
           {
             '@type': 'FAQPage',

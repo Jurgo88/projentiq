@@ -1,5 +1,6 @@
 // Cenník (EUR, konečné ceny — AJRONIK s.r.o. nie je platiteľom DPH) — jediný zdroj pre karty na homepage, JSON-LD
 // a landing pages. Podklad: prieskum trhu SK/CZ, september 2026.
+// public/llms.txt je statický — pri zmene cien ho uprav ručne.
 // id = products.card_<id>_* v prekladoch.
 export const PRICING = {
   currency: 'EUR',

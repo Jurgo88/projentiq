@@ -39,7 +39,7 @@
   },
   "cookie": {
     "aria_label": "Cookie consent",
-    "message": "We use cookies to analyze traffic and understand how the site is used. By continuing you agree, or you can decline tracking.",
+    "message": "We only use analytics cookies if you agree. They help us understand how the site is used.",
     "accept": "Accept",
     "decline": "Decline"
   },
