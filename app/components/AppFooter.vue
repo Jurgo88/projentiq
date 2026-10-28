@@ -25,6 +25,7 @@ const year = new Date().getFullYear()
         <a :href="`${homePath}#solution-1`">{{ t('products.card_1_title') }}</a>
         <a :href="`${homePath}#solution-2`">{{ t('products.card_2_title') }}</a>
         <a :href="`${homePath}#solution-3`">{{ t('products.card_3_title') }}</a>
+        <NuxtLink :to="localePath('invoice-automation')">{{ t('footer.invoice_automation') }}</NuxtLink>
       </nav>
 
       <nav class="site-footer__col" :aria-label="t('footer.company_heading')">

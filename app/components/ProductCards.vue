@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
+const localePath = useLocalePath()
 const { target, pending } = useReveal()
 
 const localeMap: Record<string, string> = { sk: 'sk-SK', cs: 'cs-CZ', en: 'en-US' }
@@ -44,6 +45,10 @@ function examples(id: number) {
           <ul class="products__tags">
             <li v-for="item in examples(card.id)" :key="item" class="products__tag">{{ item }}</li>
           </ul>
+          <NuxtLink v-if="card.id === 3" :to="localePath('invoice-automation')" class="products__more">
+            {{ t('products.card_3_more') }}
+            <Icon name="tabler:arrow-right" aria-hidden="true" />
+          </NuxtLink>
           <p class="products__price">
             {{ t('products.price_from') }} <strong>{{ formatPrice(card.setup) }} {{ t('products.price_currency') }}</strong>
             <span class="products__monthly">
@@ -188,6 +193,21 @@ function examples(id: number) {
   background: var(--color-surface-3);
   color: var(--color-text-muted);
   font-size: var(--fs-xs);
+}
+
+.products__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: -0.25rem 0 1rem;
+  color: var(--color-accent);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+}
+
+.products__more:hover {
+  text-decoration: underline;
 }
 
 .products__price {

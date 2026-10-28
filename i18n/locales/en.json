@@ -35,7 +35,8 @@
     "gdpr_link": "Privacy & cookies",
     "solutions_heading": "Solutions",
     "company_heading": "Company",
-    "contact_heading": "Contact"
+    "contact_heading": "Contact",
+    "invoice_automation": "Invoice automation"
   },
   "cookie": {
     "aria_label": "Cookie consent",
@@ -111,6 +112,7 @@
     "card_3_title": "Process Automation",
     "card_3_desc": "Automation of documents, emails, and repetitive tasks.",
     "card_3_examples": "Invoice processing · Email processing · Report generation · Data synchronization",
+    "card_3_more": "More on invoice automation",
     "pilot_label": "Pilot version",
     "pilot_title": "Validate the process before full implementation",
     "pilot_desc": "We review selected input data for one agreed process and compare the result with a success measure set in advance. The pilot includes a limited demonstration, not full integrations or production deployment.",
