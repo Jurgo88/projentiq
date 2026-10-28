@@ -7,8 +7,17 @@ const homePath = computed(() => localePath('index'))
 const isScrolled = ref(false)
 const mobileMenuOpen = ref(false)
 
+// Hlavička sa pri scrolle zmenší o ~19 px a je v toku stránky, takže obsah pod
+// ňou poskočí a prehliadač posunie scroll späť. S jedným prahom (10 px) to
+// preklopilo stav naspäť a hlavička sa zmenšovala a zväčšovala v slučke.
+// Medzera medzi prahmi je preto väčšia ako zmena výšky.
+const SHRINK_AFTER = 48
+const EXPAND_BELOW = 8
+
 function onScroll() {
-  isScrolled.value = window.scrollY > 10
+  const y = window.scrollY
+  if (!isScrolled.value && y > SHRINK_AFTER) isScrolled.value = true
+  else if (isScrolled.value && y < EXPAND_BELOW) isScrolled.value = false
 }
 
 function closeMenu() {
@@ -21,6 +30,7 @@ function onKeydown(e: KeyboardEvent) {
 
 onMounted(() => {
   window.addEventListener('scroll', onScroll, { passive: true })
+  onScroll() // obnovenie stránky uprostred scrollu
   window.addEventListener('keydown', onKeydown)
 })
 
