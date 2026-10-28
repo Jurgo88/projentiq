@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const { t, locale, locales } = useI18n()
 
+// pozri komentár nad <template>
+const hydrateEarly = { rootMargin: '300px' }
+
 const SITE_URL = 'https://projentiq.com'
 const ORG_ID = `${SITE_URL}/#organization`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
@@ -100,15 +103,22 @@ useHead(() => ({
 }))
 </script>
 
+<!--
+  Sekcie pod hero sa hydratujú až pred tým, ako sa dostanú na obrazovku
+  (#8): HTML je predgenerované a viditeľné hneď, ale JS pre celú stránku pred
+  prvým vykreslením na mobile odďaľoval LCP o niekoľko sekúnd. rootMargin
+  300px = sekcia sa pripraví skôr, než ju návštevník uvidí, takže useReveal
+  ju stihne skryť a animácia pri scrollovaní ostáva ako predtým.
+-->
 <template>
   <HeroSection />
   <TrustStrip />
-  <HowItWorks />
-  <InteractiveDemos />
-  <CaseStudies />
-  <ProductCards />
-  <WhyProjentIQ />
-  <Testimonials />
-  <FaqSection />
-  <ContactForm />
+  <LazyHowItWorks :hydrate-on-visible="hydrateEarly" />
+  <LazyInteractiveDemos :hydrate-on-visible="hydrateEarly" />
+  <LazyCaseStudies :hydrate-on-visible="hydrateEarly" />
+  <LazyProductCards :hydrate-on-visible="hydrateEarly" />
+  <LazyWhyProjentIQ :hydrate-on-visible="hydrateEarly" />
+  <LazyTestimonials :hydrate-on-visible="hydrateEarly" />
+  <LazyFaqSection :hydrate-on-visible="hydrateEarly" />
+  <LazyContactForm :hydrate-on-visible="hydrateEarly" />
 </template>
