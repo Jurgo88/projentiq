@@ -33,7 +33,7 @@ const areaServed = [
   { '@type': 'Country', name: 'Czech Republic' }
 ]
 
-const faqIds = [1, 2, 3, 4]
+const faqIds = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 // ceny z utils/pricing.ts: zákazník si vyberie jednorazovú implementáciu alebo
 // mesačný poplatok (konečné ceny — neplatiteľ DPH, preto bez valueAddedTaxIncluded)

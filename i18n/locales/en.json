@@ -176,7 +176,17 @@
     "q3": "How long does deployment take?",
     "a3": "A first working demo on your own data usually takes up to two weeks. Full deployment depends on scope.",
     "q4": "What if the system misreads a document?",
-    "a4": "Flagged fields are always highlighted for review, and nothing gets recorded without your approval. The system also learns from your corrections."
+    "a4": "Flagged fields are always highlighted for review, and nothing gets recorded without your approval. The system also learns from your corrections.",
+    "q5": "What happens after the pilot? Do we have to continue?",
+    "a5": "No. The pilot is a separate fixed-price engagement. We evaluate the result against a success criterion we agree on up front. If you decide to continue, we deduct the full pilot price from the implementation.",
+    "q6": "Do we need our own IT person?",
+    "a6": "No. We handle deployment and operation. From you we need access to your systems and someone who knows the process.",
+    "q7": "What if our process or system changes?",
+    "a7": "Minor adjustments are covered by the monthly fee. Larger changes are quoted up front.",
+    "q8": "What happens to our data if we stop working together?",
+    "a8": "Your data is always yours, and we hand it over when we stop working together. The solution itself, meaning the code and configuration, remains ours.",
+    "q9": "How does the EU AI Act affect us?",
+    "a9": "At the start of the project we assess together whether the AI Act places any obligations on your solution, and which ones."
   },
   "cta_band": {
     "title": "We'll show you on your own data.",
