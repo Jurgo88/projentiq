@@ -159,13 +159,14 @@ useHead(() => ({
               :aria-label="t('blog.section_link', { title: section.heading })"
             >#</a>
           </h2>
-          <p v-for="p in section.paragraphs" :key="p">{{ p }}</p>
-          <ul v-if="section.items" class="post__list">
+          <!-- v-html: blogInline najprv escapuje celý text (utils/blog-inline.ts) -->
+          <p v-for="p in section.paragraphs" :key="p" v-html="blogInline(p)" />
+          <component :is="section.ordered ? 'ol' : 'ul'" v-if="section.items" class="post__list">
             <li v-for="item in section.items" :key="item.text">
               <strong v-if="item.title">{{ item.title }}:</strong>
-              {{ item.text }}
+              <span v-html="` ${blogInline(item.text)}`" />
             </li>
-          </ul>
+          </component>
         </section>
 
         <figure
@@ -178,7 +179,7 @@ useHead(() => ({
 
       <aside v-if="content.takeaway" class="post__takeaway">
         <p class="eyebrow">{{ t('blog.takeaway') }}</p>
-        <p>{{ content.takeaway }}</p>
+        <p v-html="blogInline(content.takeaway)" />
       </aside>
 
       <section v-if="post.sources?.length" class="post__sources">
@@ -374,6 +375,29 @@ useHead(() => ({
 .post__list strong {
   color: var(--color-text);
   font-weight: var(--fw-semibold);
+}
+
+/* formátovanie z textu článku (utils/blog-inline.ts) */
+.post__section :deep(strong) {
+  color: var(--color-text);
+  font-weight: var(--fw-semibold);
+}
+
+.post__section :deep(code) {
+  padding: 0.1em 0.35em;
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-sm);
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  overflow-wrap: anywhere;
+}
+
+.post__section :deep(a),
+.post__takeaway :deep(a) {
+  color: var(--color-accent);
+  text-underline-offset: 0.15em;
 }
 
 .post__takeaway {

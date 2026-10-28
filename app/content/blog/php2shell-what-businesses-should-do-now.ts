@@ -86,7 +86,7 @@ export default defineBlogPost({
         {
           heading: 'Ktoré verzie sú opravené',
           paragraphs: [
-            'Opravené sú verzie PHP 8.5.12, 8.4.27, 8.3.36 a 8.2.35. Čo to znamená pre váš server, závisí od toho, akú verziu PHP dnes používa.'
+            'Opravené sú verzie PHP `8.5.12`, `8.4.27`, `8.3.36` a `8.2.35`. Čo to znamená pre váš server, závisí od toho, akú verziu PHP dnes používa.'
           ],
           items: [
             { title: 'PHP 8.2 až 8.5', text: 'Stačí aktualizovať na najnovšiu verziu v rámci tej istej vetvy. PHP 8.2 však dostáva bezpečnostné opravy len do 31. decembra 2026, preto naplánujte aj prechod na novšiu vetvu.' },
@@ -97,6 +97,7 @@ export default defineBlogPost({
         },
         {
           heading: 'Čo urobiť ešte dnes',
+          ordered: true,
           paragraphs: [
             'Mnohé firmy server samy nespravujú. Web majú u hostingu, e-shop na hotovej platforme alebo ich spravuje agentúra. Vašou úlohou je zistiť, kto je za ktorý systém zodpovedný, a dostať od neho jasnú odpoveď.'
           ],
@@ -140,7 +141,7 @@ export default defineBlogPost({
         {
           heading: 'Které verze jsou opravené',
           paragraphs: [
-            'Opravené jsou verze PHP 8.5.12, 8.4.27, 8.3.36 a 8.2.35. Co to znamená pro váš server, záleží na tom, jakou verzi PHP dnes používá.'
+            'Opravené jsou verze PHP `8.5.12`, `8.4.27`, `8.3.36` a `8.2.35`. Co to znamená pro váš server, záleží na tom, jakou verzi PHP dnes používá.'
           ],
           items: [
             { title: 'PHP 8.2 až 8.5', text: 'Stačí aktualizovat na nejnovější verzi v rámci stejné větve. PHP 8.2 však dostává bezpečnostní opravy jen do 31. prosince 2026, proto naplánujte i přechod na novější větev.' },
@@ -151,6 +152,7 @@ export default defineBlogPost({
         },
         {
           heading: 'Co udělat ještě dnes',
+          ordered: true,
           paragraphs: [
             'Mnoho firem server samo nespravuje. Web mají u hostingu, e-shop na hotové platformě, nebo je spravuje agentura. Vaším úkolem je zjistit, kdo je za který systém odpovědný, a dostat od něj jasnou odpověď.'
           ],
@@ -194,7 +196,7 @@ export default defineBlogPost({
         {
           heading: 'Which versions are fixed',
           paragraphs: [
-            'The fixed versions are PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35. What that means for your server depends on which PHP version it runs today.'
+            'The fixed versions are PHP `8.5.12`, `8.4.27`, `8.3.36` and `8.2.35`. What that means for your server depends on which PHP version it runs today.'
           ],
           items: [
             { title: 'PHP 8.2 to 8.5', text: 'Update to the latest release in the same branch. PHP 8.2 only receives security fixes until 31 December 2026, so also plan a move to a newer branch.' },
@@ -205,6 +207,7 @@ export default defineBlogPost({
         },
         {
           heading: 'What to do today',
+          ordered: true,
           paragraphs: [
             'Many companies do not run their own servers. Their website sits with a hosting provider, their shop on a ready-made platform, or an agency manages both. Your job is to find out who is responsible for each system and get a clear answer from them.'
           ],
