@@ -80,6 +80,11 @@
   margin: 0 0 1rem;
 }
 
+/* druhý nadpis v tej istej sekcii */
+.service h2.service__subsequent {
+  margin-top: calc(var(--section-y) * 0.7);
+}
+
 .service__text {
   max-width: 44rem;
   margin: 0 0 1rem;

@@ -278,5 +278,19 @@
   "integrations": {
     "nav": "Integrácie",
     "more": "Viac o napojení na účtovné systémy"
+  },
+  "calculator": {
+    "title": "Koľko vás dnes stojí ručný prepis?",
+    "lead": "Zadajte vlastné čísla. Výpočet ukáže čas a náklady na ručný zápis faktúr, nie sľúbenú úsporu. Tú overíme na pilote.",
+    "invoices": "Faktúr mesačne",
+    "minutes": "Minút na jednu faktúru",
+    "hourly": "Náklad na hodinu práce (€)",
+    "result_hours": "Čas na ručný zápis",
+    "hours_value": "{n} h mesačne",
+    "result_month": "Náklad mesačne",
+    "result_year": "Náklad ročne",
+    "cta": "Overiť na mojich dokladoch",
+    "note": "Výpočet beží len vo vašom prehliadači, nič sa neodosiela.",
+    "prefill": "Mesačne spracúvame približne {invoices} faktúr, zápis jednej trvá asi {minutes} min. Zaujíma nás automatizácia."
   }
 }

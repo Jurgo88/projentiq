@@ -278,5 +278,19 @@
   "integrations": {
     "nav": "Integrations",
     "more": "More on accounting integrations"
+  },
+  "calculator": {
+    "title": "What does manual entry cost you today?",
+    "lead": "Enter your own numbers. The result shows the time and cost of typing invoices in by hand, not a promised saving. The pilot is where we verify that.",
+    "invoices": "Invoices per month",
+    "minutes": "Minutes per invoice",
+    "hourly": "Cost of one work hour (€)",
+    "result_hours": "Time on manual entry",
+    "hours_value": "{n} h per month",
+    "result_month": "Cost per month",
+    "result_year": "Cost per year",
+    "cta": "Check it on my documents",
+    "note": "The calculation runs only in your browser; nothing is sent.",
+    "prefill": "We process about {invoices} invoices a month and entering one takes about {minutes} min. We are interested in automation."
   }
 }
