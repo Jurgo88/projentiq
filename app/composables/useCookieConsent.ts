@@ -1,7 +1,7 @@
 export const CONSENT_KEY = 'ph-consent'
 
 export function useCookieConsent() {
-  const { $posthog, $gtag, $clarity } = useNuxtApp()
+  const { $withPosthog, $gtag, $clarity } = useNuxtApp()
   // zdieľaný stav — reset() z inej stránky musí otvoriť lištu v CookieConsent
   const showBanner = useState('cookie-consent-banner', () => false)
 
@@ -9,7 +9,7 @@ export function useCookieConsent() {
     showBanner.value = localStorage.getItem(CONSENT_KEY) === null
     // if user already declined in a previous visit, honour it in PostHog too
     if (localStorage.getItem(CONSENT_KEY) === 'no') {
-      try { $posthog()?.opt_out_capturing() } catch {}
+      try { $withPosthog?.((ph) => ph.opt_out_capturing()) } catch {}
     }
   })
 
@@ -20,7 +20,7 @@ export function useCookieConsent() {
 
   function accept() {
     localStorage.setItem(CONSENT_KEY, 'yes')
-    try { $posthog()?.opt_in_capturing() } catch {}
+    try { $withPosthog?.((ph) => ph.opt_in_capturing()) } catch {}
     setGtagConsent('granted')
     // Clarity sa bez súhlasu vôbec nenačíta — tu ho spúšťame prvýkrát
     try { $clarity?.()?.start() } catch {}
@@ -29,7 +29,7 @@ export function useCookieConsent() {
 
   function decline() {
     localStorage.setItem(CONSENT_KEY, 'no')
-    try { $posthog()?.opt_out_capturing() } catch {}
+    try { $withPosthog?.((ph) => ph.opt_out_capturing()) } catch {}
     setGtagConsent('denied')
     try { $clarity?.()?.revoke() } catch {}
     showBanner.value = false

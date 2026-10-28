@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
-const { $gtag, $posthog } = useNuxtApp()
+const { $gtag, $withPosthog } = useNuxtApp()
 const localePath = useLocalePath()
 const { target, pending } = useReveal()
 
@@ -49,7 +49,7 @@ function trackLead() {
     has_message: Boolean(form.message.trim())
   }
   try { $gtag?.()?.('event', 'generate_lead', props) } catch {}
-  try { $posthog?.()?.capture('contact_form_submitted', props) } catch {}
+  try { $withPosthog?.((ph) => ph.capture('contact_form_submitted', props)) } catch {}
 }
 
 async function onSubmit() {
