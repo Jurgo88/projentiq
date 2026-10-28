@@ -1,6 +1,8 @@
 // Generuje titulné obrázky blogu (1200×630 PNG) z poľa `cover` v
-// app/content/blog/<slug>.ts. Vzhľad zodpovedá ručne robeným obrázkom:
-// logo, štítok, karta s otázkou, veľký nadpis s akcentom a pätička.
+// app/content/blog/<slug>.ts, pre každý jazyk zvlášť (sk = <slug>.png alebo
+// `image`, cs a en = <slug>.cs.png, <slug>.en.png). Vzhľad zodpovedá ručne
+// robeným obrázkom: logo, štítok, karta s otázkou, veľký nadpis s akcentom
+// a pätička.
 //
 // Spustenie:
 //   node scripts/generate-blog-covers.mjs              # chýbajúce obrázky
@@ -181,16 +183,25 @@ async function main() {
   const fonts = loadFonts()
   let written = 0
   for (const post of posts) {
-    const image = post.image ?? `/blog/${post.slug}.png`
-    const target = outDir ? join(outDir, `${post.slug}.png`) : join('public', image)
-    if (!outDir && existsSync(target) && !force) continue
+    // cesty ako v app/utils/blog-posts.ts: sk = `image`, ostatné <slug>.<jazyk>.png
+    const images = {
+      sk: post.image ?? `/blog/${post.slug}.png`,
+      cs: `/blog/${post.slug}.cs.png`,
+      en: `/blog/${post.slug}.en.png`
+    }
+    for (const [locale, image] of Object.entries(images)) {
+      const cover = post.cover[locale]
+      if (!cover) throw new Error(`${post.slug}: chýba cover.${locale}`)
+      const target = outDir ? join(outDir, image.split('/').pop()) : join('public', image)
+      if (!outDir && existsSync(target) && !force) continue
 
-    validateCover(post.slug, post.cover)
-    const svg = await satori(coverTree(post.cover), { width: WIDTH, height: HEIGHT, fonts })
-    mkdirSync(dirname(target), { recursive: true })
-    writeFileSync(target, await sharp(Buffer.from(svg)).png({ compressionLevel: 9 }).toBuffer())
-    console.log(`✔ ${target}`)
-    written++
+      validateCover(`${post.slug} (${locale})`, cover)
+      const svg = await satori(coverTree(cover), { width: WIDTH, height: HEIGHT, fonts })
+      mkdirSync(dirname(target), { recursive: true })
+      writeFileSync(target, await sharp(Buffer.from(svg)).png({ compressionLevel: 9 }).toBuffer())
+      console.log(`✔ ${target}`)
+      written++
+    }
   }
   if (!written) console.log('Nič na generovanie (obrázky existujú — použi --force).')
 }

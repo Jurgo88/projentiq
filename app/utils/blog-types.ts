@@ -17,10 +17,10 @@ export interface BlogPostContent {
   takeaway?: string
 }
 
-// Text titulného obrázka 1200×630. Vykreslí ho
-// node scripts/generate-blog-covers.mjs do public/blog/<slug>.png. Texty sú
-// po slovensky (jeden obrázok pre všetky jazyky); max. dĺžky v znakoch sú v
-// komentároch, dlhší text skript odmietne.
+// Text titulného obrázka 1200×630 v jednom jazyku. Vykreslí ho
+// node scripts/generate-blog-covers.mjs do public/blog/<slug>.png (sk),
+// <slug>.cs.png a <slug>.en.png; max. dĺžky v znakoch sú v komentároch,
+// dlhší text skript odmietne.
 export interface BlogCover {
   // Štítok vpravo hore, napr. 'Automatizácia' (20).
   tag: string
@@ -36,7 +36,8 @@ export interface BlogCover {
 
 // Textový reel na Instagram a Facebook (1080×1920 MP4). Vykreslí ho
 // node scripts/generate-blog-reel.mjs <slug> do social/reels/<slug>.mp4.
-// Štítok a riadok nad úvodnou otázkou berie z `cover` (tag, card.label).
+// Štítok a riadok nad úvodnou otázkou berie zo slovenského `cover`
+// (tag, card.label).
 // Texty sú po slovensky a krátke, záber trvá len pár sekúnd; max. dĺžky v
 // znakoch sú v komentároch, dlhší text skript odmietne.
 export interface BlogReel {
@@ -56,9 +57,10 @@ export interface BlogPostSource {
   datePublished: string
   // Len ak treba prebiť automatický odhad (READING_WPM v blog-posts.ts).
   readingMinutes?: number
-  // Predvolene /blog/<slug>.png (výstup generátora z `cover`).
+  // Slovenský obrázok, predvolene /blog/<slug>.png (výstup generátora
+  // z `cover`). Bez `cover` sa použije pre všetky jazyky.
   image?: string
-  cover?: BlogCover
+  cover?: Record<BlogLocale, BlogCover>
   reel?: BlogReel
   imageAlt: Record<BlogLocale, string>
   inlineImage?: {
@@ -75,7 +77,7 @@ export interface BlogPostSource {
 
 export interface BlogPost extends Omit<BlogPostSource, 'readingMinutes' | 'image'> {
   slug: string
-  image: string
+  image: Record<BlogLocale, string>
   readingMinutes: Record<BlogLocale, number>
 }
 

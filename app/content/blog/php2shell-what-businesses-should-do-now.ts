@@ -2,11 +2,27 @@
 export default defineBlogPost({
   datePublished: '2026-10-23',
   cover: {
-    tag: 'Bezpečnosť',
-    card: { badge: 'PHP', label: 'Kritická zraniteľnosť PHP2Shell', text: 'Beží váš web alebo e-shop na PHP?' },
-    headline: 'Overte verziu ešte dnes.',
-    highlight: 'Jediná úplná oprava je aktualizácia.',
-    footnote: 'Čo urobiť, ak web spravuje hosting alebo agentúra.'
+    sk: {
+      tag: 'Bezpečnosť',
+      card: { badge: 'PHP', label: 'Kritická zraniteľnosť PHP2Shell', text: 'Beží váš web alebo e-shop na PHP?' },
+      headline: 'Overte verziu ešte dnes.',
+      highlight: 'Jediná úplná oprava je aktualizácia.',
+      footnote: 'Čo urobiť, ak web spravuje hosting alebo agentúra.'
+    },
+    cs: {
+      tag: 'Bezpečnost',
+      card: { badge: 'PHP', label: 'Kritická zranitelnost PHP2Shell', text: 'Běží váš web nebo e-shop na PHP?' },
+      headline: 'Ověřte verzi ještě dnes.',
+      highlight: 'Jedinou úplnou opravou je aktualizace.',
+      footnote: 'Co dělat, když web spravuje hosting nebo agentura.'
+    },
+    en: {
+      tag: 'Security',
+      card: { badge: 'PHP', label: 'Critical PHP2Shell vulnerability', text: 'Does your website or online shop run on PHP?' },
+      headline: 'Check the version today.',
+      highlight: 'The only complete fix is an update.',
+      footnote: 'What to do if a host or agency runs your site.'
+    }
   },
   reel: {
     hook: 'Beží váš web alebo e-shop na PHP?',

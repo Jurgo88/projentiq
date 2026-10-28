@@ -101,7 +101,7 @@ function stepRow(n, content) {
 }
 
 // Záber = prvky, ktoré postupne nabehnú (`at` = sekunda od začiatku záberu).
-function buildScenes({ cover, reel }) {
+function buildScenes({ cover: { sk: cover }, reel }) {
   const duration = (chars, extra = 0) =>
     Math.min(SCENE_MAX, Math.max(SCENE_MIN, 1.2 + chars / CHARS_PER_SECOND + extra))
 
@@ -228,7 +228,7 @@ function frameTree(post, scenes, t) {
         backgroundColor: C.bg,
         backgroundImage: background(t)
       },
-      header(post.cover.tag, t),
+      header(post.cover.sk.tag, t),
       h(
         'div',
         { display: 'flex', flexDirection: 'column', justifyContent: 'center', flexGrow: 1 },
