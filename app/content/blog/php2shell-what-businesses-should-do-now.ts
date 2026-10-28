@@ -8,6 +8,26 @@ export default defineBlogPost({
     highlight: 'Jediná úplná oprava je aktualizácia.',
     footnote: 'Čo urobiť, ak web spravuje hosting alebo agentúra.'
   },
+  reel: {
+    hook: 'Beží váš web alebo e-shop na PHP?',
+    scenes: [
+      {
+        text: 'Projekt PHP 21. októbra opravil dve kritické chyby.',
+        highlight: 'Útočník cez ne môže bez prihlásenia spustiť na serveri vlastný kód.'
+      },
+      { text: 'Prvý pokus o zneužitie zaznamenali už 17. októbra.', highlight: 'Štyri dni pred zverejnením opráv.' },
+      { text: 'Nová verzia WordPressu ani pluginov nepomôže.', highlight: 'Aktualizovať treba samotné PHP na serveri.' }
+    ],
+    steps: {
+      title: 'Čo urobiť ešte dnes',
+      items: [
+        'Spíšte všetko, čo vám beží na PHP.',
+        'Opýtajte sa hostingu, akú verziu PHP máte.',
+        'Nechajte skontrolovať záznamy servera od 17. októbra.'
+      ]
+    },
+    cta: 'Opravené verzie a celý postup nájdete v článku.'
+  },
   imageAlt: {
     sk: 'Tmavá grafika ProjentIQ: Beží váš web alebo e-shop na PHP? Overte verziu ešte dnes. Jediná úplná oprava je aktualizácia.',
     cs: 'Tmavá grafika ProjentIQ: Běží váš web nebo e-shop na PHP? Ověřte verzi ještě dnes. Jedinou úplnou opravou je aktualizace.',

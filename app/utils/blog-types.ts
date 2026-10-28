@@ -34,6 +34,22 @@ export interface BlogCover {
   footnote?: string
 }
 
+// Textový reel na Instagram a Facebook (1080×1920 MP4). Vykreslí ho
+// node scripts/generate-blog-reel.mjs <slug> do social/reels/<slug>.mp4.
+// Štítok a riadok nad úvodnou otázkou berie z `cover` (tag, card.label).
+// Texty sú po slovensky a krátke, záber trvá len pár sekúnd; max. dĺžky v
+// znakoch sú v komentároch, dlhší text skript odmietne.
+export interface BlogReel {
+  // Úvodná otázka (60).
+  hook: string
+  // 2–4 zábery: tvrdenie (90) a pod ním zvýraznená pointa (90).
+  scenes: { text: string; highlight?: string }[]
+  // Záber s krokmi: nadpis (30) a najviac 3 kroky (každý 55).
+  steps?: { title: string; items: string[] }
+  // Záverečná veta nad adresou blogu (70).
+  cta: string
+}
+
 // Tvar súboru app/content/blog/<slug>.ts. Slug a čas čítania sa dopočítajú.
 export interface BlogPostSource {
   // YYYY-MM-DD. Budúci dátum = článok čaká a vyjde pri prvom builde v ten deň.
@@ -43,6 +59,7 @@ export interface BlogPostSource {
   // Predvolene /blog/<slug>.png (výstup generátora z `cover`).
   image?: string
   cover?: BlogCover
+  reel?: BlogReel
   imageAlt: Record<BlogLocale, string>
   inlineImage?: {
     src: string

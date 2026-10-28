@@ -25,3 +25,6 @@ logs
 
 # Local Netlify folder
 .netlify
+
+# Výstup scripts/generate-blog-reel.mjs (MP4 a náhľadové snímky)
+social/reels/

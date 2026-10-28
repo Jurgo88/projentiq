@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "blog:covers": "node scripts/generate-blog-covers.mjs"
+    "blog:covers": "node scripts/generate-blog-covers.mjs",
+    "blog:reel": "node scripts/generate-blog-reel.mjs"
   },
   "dependencies": {
     "nuxt": "^4.4.8",

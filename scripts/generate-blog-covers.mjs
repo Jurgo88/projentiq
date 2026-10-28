@@ -10,51 +10,14 @@
 //
 // Súbory článkov sú TypeScript — Node (>= 23.6) z nich typy odstráni sám.
 
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
-import { basename, dirname, join } from 'node:path'
-import { pathToFileURL } from 'node:url'
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
+import { dirname, join } from 'node:path'
 import satori from 'satori'
 import sharp from 'sharp'
+import { C, FONT_SUBSETS, h, loadFonts, loadPosts } from './blog-graphics.mjs'
 
-const POSTS_DIR = 'app/content/blog'
 const WIDTH = 1200
 const HEIGHT = 630
-
-const C = {
-  bg: '#07070b',
-  surface: 'rgba(20, 20, 31, 0.78)',
-  border: '#20202e',
-  text: '#f4f4f7',
-  muted: '#9a9aa8',
-  accent: '#5b8cff',
-  accentSoft: 'rgba(91, 140, 255, 0.12)',
-  accentBorder: 'rgba(91, 140, 255, 0.32)',
-  accentText: '#9bb8ff',
-  gradientText: 'linear-gradient(120deg, #9bb8ff 0%, #b89bff 100%)'
-}
-
-// Inter z @fontsource: latin + latin-ext (diakritika), satori berie len woff/ttf.
-// Podmnožiny musia mať rôzne mená — satori pri chýbajúcom znaku prechádza
-// rodiny vo fontFamily, nie súbory s rovnakým menom.
-const FONT_SUBSETS = { latin: 'Inter', 'latin-ext': 'Inter Ext' }
-
-function loadFonts() {
-  const dir = 'node_modules/@fontsource/inter/files'
-  return [400, 500, 700].flatMap((weight) =>
-    Object.entries(FONT_SUBSETS).map(([subset, name]) => ({
-      name,
-      weight,
-      style: 'normal',
-      data: readFileSync(join(dir, `inter-${subset}-${weight}-normal.woff`))
-    }))
-  )
-}
-
-// h('div', style, ...children) → strom, ktorý satori vie vykresliť
-function h(type, style, ...children) {
-  const flat = children.flat().filter((c) => c !== null && c !== undefined && c !== false)
-  return { type, props: { style, children: flat.length === 1 ? flat[0] : flat } }
-}
 
 // Dlhší text sa do 1200×630 nezmestí (satori by ho vykreslil cez okraj),
 // preto radšej chyba s jasnou správou.
@@ -199,18 +162,6 @@ function coverTree(cover) {
         h('div', { display: 'flex' }, 'projentiq.com')
       )
     )
-  )
-}
-
-async function loadPosts() {
-  // súbory článkov volajú auto-importovaný defineBlogPost — tu stačí identita
-  globalThis.defineBlogPost = (post) => post
-  const files = readdirSync(POSTS_DIR).filter((f) => f.endsWith('.ts'))
-  return Promise.all(
-    files.map(async (file) => {
-      const mod = await import(pathToFileURL(join(POSTS_DIR, file)).href)
-      return { slug: basename(file, '.ts'), ...mod.default }
-    })
   )
 }
 
