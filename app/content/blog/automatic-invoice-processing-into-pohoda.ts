@@ -2,11 +2,27 @@
 export default defineBlogPost({
   datePublished: '2026-11-03',
   cover: {
-    tag: 'Automatizácia',
-    card: { badge: 'AI', label: 'Faktúry do Pohody', text: 'Kto skontroluje doklad, ktorý AI neprečíta?' },
-    headline: 'Najprv kontrola,',
-    highlight: 'až potom zápis do Pohody.',
-    footnote: 'Ako funguje tok faktúry a kde sú jeho limity.'
+    sk: {
+      tag: 'Automatizácia',
+      card: { badge: 'AI', label: 'Faktúry do Pohody', text: 'Kto skontroluje doklad, ktorý AI neprečíta?' },
+      headline: 'Najprv kontrola,',
+      highlight: 'až potom zápis do Pohody.',
+      footnote: 'Ako funguje tok faktúry a kde sú jeho limity.'
+    },
+    cs: {
+      tag: 'Automatizace',
+      card: { badge: 'AI', label: 'Faktury do Pohody', text: 'Kdo zkontroluje doklad, který AI nepřečte?' },
+      headline: 'Nejprve kontrola,',
+      highlight: 'teprve potom zápis do Pohody.',
+      footnote: 'Jak funguje tok faktury a kde jsou jeho limity.'
+    },
+    en: {
+      tag: 'Automation',
+      card: { badge: 'AI', label: 'Invoices into Pohoda', text: 'Who checks the document the AI cannot read?' },
+      headline: 'Review first,',
+      highlight: 'only then write to Pohoda.',
+      footnote: 'How the invoice flow works and where its limits are.'
+    }
   },
   imageAlt: {
     sk: 'Tmavá grafika ProjentIQ: Kto skontroluje doklad, ktorý AI neprečíta? Najprv kontrola, až potom zápis do Pohody.',

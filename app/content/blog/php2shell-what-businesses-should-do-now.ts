@@ -2,11 +2,47 @@
 export default defineBlogPost({
   datePublished: '2026-10-23',
   cover: {
-    tag: 'Bezpečnosť',
-    card: { badge: 'PHP', label: 'Kritická zraniteľnosť PHP2Shell', text: 'Beží váš web alebo e-shop na PHP?' },
-    headline: 'Overte verziu ešte dnes.',
-    highlight: 'Jediná úplná oprava je aktualizácia.',
-    footnote: 'Čo urobiť, ak web spravuje hosting alebo agentúra.'
+    sk: {
+      tag: 'Bezpečnosť',
+      card: { badge: 'PHP', label: 'Kritická zraniteľnosť PHP2Shell', text: 'Beží váš web alebo e-shop na PHP?' },
+      headline: 'Overte verziu ešte dnes.',
+      highlight: 'Jediná úplná oprava je aktualizácia.',
+      footnote: 'Čo urobiť, ak web spravuje hosting alebo agentúra.'
+    },
+    cs: {
+      tag: 'Bezpečnost',
+      card: { badge: 'PHP', label: 'Kritická zranitelnost PHP2Shell', text: 'Běží váš web nebo e-shop na PHP?' },
+      headline: 'Ověřte verzi ještě dnes.',
+      highlight: 'Jedinou úplnou opravou je aktualizace.',
+      footnote: 'Co dělat, když web spravuje hosting nebo agentura.'
+    },
+    en: {
+      tag: 'Security',
+      card: { badge: 'PHP', label: 'Critical PHP2Shell vulnerability', text: 'Does your website or online shop run on PHP?' },
+      headline: 'Check the version today.',
+      highlight: 'The only complete fix is an update.',
+      footnote: 'What to do if a host or agency runs your site.'
+    }
+  },
+  reel: {
+    hook: 'Beží váš web alebo e-shop na PHP?',
+    scenes: [
+      {
+        text: 'Projekt PHP 21. októbra opravil dve kritické chyby.',
+        highlight: 'Útočník cez ne môže bez prihlásenia spustiť na serveri vlastný kód.'
+      },
+      { text: 'Prvý pokus o zneužitie zaznamenali už 17. októbra.', highlight: 'Štyri dni pred zverejnením opráv.' },
+      { text: 'Nová verzia WordPressu ani pluginov nepomôže.', highlight: 'Aktualizovať treba samotné PHP na serveri.' }
+    ],
+    steps: {
+      title: 'Čo urobiť ešte dnes',
+      items: [
+        'Spíšte všetko, čo vám beží na PHP.',
+        'Opýtajte sa hostingu, akú verziu PHP máte.',
+        'Nechajte skontrolovať záznamy servera od 17. októbra.'
+      ]
+    },
+    cta: 'Opravené verzie a celý postup nájdete v článku.'
   },
   imageAlt: {
     sk: 'Tmavá grafika ProjentIQ: Beží váš web alebo e-shop na PHP? Overte verziu ešte dnes. Jediná úplná oprava je aktualizácia.',

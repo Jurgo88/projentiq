@@ -105,12 +105,16 @@ Vzor: `app/content/blog/php2shell-what-businesses-should-do-now.ts`.
 
 ## Titulný obrázok
 
-Pole `cover` (texty po slovensky, limity v `BlogCover`), potom
-`npm run blog:covers` → `public/blog/<slug>.png`. Obrázok si po vygenerovaní
-pozri. Štýl ako vzory: karta = otázka alebo citát, ktorý si čitateľ kladie;
-headline + highlight = odpoveď alebo pointa článku; footnote = čo v článku nájde.
+Pole `cover` so sk, cs a en (limity v `BlogCover`), potom
+`npm run blog:covers` → `public/blog/<slug>.png`, `<slug>.cs.png` a
+`<slug>.en.png`. Každý jazyk má vlastný obrázok, preto texty prelož, nie len
+skopíruj. Všetky tri obrázky si po vygenerovaní pozri; ak na poslednom riadku
+ostane jedno slovo, text skráť. Štýl ako vzory: karta = otázka alebo citát,
+ktorý si čitateľ kladie; headline + highlight = odpoveď alebo pointa článku;
+footnote = čo v článku nájde.
 
-`imageAlt` v troch jazykoch opisuje, čo je na obrázku (vrátane textu).
+`imageAlt` v troch jazykoch opisuje, čo je na obrázku daného jazyka (vrátane
+textu).
 `inlineImage` nepoužívaj.
 
 ## Dátum
@@ -130,7 +134,7 @@ otázka do diskusie, cesta k obrázku. Po slovensky, bez hashtagov a emoji.
 1. Téma presunutá v `docs/blog/ideas.md` z „Na rade“ do „Napísané“.
 2. Každé tvrdenie o ProjentIQ je v zozname vyššie; v texte nie je žiadne
    číslo bez zdroja.
-3. `npm run blog:covers` prešiel a obrázok vyzerá dobre.
+3. `npm run blog:covers` prešiel a všetky tri obrázky vyzerajú dobre.
 4. Lokálne prešiel `npm run generate`. V cloude, kde chýba prístup ku Google
    Fonts, stačí `npx tsc --noEmit -p .nuxt/tsconfig.app.json`; celý build
    overí Netlify náhľad v PR.

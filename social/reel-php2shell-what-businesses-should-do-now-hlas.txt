@@ -1,0 +1,12 @@
+Beží váš web alebo e-shop na PHP?
+V PHP nedávno opravili dve kritické chyby.
+Útočník cez ne môže spustiť na serveri vlastný kód.
+Prvý pokus o zneužitie zaznamenali
+ešte pred zverejnením opráv.
+Nová verzia WordPressu nepomôže.
+Treba aktualizovať samotné PHP.
+Čo urobiť: zistite, čo vám beží na PHP,
+opýtajte sa hostingu na verziu
+a nechajte skontrolovať záznamy servera.
+Opravené verzie a celý postup
+nájdete v článku na našom blogu.

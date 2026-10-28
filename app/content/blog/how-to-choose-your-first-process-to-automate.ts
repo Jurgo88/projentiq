@@ -2,6 +2,30 @@
 export default defineBlogPost({
   datePublished: '2026-10-15',
   image: '/blog/first-process-to-automate.png',
+  // slovenský obrázok je ručne robený, cs/en vygeneroval skript
+  cover: {
+    sk: {
+      tag: 'Automatizácia',
+      card: { badge: '01', label: 'Výber prvého procesu', text: 'Čo vám vo firme berie čas každý deň?' },
+      headline: 'Najlepší prvý proces?',
+      highlight: 'Ten, ktorý sa opakuje.',
+      footnote: '5 otázok pred prvým pilotom.'
+    },
+    cs: {
+      tag: 'Automatizace',
+      card: { badge: '01', label: 'Výběr prvního procesu', text: 'Co vám ve firmě bere čas každý den?' },
+      headline: 'Nejlepší první proces?',
+      highlight: 'Ten, který se opakuje.',
+      footnote: '5 otázek před prvním pilotem.'
+    },
+    en: {
+      tag: 'Automation',
+      card: { badge: '01', label: 'Choosing the first process', text: 'What takes up your team’s time every day?' },
+      headline: 'The best first process?',
+      highlight: 'The one that repeats.',
+      footnote: '5 questions before your first pilot.'
+    }
+  },
   imageAlt: {
     sk: 'Tmavá grafika ProjentIQ s otázkou, ktorý proces automatizovať ako prvý, a odpoveďou: ten, ktorý sa opakuje.',
     cs: 'Tmavá grafika ProjentIQ s otázkou, který proces automatizovat jako první, a odpovědí: ten, který se opakuje.',

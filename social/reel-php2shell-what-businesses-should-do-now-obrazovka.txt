@@ -1,0 +1,14 @@
+Kritická zraniteľnosť PHP2Shell
+Beží váš web alebo e-shop na PHP?
+Projekt PHP 21. októbra opravil dve kritické chyby.
+Útočník cez ne môže bez prihlásenia spustiť na serveri vlastný kód.
+Prvý pokus o zneužitie zaznamenali už 17. októbra.
+Štyri dni pred zverejnením opráv.
+Nová verzia WordPressu ani pluginov nepomôže.
+Aktualizovať treba samotné PHP na serveri.
+Čo urobiť ešte dnes:
+1. Spíšte všetko, čo vám beží na PHP.
+2. Opýtajte sa hostingu, akú verziu PHP máte.
+3. Nechajte skontrolovať záznamy servera od 17. októbra.
+Opravené verzie a celý postup nájdete v článku.
+projentiq.com/sk/blog

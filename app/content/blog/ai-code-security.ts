@@ -2,10 +2,34 @@
 export default defineBlogPost({
   datePublished: '2026-09-27',
   image: '/blog/ai-code-security.png',
+  // slovenský obrázok je ručne robený, cs/en vygeneroval skript
+  cover: {
+    sk: {
+      tag: 'Bezpečnosť',
+      card: { badge: 'AI', label: 'Bezpečnostná kontrola kódu', text: '„Kód je bezpečný. Všetko je v poriadku.“' },
+      headline: 'AI vidí kód. Nevidí celú aplikáciu.',
+      highlight: 'Preto ju pred nasadením preverí náš bezpečnostný expert.',
+      footnote: 'AI kontroluje každú zmenu. Expert celú aplikáciu.'
+    },
+    cs: {
+      tag: 'Bezpečnost',
+      card: { badge: 'AI', label: 'Bezpečnostní kontrola kódu', text: '„Kód je bezpečný. Všechno je v pořádku.“' },
+      headline: 'AI vidí kód. Nevidí celou aplikaci.',
+      highlight: 'Proto ji před nasazením prověří náš expert.',
+      footnote: 'AI kontroluje každou změnu. Expert celou aplikaci.'
+    },
+    en: {
+      tag: 'Security',
+      card: { badge: 'AI', label: 'Code security review', text: '“The code is secure. Everything is fine.”' },
+      headline: 'AI sees the code, not the whole app.',
+      highlight: 'So our expert reviews it before launch.',
+      footnote: 'AI checks every change. An expert checks the whole app.'
+    }
+  },
   imageAlt: {
     sk: 'AI: „Kód je bezpečný. Všetko je v poriadku.“ AI vidí kód. Nevidí celú aplikáciu.',
     cs: 'AI: „Kód je bezpečný. Všetko je v pořádku.“ AI vidí kód. Nevidí celou aplikaci.',
-    en: 'AI: “The code is secure. Everything is fine.” AI sees the code. It doesn’t see the whole application.'
+    en: 'AI: “The code is secure. Everything is fine.” AI sees the code, not the whole app.'
   },
   tags: ['AI', 'Security', 'Supabase'],
   content: {

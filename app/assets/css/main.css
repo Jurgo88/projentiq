@@ -8,6 +8,8 @@
   --color-border-strong: #2c2c3d;
   --color-text: #f4f4f7;
   --color-text-muted: #9a9aa8;
+  /* long-form reading text (articles, legal): muted grey at this length reads washed-out */
+  --color-text-body: #d2d2db;
   --color-text-subtle: #8b8b99;
   --color-accent: #5b8cff;
   --color-accent-hover: #6f9bff;
@@ -34,6 +36,7 @@
   --color-border-strong: #d4d8df;
   --color-text: #0d0d14;
   --color-text-muted: #545a66;
+  --color-text-body: #2c303a;
   --color-text-subtle: #686e79;
   /* darker than spec's #2f6bff: that value measured under 4.5:1 as text against
      --color-surface-1 (4.23:1) and right at the rounding edge against white (4.50:1) */

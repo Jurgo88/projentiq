@@ -37,10 +37,13 @@ function toPost(path: string, { readingMinutes, ...source }: BlogPostSource): Bl
   const slug = path.split('/').pop()!.replace(/\.ts$/, '')
   const minutes = (locale: BlogLocale) =>
     readingMinutes ?? Math.max(1, Math.ceil(countWords(source.content[locale]) / READING_WPM))
+  // s `cover` má každý jazyk vlastný obrázok (scripts/generate-blog-covers.mjs)
+  const image = source.image ?? `/blog/${slug}.png`
+  const localized = (locale: BlogLocale) => (source.cover ? `/blog/${slug}.${locale}.png` : image)
   return {
     ...source,
     slug,
-    image: source.image ?? `/blog/${slug}.png`,
+    image: { sk: image, cs: localized('cs'), en: localized('en') },
     readingMinutes: { sk: minutes('sk'), cs: minutes('cs'), en: minutes('en') }
   }
 }

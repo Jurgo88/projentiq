@@ -254,7 +254,7 @@ useHead(() => ({
 .case-study__section > p {
   max-width: 68ch;
   margin: 0;
-  color: var(--color-text-muted);
+  color: var(--color-text-body);
   font-size: var(--fs-md);
   line-height: var(--lh-reading);
 }

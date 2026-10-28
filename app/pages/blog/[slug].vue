@@ -10,9 +10,10 @@ if (!post) {
 
 const localeMap: Record<string, string> = { sk: 'sk-SK', cs: 'cs-CZ', en: 'en-US' }
 const content = computed(() => post.content[locale.value as BlogLocale] ?? post.content.en)
+const image = computed(() => post.image[locale.value as BlogLocale] ?? post.image.en)
 const imageAlt = computed(() => post.imageAlt[locale.value as BlogLocale] ?? post.imageAlt.en)
 const readingMinutes = computed(() => post.readingMinutes[locale.value as BlogLocale] ?? post.readingMinutes.en)
-const inlineImageAlt =computed(() => post.inlineImage?.alt[locale.value as BlogLocale] ?? post.inlineImage?.alt.en ?? '')
+const inlineImageAlt = computed(() => post.inlineImage?.alt[locale.value as BlogLocale] ?? post.inlineImage?.alt.en ?? '')
 const date = computed(() =>
   new Date(post.datePublished).toLocaleDateString(localeMap[locale.value] ?? 'en-US', {
     day: 'numeric',
@@ -25,7 +26,7 @@ const isSecurityPost = post.tags.includes('Security')
 
 const SITE_URL = 'https://projentiq.com'
 const ORG_ID = `${SITE_URL}/#organization`
-const IMAGE_URL = `${SITE_URL}${post.image}`
+const imageUrl = computed(() => `${SITE_URL}${image.value}`)
 
 const inLanguage = computed(() => {
   const current = locales.value.find((l) => l.code === locale.value)
@@ -41,7 +42,7 @@ useSeoMeta({
   ogTitle: () => content.value.title,
   ogDescription: () => content.value.perex,
   ogType: 'article',
-  ogImage: IMAGE_URL,
+  ogImage: () => imageUrl.value,
   ogImageWidth: 1200,
   ogImageHeight: 630,
   ogImageAlt: () => imageAlt.value,
@@ -49,7 +50,7 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
   twitterTitle: () => content.value.title,
   twitterDescription: () => content.value.perex,
-  twitterImage: IMAGE_URL,
+  twitterImage: () => imageUrl.value,
   twitterImageAlt: () => imageAlt.value
 })
 
@@ -64,7 +65,7 @@ useHead(() => ({
         description: content.value.perex,
         inLanguage: inLanguage.value,
         datePublished: post.datePublished,
-        image: IMAGE_URL,
+        image: imageUrl.value,
         keywords: post.tags.join(', '),
         author: { '@id': ORG_ID },
         publisher: { '@id': ORG_ID }
@@ -92,7 +93,7 @@ useHead(() => ({
     </header>
 
     <div class="post__inner post__body">
-      <img :src="post.image" :alt="imageAlt" width="1200" height="630" class="post__img" />
+      <img :src="image" :alt="imageAlt" width="1200" height="630" class="post__img" />
 
       <template v-for="(section, index) in content.sections" :key="section.heading">
         <section class="post__section">
@@ -221,7 +222,7 @@ useHead(() => ({
 
 .post__section p,
 .post__list li {
-  color: var(--color-text-muted);
+  color: var(--color-text-body);
   font-size: var(--fs-md);
   line-height: var(--lh-reading);
 }

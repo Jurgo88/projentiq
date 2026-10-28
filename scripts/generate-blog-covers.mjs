@@ -1,6 +1,8 @@
 // Generuje titulné obrázky blogu (1200×630 PNG) z poľa `cover` v
-// app/content/blog/<slug>.ts. Vzhľad zodpovedá ručne robeným obrázkom:
-// logo, štítok, karta s otázkou, veľký nadpis s akcentom a pätička.
+// app/content/blog/<slug>.ts, pre každý jazyk zvlášť (sk = <slug>.png alebo
+// `image`, cs a en = <slug>.cs.png, <slug>.en.png). Vzhľad zodpovedá ručne
+// robeným obrázkom: logo, štítok, karta s otázkou, veľký nadpis s akcentom
+// a pätička.
 //
 // Spustenie:
 //   node scripts/generate-blog-covers.mjs              # chýbajúce obrázky
@@ -10,51 +12,14 @@
 //
 // Súbory článkov sú TypeScript — Node (>= 23.6) z nich typy odstráni sám.
 
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
-import { basename, dirname, join } from 'node:path'
-import { pathToFileURL } from 'node:url'
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
+import { dirname, join } from 'node:path'
 import satori from 'satori'
 import sharp from 'sharp'
+import { C, FONT_SUBSETS, h, loadFonts, loadPosts } from './blog-graphics.mjs'
 
-const POSTS_DIR = 'app/content/blog'
 const WIDTH = 1200
 const HEIGHT = 630
-
-const C = {
-  bg: '#07070b',
-  surface: 'rgba(20, 20, 31, 0.78)',
-  border: '#20202e',
-  text: '#f4f4f7',
-  muted: '#9a9aa8',
-  accent: '#5b8cff',
-  accentSoft: 'rgba(91, 140, 255, 0.12)',
-  accentBorder: 'rgba(91, 140, 255, 0.32)',
-  accentText: '#9bb8ff',
-  gradientText: 'linear-gradient(120deg, #9bb8ff 0%, #b89bff 100%)'
-}
-
-// Inter z @fontsource: latin + latin-ext (diakritika), satori berie len woff/ttf.
-// Podmnožiny musia mať rôzne mená — satori pri chýbajúcom znaku prechádza
-// rodiny vo fontFamily, nie súbory s rovnakým menom.
-const FONT_SUBSETS = { latin: 'Inter', 'latin-ext': 'Inter Ext' }
-
-function loadFonts() {
-  const dir = 'node_modules/@fontsource/inter/files'
-  return [400, 500, 700].flatMap((weight) =>
-    Object.entries(FONT_SUBSETS).map(([subset, name]) => ({
-      name,
-      weight,
-      style: 'normal',
-      data: readFileSync(join(dir, `inter-${subset}-${weight}-normal.woff`))
-    }))
-  )
-}
-
-// h('div', style, ...children) → strom, ktorý satori vie vykresliť
-function h(type, style, ...children) {
-  const flat = children.flat().filter((c) => c !== null && c !== undefined && c !== false)
-  return { type, props: { style, children: flat.length === 1 ? flat[0] : flat } }
-}
 
 // Dlhší text sa do 1200×630 nezmestí (satori by ho vykreslil cez okraj),
 // preto radšej chyba s jasnou správou.
@@ -202,18 +167,6 @@ function coverTree(cover) {
   )
 }
 
-async function loadPosts() {
-  // súbory článkov volajú auto-importovaný defineBlogPost — tu stačí identita
-  globalThis.defineBlogPost = (post) => post
-  const files = readdirSync(POSTS_DIR).filter((f) => f.endsWith('.ts'))
-  return Promise.all(
-    files.map(async (file) => {
-      const mod = await import(pathToFileURL(join(POSTS_DIR, file)).href)
-      return { slug: basename(file, '.ts'), ...mod.default }
-    })
-  )
-}
-
 async function main() {
   const args = process.argv.slice(2)
   const force = args.includes('--force')
@@ -230,16 +183,25 @@ async function main() {
   const fonts = loadFonts()
   let written = 0
   for (const post of posts) {
-    const image = post.image ?? `/blog/${post.slug}.png`
-    const target = outDir ? join(outDir, `${post.slug}.png`) : join('public', image)
-    if (!outDir && existsSync(target) && !force) continue
+    // cesty ako v app/utils/blog-posts.ts: sk = `image`, ostatné <slug>.<jazyk>.png
+    const images = {
+      sk: post.image ?? `/blog/${post.slug}.png`,
+      cs: `/blog/${post.slug}.cs.png`,
+      en: `/blog/${post.slug}.en.png`
+    }
+    for (const [locale, image] of Object.entries(images)) {
+      const cover = post.cover[locale]
+      if (!cover) throw new Error(`${post.slug}: chýba cover.${locale}`)
+      const target = outDir ? join(outDir, image.split('/').pop()) : join('public', image)
+      if (!outDir && existsSync(target) && !force) continue
 
-    validateCover(post.slug, post.cover)
-    const svg = await satori(coverTree(post.cover), { width: WIDTH, height: HEIGHT, fonts })
-    mkdirSync(dirname(target), { recursive: true })
-    writeFileSync(target, await sharp(Buffer.from(svg)).png({ compressionLevel: 9 }).toBuffer())
-    console.log(`✔ ${target}`)
-    written++
+      validateCover(`${post.slug} (${locale})`, cover)
+      const svg = await satori(coverTree(cover), { width: WIDTH, height: HEIGHT, fonts })
+      mkdirSync(dirname(target), { recursive: true })
+      writeFileSync(target, await sharp(Buffer.from(svg)).png({ compressionLevel: 9 }).toBuffer())
+      console.log(`✔ ${target}`)
+      written++
+    }
   }
   if (!written) console.log('Nič na generovanie (obrázky existujú — použi --force).')
 }

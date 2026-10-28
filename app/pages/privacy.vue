@@ -87,7 +87,7 @@ useSeoMeta({
 
 .legal p,
 .legal li {
-  color: var(--color-text-muted);
+  color: var(--color-text-body);
   line-height: 1.7;
 }
 

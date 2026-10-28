@@ -7,7 +7,7 @@ const localeMap: Record<string, string> = { sk: 'sk-SK', cs: 'cs-CZ', en: 'en-US
 const posts = computed(() =>
   BLOG_POSTS.map((post) => ({
     slug: post.slug,
-    image: post.image,
+    image: post.image[locale.value as BlogLocale] ?? post.image.en,
     imageAlt: post.imageAlt[locale.value as BlogLocale] ?? post.imageAlt.en,
     readingMinutes: post.readingMinutes[locale.value as BlogLocale] ?? post.readingMinutes.en,
     datePublished: post.datePublished,
