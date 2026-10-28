@@ -69,6 +69,8 @@ const year = new Date().getFullYear()
 
 .site-footer__inner {
   max-width: var(--container);
+  /* padding mimo --container ako pri sekciách — obsah lícuje s nimi */
+  box-sizing: content-box;
   margin: 0 auto;
   padding: 3rem 1.5rem 2rem;
   display: grid;
