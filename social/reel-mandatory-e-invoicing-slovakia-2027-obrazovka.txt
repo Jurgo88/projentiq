@@ -1,0 +1,14 @@
+Povinná e-faktúra od 1. 1. 2027
+Viete od januára prijímať eFaktúry?
+Od 1. januára 2027 ich musí prijímať každý podnikateľ na Slovensku.
+Aj živnostník, ktorý nie je platiteľom DPH.
+Platitelia DPH ich budú posielať ako XML cez sieť Peppol.
+PDF ani sken už eFaktúrou nie je.
+Faktúry doručuje certifikovaný digitálny poštár.
+Finančná správa odhaduje cenu na 5 až 12 € mesačne.
+Čo urobiť do konca roka:
+1. Overte, či váš účtovný program zvládne eFaktúry.
+2. Vyberte si certifikovaného digitálneho poštára.
+3. Vyskúšajte posielanie aj prijímanie.
+Koho sa to týka, čo platí do roku 2030 a aké sú pokuty, je v článku.
+projentiq.com/sk/blog

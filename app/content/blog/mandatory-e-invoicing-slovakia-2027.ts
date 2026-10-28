@@ -27,6 +27,29 @@ export default defineBlogPost({
       footnote: 'What to prepare by year-end and what applies until 2030.'
     }
   },
+  reel: {
+    hook: 'Viete od januára prijímať eFaktúry?',
+    scenes: [
+      {
+        text: 'Od 1. januára 2027 ich musí prijímať každý podnikateľ na Slovensku.',
+        highlight: 'Aj živnostník, ktorý nie je platiteľom DPH.'
+      },
+      { text: 'Platitelia DPH ich budú posielať ako XML cez sieť Peppol.', highlight: 'PDF ani sken už eFaktúrou nie je.' },
+      {
+        text: 'Faktúry doručuje certifikovaný digitálny poštár.',
+        highlight: 'Finančná správa odhaduje cenu na 5 až 12 € mesačne.'
+      }
+    ],
+    steps: {
+      title: 'Čo urobiť do konca roka',
+      items: [
+        'Overte, či váš účtovný program zvládne eFaktúry.',
+        'Vyberte si certifikovaného digitálneho poštára.',
+        'Vyskúšajte posielanie aj prijímanie.'
+      ]
+    },
+    cta: 'Koho sa to týka, čo platí do roku 2030 a aké sú pokuty, je v článku.'
+  },
   imageAlt: {
     sk: 'Tmavá grafika ProjentIQ: Povinná e-faktúra od 1. 1. 2027. Viete od januára prijímať eFaktúry? Prijímať ich musí každý podnikateľ, vystavovať platitelia DPH.',
     cs: 'Tmavá grafika ProjentIQ: Povinná e-faktura na Slovensku od 2027. Umíte od ledna přijímat eFaktury? Přijímat je musí každý podnikatel, vystavovat plátci DPH.',
