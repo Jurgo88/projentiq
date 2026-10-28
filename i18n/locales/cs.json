@@ -39,7 +39,7 @@
   },
   "cookie": {
     "aria_label": "Souhlas s používáním cookies",
-    "message": "Používáme cookies k analýze návštěvnosti, abychom pochopili, jak web funguje. Pokračováním souhlasíte, případně můžete sledování odmítnout.",
+    "message": "Analytické cookies používáme, jen pokud s tím souhlasíte. Pomáhají nám pochopit, jak se web používá.",
     "accept": "Přijmout",
     "decline": "Odmítnout"
   },
