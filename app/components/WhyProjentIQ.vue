@@ -13,7 +13,9 @@ const items = [
 <template>
   <section id="why" class="why">
     <div ref="target" class="why__inner reveal" :class="{ 'reveal--pending': pending }">
-      <h2>{{ t('why.title') }}</h2>
+      <p class="eyebrow">{{ t('why.title') }}</p>
+      <h2>{{ t('why.heading') }}</h2>
+      <p class="why__lead">{{ t('why.lead') }}</p>
 
       <ul class="why__list">
         <li v-for="item in items" :key="item.id" class="why__item">
@@ -40,8 +42,18 @@ const items = [
 }
 
 .why h2 {
+  max-width: 40rem;
   font-size: var(--fs-2xl);
-  margin: 0 0 2rem;
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 0.75rem;
+}
+
+.why__lead {
+  max-width: 42rem;
+  margin: 0 0 2.5rem;
+  color: var(--color-text-muted);
+  font-size: var(--fs-md);
+  line-height: var(--lh-base);
 }
 
 .why__list {

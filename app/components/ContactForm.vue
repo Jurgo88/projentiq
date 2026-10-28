@@ -68,6 +68,10 @@ async function onSubmit() {
           <Icon name="tabler:calendar-event" aria-hidden="true" />
           {{ t('contact.success_message') }}
         </p>
+        <p class="contact__email">
+          {{ t('contact.email_alt') }}
+          <a :href="`mailto:${COMPANY.email}`">{{ COMPANY.email }}</a>
+        </p>
       </div>
 
       <form
@@ -201,6 +205,12 @@ async function onSubmit() {
   color: var(--color-text-muted);
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
+}
+
+.contact__email {
+  margin: 1rem 0 0;
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
 }
 
 .contact__microcopy :deep(svg) {

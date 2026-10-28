@@ -119,6 +119,8 @@
   },
   "why": {
     "title": "Proč ProjentIQ",
+    "heading": "Technologie prodáváme až poté, co pochopíme problém.",
+    "lead": "Nejdříve pochopíme proces, který chcete zlepšit. Až poté navrhujeme technologii. Cílem je mít méně manuální práce, rychlejší přístup k informacím a jednodušší procesy.",
     "item_1_title": "Pracujeme s vašimi daty",
     "item_1_desc": "AI řešení jsou postavená na dokumentech, systémech a informacích, které už ve firmě používáte.",
     "item_2_title": "Přizpůsobené vašemu procesu",
@@ -127,13 +129,6 @@
     "item_3_desc": "Před objednávkou uvidíte řešení na vlastních datech.",
     "item_4_title": "Integrace na stávající systémy",
     "item_4_desc": "ERP, CRM, SharePoint, Google Drive, e-mail, databáze nebo API."
-  },
-  "trust_section": {
-    "title": "Technologie prodáváme až poté, co pochopíme problém.",
-    "p1": "Nevytváříme univerzální AI řešení.",
-    "p2": "Nejdříve pochopíme proces, který chcete zlepšit. Až poté navrhujeme technologii.",
-    "p3": "Cílem není mít více AI.",
-    "p4": "Cílem je mít méně manuální práce, rychlejší přístup k informacím a jednodušší procesy."
   },
   "testimonials": {
     "title": "Zkušenosti klientů"
@@ -187,11 +182,6 @@
     "a8": "Data jsou vždy vaše a při ukončení spolupráce vám je předáme. Samotné řešení, tedy kód a konfigurace, zůstává naše.",
     "q9": "Jak se nás týká AI Act?",
     "a9": "Na začátku spolupráce společně posoudíme, zda a jaké povinnosti z AI Actu se vašeho řešení týkají."
-  },
-  "cta_band": {
-    "title": "Ukážeme vám to na vašich datech.",
-    "lead": "Pošlete nám proces nebo problém, který chcete řešit. Navrhneme konkrétní postup a ukázku řešení na reálných firemních datech.",
-    "email": "Napsat e-mail"
   },
   "demos": {
     "eyebrow": "Vyzkoušejte si to",
@@ -249,8 +239,9 @@
     }
   },
   "contact": {
-    "title": "Ozvěte se nám",
-    "lead": "Napište nám pár slov o tom, co řešíte — ozveme se vám s termínem na krátké demo.",
+    "title": "Ukážeme vám to na vašich datech.",
+    "lead": "Pošlete nám proces nebo problém, který chcete řešit. Navrhneme konkrétní postup a ukázku řešení na reálných firemních datech.",
+    "email_alt": "Raději e-mailem?",
     "name_label": "Jméno a příjmení",
     "company_label": "Firma",
     "email_label": "E-mail",
