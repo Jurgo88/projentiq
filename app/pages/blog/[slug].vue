@@ -222,7 +222,7 @@ useHead(() => ({
 
 .post__section p,
 .post__list li {
-  color: var(--color-text-muted);
+  color: var(--color-text-body);
   font-size: var(--fs-md);
   line-height: var(--lh-reading);
 }
