@@ -259,6 +259,8 @@
     "sending": "Sending…",
     "success_title": "Thank you!",
     "success_message": "We'll get back to you within one business day.",
+    "success_next": "I will reply by email and suggest a time for a short demo.",
+    "success_alt": "In a hurry? Email us directly at",
     "error_required": "This field is required.",
     "error_email": "Enter a valid email address.",
     "error_consent": "You need to agree to data processing before sending.",

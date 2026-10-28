@@ -43,12 +43,13 @@ export default defineNuxtConfig({
   app: {
     head: {
       viewport: 'width=device-width, initial-scale=1',
-      meta: [{ name: 'theme-color', content: '#0a0a0f' }],
+      // theme-color podľa zvolenej témy nastavuje app.vue
       // ikony generuje scripts/generate-favicons.mjs z public/logo.png
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: '16x16 32x32 48x48' },
         { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon-96x96.png' },
-        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/site.webmanifest' }
       ]
     }
   },

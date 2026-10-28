@@ -1,4 +1,4 @@
-// Generuje favicon sadu z public/logo.png.
+// Generuje favicon sadu a ikony manifestu z public/logo.png.
 // Spustenie: node scripts/generate-favicons.mjs
 //
 // Značka v origináli zaberá len ~55 % plochy odznaku, takže na 16 px by
@@ -97,3 +97,9 @@ console.log('public/favicon-96x96.png      96 px')
 // Apple si rohy zaobľuje sám a priehľadnosť skladá na bielu
 writeFileSync('public/apple-touch-icon.png', await icon(180, { transparent: false }))
 console.log('public/apple-touch-icon.png   180 px, nepriehľadné')
+
+// ikony pre public/site.webmanifest (inštalácia na plochu v Androide)
+for (const size of [192, 512]) {
+  writeFileSync(`public/icon-${size}.png`, await icon(size))
+  console.log(`public/icon-${size}.png          ${size} px`)
+}
