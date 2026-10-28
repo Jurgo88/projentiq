@@ -18,6 +18,13 @@ const icons: Record<number, string> = {
 // poradie a ceny z utils/pricing.ts — vstupný produkt (automatizácia) prvý a zvýraznený
 const cards = PRICING.services.map((s, i) => ({ ...s, flagship: i === 0, icon: icons[s.id] }))
 
+// stránka služby ku každej karte (pri automatizácii je to zatiaľ faktúrová)
+const detailRoutes: Record<number, string> = {
+  1: 'ai-agents',
+  2: 'ai-chatbot',
+  3: 'invoice-automation'
+}
+
 function examples(id: number) {
   return t(`products.card_${id}_examples`).split(' · ')
 }
@@ -45,8 +52,8 @@ function examples(id: number) {
           <ul class="products__tags">
             <li v-for="item in examples(card.id)" :key="item" class="products__tag">{{ item }}</li>
           </ul>
-          <NuxtLink v-if="card.id === 3" :to="localePath('invoice-automation')" class="products__more">
-            {{ t('products.card_3_more') }}
+          <NuxtLink :to="localePath(detailRoutes[card.id]!)" class="products__more">
+            {{ t(`products.card_${card.id}_more`) }}
             <Icon name="tabler:arrow-right" aria-hidden="true" />
           </NuxtLink>
           <p class="products__price">
