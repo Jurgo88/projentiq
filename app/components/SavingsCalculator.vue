@@ -3,6 +3,11 @@
 // stojí ručná práca z čísel, ktoré zadá návštevník — žiadne sľúbené percento
 // úspory (docs/blog/guide.md: čísla bez zdroja nepíšeme). Koľko z toho
 // automatizácia ušetrí, overí pilot.
+const props = defineProps<{
+  // porovnanie s cenou automatizácie (samostatná stránka kalkulačky)
+  compare?: boolean
+}>()
+
 const { t, locale } = useI18n()
 
 // vzorové hodnoty, návštevník ich prepíše
@@ -26,6 +31,14 @@ const positive = (value: number) => (Number.isFinite(value) && value > 0 ? value
 
 const hours = computed(() => (positive(invoices.value) * positive(minutes.value)) / 60)
 const monthlyCost = computed(() => hours.value * positive(hourly.value))
+
+// automatizácia procesov = karta 3 v utils/pricing.ts; porovnáva sa najnižšia
+// cena „od“, nie sľúbená úspora
+const price = servicePrice(3)!
+const feeShare = computed(() => (monthlyCost.value > 0 ? price.monthly / monthlyCost.value : 0))
+const setupMonths = computed(() => (monthlyCost.value > 0 ? price.setup / monthlyCost.value : 0))
+const percent = (value: number) =>
+  value.toLocaleString(localeMap[locale.value] ?? 'sk-SK', { style: 'percent', maximumFractionDigits: 0 })
 
 // predvyplní správu v kontaktnom formulári (ContactForm číta ten istý stav)
 const prefill = useState<string>('contact-prefill', () => '')
@@ -68,6 +81,18 @@ function prefillContact() {
         <dd>{{ formatEur(monthlyCost * 12) }}</dd>
       </div>
     </dl>
+
+    <div v-if="props.compare && monthlyCost > 0" class="calc__compare" aria-live="polite">
+      <p class="calc__compare-heading">{{ t('calculator.compare_heading') }}</p>
+      <ul>
+        <li v-if="feeShare <= 1">
+          {{ t('calculator.compare_monthly', { price: formatEur(price.monthly), share: percent(feeShare) }) }}
+        </li>
+        <li v-else>{{ t('calculator.compare_monthly_over', { price: formatEur(price.monthly) }) }}</li>
+        <li>{{ t('calculator.compare_setup', { price: formatEur(price.setup), months: format(setupMonths, 1) }) }}</li>
+      </ul>
+      <p class="calc__note">{{ t('calculator.compare_note') }}</p>
+    </div>
 
     <div class="calc__footer">
       <a href="#demo" class="btn-primary" @click="prefillContact">{{ t('calculator.cta') }}</a>
@@ -137,6 +162,27 @@ function prefillContact() {
   margin: 0.25rem 0 0;
   font-size: var(--fs-xl);
   font-weight: var(--fw-bold);
+}
+
+.calc__compare {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.calc__compare-heading {
+  margin: 0 0 0.5rem;
+  font-weight: var(--fw-semibold);
+}
+
+.calc__compare ul {
+  margin: 0 0 0.75rem;
+  padding-left: 1.2rem;
+  color: var(--color-text-body);
+}
+
+.calc__compare li + li {
+  margin-top: 0.35rem;
 }
 
 .calc__footer {

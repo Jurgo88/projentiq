@@ -82,6 +82,11 @@ function examples(id: number) {
           </div>
         </section>
         <p class="products__vat">{{ t('products.price_note') }}</p>
+        <!-- ceny v kontexte nákladov na ručnú prácu (#38, #60) -->
+        <NuxtLink :to="localePath('invoice-cost-calculator')" class="products__calc">
+          {{ t('calculator.products_link') }}
+          <Icon name="tabler:arrow-right" aria-hidden="true" />
+        </NuxtLink>
       </div>
     </div>
   </section>
@@ -310,6 +315,21 @@ function examples(id: number) {
   margin: 1.5rem 0 0;
   color: var(--color-text-muted);
   font-size: var(--fs-xs);
+}
+
+.products__calc {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  color: var(--color-accent);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+}
+
+.products__calc:hover {
+  text-decoration: underline;
 }
 
 .products__cta {

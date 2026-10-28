@@ -44,6 +44,9 @@ Sporné polia sú vždy zvýraznené na kontrolu a nič sa nezapíše bez schvá
 - [Integrácie (slovensky)](https://projentiq.com/sk/integracie/): zápis do Pohody (XML import), Omegy (import), iDokladu (API) a iných systémov cez API; prijaté a vydané faktúry, pokladničné doklady, objednávky a adresár.
 - [Integrations (English)](https://projentiq.com/integrations/)
 - [Integrace (česky)](https://projentiq.com/cs/integrace/)
+- [Kalkulačka nákladov na ručný prepis faktúr (slovensky)](https://projentiq.com/sk/kalkulacka-nakladov-na-faktury/): čas a náklady na ručný zápis faktúr mesačne a ročne z vlastných čísel a porovnanie s cenou automatizácie; výpočet beží len v prehliadači.
+- [Invoice entry cost calculator (English)](https://projentiq.com/invoice-cost-calculator/)
+- [Kalkulačka nákladů na faktury (česky)](https://projentiq.com/cs/kalkulacka-nakladu-na-faktury/)
 
 ## Kontakt
 
