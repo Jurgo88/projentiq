@@ -119,6 +119,8 @@
   },
   "why": {
     "title": "Why ProjentIQ",
+    "heading": "We sell technology only after we understand the problem.",
+    "lead": "We first understand the process you want to improve. Only then do we design the technology. The goal is less manual work, faster access to information, and simpler processes.",
     "item_1_title": "We work with your data",
     "item_1_desc": "AI solutions are built on the documents, systems, and information your company already uses.",
     "item_2_title": "Built around your process",
@@ -127,13 +129,6 @@
     "item_3_desc": "Before you commit, you'll see the solution working on your own data.",
     "item_4_title": "Integrates with your existing systems",
     "item_4_desc": "ERP, CRM, SharePoint, Google Drive, email, databases, or APIs."
-  },
-  "trust_section": {
-    "title": "We sell technology only after we understand the problem.",
-    "p1": "We don't build generic AI solutions.",
-    "p2": "We first understand the process you want to improve. Only then do we design the technology.",
-    "p3": "The goal isn't to have more AI.",
-    "p4": "The goal is less manual work, faster access to information, and simpler processes."
   },
   "testimonials": {
     "title": "What our clients say"
@@ -187,11 +182,6 @@
     "a8": "Your data is always yours, and we hand it over when we stop working together. The solution itself, meaning the code and configuration, remains ours.",
     "q9": "How does the EU AI Act affect us?",
     "a9": "At the start of the project we assess together whether the AI Act places any obligations on your solution, and which ones."
-  },
-  "cta_band": {
-    "title": "We'll show you on your own data.",
-    "lead": "Send us the process or problem you want to solve. We'll design a concrete approach and demo the solution on real company data.",
-    "email": "Send an email"
   },
   "demos": {
     "eyebrow": "Try it out",
@@ -249,8 +239,9 @@
     }
   },
   "contact": {
-    "title": "Get in touch",
-    "lead": "Tell us a bit about what you're looking to automate — we'll get back to you with a time for a short demo.",
+    "title": "We'll show you on your own data.",
+    "lead": "Send us the process or problem you want to solve. We'll design a concrete approach and demo the solution on real company data.",
+    "email_alt": "Prefer email?",
     "name_label": "Full name",
     "company_label": "Company",
     "email_label": "Email",

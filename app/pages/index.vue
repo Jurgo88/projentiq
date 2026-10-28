@@ -129,9 +129,7 @@ useHead(() => ({
   <InteractiveDemos />
   <CaseStudies />
   <WhyProjentIQ />
-  <TrustSection />
   <Testimonials />
   <FaqSection />
-  <CtaBand />
   <ContactForm />
 </template>
