@@ -22,9 +22,9 @@ const year = new Date().getFullYear()
 
       <nav class="site-footer__col" :aria-label="t('footer.solutions_heading')">
         <p class="site-footer__heading">{{ t('footer.solutions_heading') }}</p>
-        <a :href="`${homePath}#solutions`">{{ t('products.card_1_title') }}</a>
-        <a :href="`${homePath}#solutions`">{{ t('products.card_2_title') }}</a>
-        <a :href="`${homePath}#solutions`">{{ t('products.card_3_title') }}</a>
+        <a :href="`${homePath}#solution-1`">{{ t('products.card_1_title') }}</a>
+        <a :href="`${homePath}#solution-2`">{{ t('products.card_2_title') }}</a>
+        <a :href="`${homePath}#solution-3`">{{ t('products.card_3_title') }}</a>
       </nav>
 
       <nav class="site-footer__col" :aria-label="t('footer.company_heading')">
@@ -120,10 +120,13 @@ const year = new Date().getFullYear()
 
 .site-footer__col a {
   color: var(--color-text-muted);
+  text-decoration: none;
 }
 
-.site-footer__col a:hover {
+.site-footer__col a:hover,
+.site-footer__col a:focus-visible {
   color: var(--color-text);
+  text-decoration: underline;
 }
 
 .site-footer__bottom {
@@ -149,11 +152,18 @@ const year = new Date().getFullYear()
 
 .site-footer__langs a {
   color: var(--color-text-muted);
+  text-decoration: none;
 }
 
 .site-footer__langs a:hover,
+.site-footer__langs a:focus-visible,
 .site-footer__langs a[aria-current='true'] {
   color: var(--color-text);
+}
+
+.site-footer__langs a:hover,
+.site-footer__langs a:focus-visible {
+  text-decoration: underline;
 }
 
 @media (max-width: 56rem) {
