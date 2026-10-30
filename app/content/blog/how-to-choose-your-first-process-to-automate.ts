@@ -26,6 +26,33 @@ export default defineBlogPost({
       footnote: '5 questions before your first pilot.'
     }
   },
+  reel: {
+    hook: 'Čo vo firme automatizovať ako prvé?',
+    scenes: [
+      {
+        text: 'Nie najväčší projekt. Začnite úlohou, ktorá ľuďom berie čas každý deň.',
+        highlight: 'Najlepší prvý proces je ten, ktorý sa opakuje.'
+      },
+      { text: 'Dobrý kandidát sa dá opísať jednou vetou:', highlight: 'Keď príde X, niekto urobí Y, aby vzniklo Z.' },
+      {
+        text: 'Opakuje sa často? Je jasné, ako vyzerá správny výsledok?',
+        highlight: 'Sú vstupy dostupné na bezpečnom mieste?'
+      },
+      {
+        text: 'Viete oddeliť výnimky, ktoré má skontrolovať človek?',
+        highlight: 'Viete zmerať čas a chyby pred zmenou a po nej?'
+      }
+    ],
+    steps: {
+      title: 'Ako začať pilot',
+      items: [
+        'Týždeň či dva merajte počet prípadov a čas.',
+        'Vopred určte, čo znamená úspech.',
+        'Schválenie nechajte na človeku.'
+      ]
+    },
+    cta: 'Celý postup aj to, kedy ešte neautomatizovať, je v článku.'
+  },
   imageAlt: {
     sk: 'Tmavá grafika ProjentIQ s otázkou, ktorý proces automatizovať ako prvý, a odpoveďou: ten, ktorý sa opakuje.',
     cs: 'Tmavá grafika ProjentIQ s otázkou, který proces automatizovat jako první, a odpovědí: ten, který se opakuje.',
