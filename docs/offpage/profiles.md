@@ -79,7 +79,7 @@ pozastavenie. Virtuálne sídlo ani coworking ako adresa neprejdú.
 ### Firemná stránka
 
 - **Názov:** ProjentIQ
-- **URL:** linkedin.com/company/projentiq (ak je voľné)
+- **URL:** linkedin.com/company/projentiq
 - **Tagline:** krátky popis SK alebo EN (vyššie)
 - **O nás:** dlhý popis. Na LinkedIne môžeš dať SK aj EN verziu pod seba.
 - **Odvetvie:** IT Services and IT Consulting

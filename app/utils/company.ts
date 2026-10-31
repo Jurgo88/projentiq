@@ -13,6 +13,9 @@ export const COMPANY = {
   baseCity: 'Bratislava',
   register: 'Obchodný register Okresného súdu Nitra, oddiel Sro, vložka č. 59882/N',
   email: 'info@projentiq.com',
+  // pätička a sameAs v JSON-LD
+  linkedin: 'https://www.linkedin.com/company/projentiq/',
+  facebook: 'https://www.facebook.com/projentiq/',
   // kontaktná osoba pri formulári (ContactForm)
   contactPerson: 'Juraj Paluš'
 } as const

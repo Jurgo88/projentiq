@@ -44,6 +44,14 @@ const year = new Date().getFullYear()
         <a :href="`mailto:${COMPANY.email}`">{{ COMPANY.email }}</a>
         <a :href="`${homePath}#demo`">{{ t('nav.cta_demo') }}</a>
         <NuxtLink :to="localePath('privacy')">{{ t('footer.gdpr_link') }}</NuxtLink>
+        <a class="site-footer__social" :href="COMPANY.linkedin" target="_blank" rel="noopener">
+          <Icon name="tabler:brand-linkedin" aria-hidden="true" />
+          LinkedIn
+        </a>
+        <a class="site-footer__social" :href="COMPANY.facebook" target="_blank" rel="noopener">
+          <Icon name="tabler:brand-facebook" aria-hidden="true" />
+          Facebook
+        </a>
       </nav>
 
       <div class="site-footer__bottom">
@@ -131,6 +139,12 @@ const year = new Date().getFullYear()
 .site-footer__col a:focus-visible {
   color: var(--color-text);
   text-decoration: underline;
+}
+
+.site-footer__col .site-footer__social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .site-footer__bottom {
