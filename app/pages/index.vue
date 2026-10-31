@@ -36,7 +36,7 @@ const areaServed = [
   { '@type': 'Country', name: 'Czech Republic' }
 ]
 
-const faqIds = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const faqIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 useHead(() => ({
   script: [
@@ -62,6 +62,7 @@ useHead(() => ({
               addressLocality: COMPANY.city,
               addressCountry: COMPANY.country
             },
+            areaServed: [{ '@type': 'City', name: COMPANY.baseCity }, ...areaServed],
             contactPoint: {
               '@type': 'ContactPoint',
               contactType: 'sales',
