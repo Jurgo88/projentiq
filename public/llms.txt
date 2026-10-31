@@ -1,6 +1,6 @@
 # ProjentIQ
 
-> ProjentIQ navrhuje a nasadzuje AI agentov, RAG znalostné systémy a automatizáciu procesov pre malé a stredné firmy na Slovensku a v Česku. Riešenia sú postavené na vlastných dokumentoch, dátach a systémoch firmy; spracovanie prebieha v rámci EÚ, prípadne priamo na infraštruktúre klienta.
+> ProjentIQ navrhuje a nasadzuje AI agentov, RAG znalostné systémy a automatizáciu procesov pre malé a stredné firmy na Slovensku a v Česku. Riešenia sú postavené na vlastných dokumentoch, dátach a systémoch firmy; spracovanie prebieha v rámci EÚ, prípadne priamo na infraštruktúre klienta. ProjentIQ pôsobí najmä v Bratislave a na západnom Slovensku; po dohode príde kamkoľvek na Slovensku aj do Česka a na diaľku spolupracuje odkiaľkoľvek.
 
 ## Služby
 

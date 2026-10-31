@@ -29,6 +29,7 @@
   "footer": {
     "links_label": "Odkazy",
     "tagline": "AI automatizácia spracovania dokladov, znalostných báz a procesov pre malé a stredné firmy na Slovensku a v Česku.",
+    "location": "Pôsobíme v Bratislave.",
     "operator": "Prevádzkovateľ:",
     "ico_label": "IČO",
     "dic_label": "DIČ",
@@ -189,7 +190,9 @@
     "q8": "Čo sa stane s našimi dátami, ak spoluprácu ukončíme?",
     "a8": "Dáta sú vždy vaše a pri ukončení spolupráce vám ich odovzdáme. Samotné riešenie, teda kód a konfigurácia, ostáva naše.",
     "q9": "Ako sa nás týka AI Act?",
-    "a9": "Na začiatku spolupráce spolu posúdime, či a aké povinnosti z AI Actu sa vášho riešenia týkajú."
+    "a9": "Na začiatku spolupráce spolu posúdime, či a aké povinnosti z AI Actu sa vášho riešenia týkajú.",
+    "q10": "Kde pôsobíte? Stretneme sa aj osobne?",
+    "a10": "Pôsobíme najmä v Bratislave a na západnom Slovensku. Po dohode prídeme kamkoľvek na Slovensku aj do Česka a na diaľku vieme spolupracovať odkiaľkoľvek."
   },
   "demos": {
     "eyebrow": "Vyskúšajte si to",
@@ -249,7 +252,7 @@
   "contact": {
     "title": "Ukážeme vám to na vašich dátach.",
     "lead": "Pošlite nám proces alebo problém, ktorý chcete riešiť. Navrhneme konkrétny postup a ukážku riešenia na reálnych firemných dátach.",
-    "person_note": "Vašu správu si prečítam osobne a ozvem sa vám do jedného pracovného dňa.",
+    "person_note": "Pôsobím v Bratislave. Vašu správu si prečítam osobne a ozvem sa vám do jedného pracovného dňa.",
     "email_alt": "Radšej e-mailom?",
     "name_label": "Meno a priezvisko",
     "company_label": "Firma",

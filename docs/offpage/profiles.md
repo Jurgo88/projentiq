@@ -13,7 +13,8 @@ a kontaktu. Používaj presne tieto tvary, bez skratiek a variácií:
 |---|---|
 | Značka | ProjentIQ |
 | Prevádzkovateľ | AJRONIK s.r.o. |
-| Adresa | Clementisova 1997/11, 955 01 Topoľčany |
+| Sídlo (register, faktúry, katalógy) | Clementisova 1997/11, 955 01 Topoľčany |
+| Miesto pôsobenia (profily a texty) | Bratislava |
 | IČO / DIČ | 55304052 / 2121943153 |
 | E-mail | info@projentiq.com |
 | Web | https://projentiq.com/sk/ (SK profily), https://projentiq.com/ (EN profily) |
@@ -31,7 +32,7 @@ Logo: `public/icon-512.png`.
 - **CS:** AI automatizace faktur, dokumentů a procesů pro malé a střední firmy. Napojení na Pohodu, Omegu a iDoklad. Demo na vašich datech zdarma.
 - **EN:** AI automation of invoices, documents and processes for SMEs in Slovakia and Czechia. Connects to Pohoda, Omega and iDoklad. Free demo on your data.
 
-### Dlhý (Google Business Profile do 750 znakov, LinkedIn „O nás“, Clutch)
+### Dlhý (LinkedIn „O nás“, Clutch; pre Google profil je samostatný text v sekcii 3)
 
 **SK:**
 
@@ -56,12 +57,19 @@ pozastavenie. Virtuálne sídlo ani coworking ako adresa neprejdú.
 
 - **Hlavná kategória:** Softvérová spoločnosť (Software company)
 - **Ďalšie kategórie:** Poradca v oblasti IT (Computer consultant), Vývojár webových aplikácií alebo podobná, ak ju Google ponúkne
-- **Oblasť pôsobnosti:** Slovensko (prípadne kraje, kam reálne chodíš)
-- **Služby** (názov a krátky popis):
+- **Oblasť pôsobnosti:** Bratislava a západné Slovensko, teda Bratislavský, Trnavský, Nitriansky a Trenčiansky kraj (Google odporúča do cca 2 hodín jazdy od základne)
+- **Adresa v profile:** bratislavská adresa, odkiaľ reálne pracuješ, skrytá pred verejnosťou
+- **Popis (do 750 znakov):** Google v popise nepovoľuje ceny, akcie, ponuky zdarma ani odkazy, tie patria do príspevkov a služieb:
+
+  > ProjentIQ navrhuje a nasadzuje AI riešenia pre malé a stredné firmy, najmä v Bratislave a na západnom Slovensku. Po dohode prídeme kamkoľvek na Slovensku aj do Česka. Automatizujeme spracovanie faktúr a iných dokladov so zápisom do Pohody, Omegy či iDokladu, staviame AI chatboty, ktoré odpovedajú z firemných dokumentov s citáciou zdroja, a AI agentov pre e-maily, objednávky a reporty.
+  >
+  > Riešenia pracujú s vašimi dátami a systémami, spracovanie prebieha v EÚ a sporné prípady vždy schvaľuje človek. Spoluprácu začíname analýzou procesu a ukážkou na vašich dátach, potom riešenie overíme na jednom procese.
+
+- **Služby** (názov a krátky popis, cena len v poli na cenu):
   - Automatizácia spracovania faktúr: vyťaženie údajov z PDF, skenov a XML a zápis do Pohody, Omegy alebo iDokladu
   - AI chatbot pre firmy (RAG): odpovede z firemných dokumentov s citáciou zdroja
   - AI agenti: e-maily, objednávky, zákaznícka podpora, reporty
-  - Pilot s pevnou cenou: overenie na jednom procese za 490 €
+  - Pilotný projekt: overenie riešenia na jednom procese (cena 490 € v poli na cenu)
 - **Web:** https://projentiq.com/sk/
 - **Fotky:** logo, titulný obrázok (`public/og-image.png`), screenshoty dem z webu
 - **Recenzie:** po prvých pilotoch požiadaj klientov o recenziu priamo cez odkaz z profilu
@@ -76,7 +84,7 @@ pozastavenie. Virtuálne sídlo ani coworking ako adresa neprejdú.
 - **O nás:** dlhý popis. Na LinkedIne môžeš dať SK aj EN verziu pod seba.
 - **Odvetvie:** IT Services and IT Consulting
 - **Veľkosť:** 1 – 10 zamestnancov
-- **Sídlo:** Topoľčany, Slovensko
+- **Lokalita:** Bratislava, Slovensko
 - **Špecializácie:** AI automatizácia, spracovanie faktúr, RAG, AI agenti, AI chatbot, Pohoda, Omega, iDoklad, e-faktúra
 
 ### Osobný profil zakladateľa

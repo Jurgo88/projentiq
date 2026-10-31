@@ -14,6 +14,7 @@ const year = new Date().getFullYear()
       <div class="site-footer__brand">
         <strong class="site-footer__logo">Projent<span class="site-footer__logo-accent">IQ</span></strong>
         <p class="site-footer__tagline">{{ t('footer.tagline') }}</p>
+        <p>{{ t('footer.location') }}</p>
         <p class="site-footer__company">
           {{ t('footer.operator') }} {{ COMPANY.legalName }}<br />
           {{ t('footer.ico_label') }}: {{ COMPANY.ico }} · {{ t('footer.dic_label') }}: {{ COMPANY.dic }}

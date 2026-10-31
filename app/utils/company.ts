@@ -9,6 +9,8 @@ export const COMPANY = {
   postalCode: '955 01',
   city: 'Topoľčany',
   country: 'SK',
+  // kde reálne pôsobíme; city vyššie je sídlo z registra, nemeniť bez zmeny v OR
+  baseCity: 'Bratislava',
   register: 'Obchodný register Okresného súdu Nitra, oddiel Sro, vložka č. 59882/N',
   email: 'info@projentiq.com',
   // kontaktná osoba pri formulári (ContactForm)

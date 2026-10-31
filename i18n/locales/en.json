@@ -29,6 +29,7 @@
   "footer": {
     "links_label": "Links",
     "tagline": "AI automation for document processing, knowledge bases, and workflows — built for small and mid-sized businesses in Slovakia and Czechia.",
+    "location": "Based in Bratislava.",
     "operator": "Operated by",
     "ico_label": "Company ID",
     "dic_label": "Tax ID",
@@ -189,7 +190,9 @@
     "q8": "What happens to our data if we stop working together?",
     "a8": "Your data is always yours, and we hand it over when we stop working together. The solution itself, meaning the code and configuration, remains ours.",
     "q9": "How does the EU AI Act affect us?",
-    "a9": "At the start of the project we assess together whether the AI Act places any obligations on your solution, and which ones."
+    "a9": "At the start of the project we assess together whether the AI Act places any obligations on your solution, and which ones.",
+    "q10": "Where are you based? Can we meet in person?",
+    "a10": "We mainly work in Bratislava and western Slovakia. By arrangement we can travel anywhere in Slovakia or Czechia, and we can work remotely from anywhere."
   },
   "demos": {
     "eyebrow": "Try it out",
@@ -249,7 +252,7 @@
   "contact": {
     "title": "We'll show you on your own data.",
     "lead": "Send us the process or problem you want to solve. We'll design a concrete approach and demo the solution on real company data.",
-    "person_note": "I read every message myself and reply within one business day.",
+    "person_note": "I'm based in Bratislava. I read every message myself and reply within one business day.",
     "email_alt": "Prefer email?",
     "name_label": "Full name",
     "company_label": "Company",
