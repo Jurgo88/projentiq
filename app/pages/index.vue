@@ -51,6 +51,7 @@ useHead(() => ({
             name: COMPANY.brand,
             legalName: COMPANY.legalName,
             url: `${SITE_URL}/`,
+            sameAs: [COMPANY.linkedin, COMPANY.facebook],
             description: t('footer.tagline'),
             email: COMPANY.email,
             taxID: COMPANY.dic,
