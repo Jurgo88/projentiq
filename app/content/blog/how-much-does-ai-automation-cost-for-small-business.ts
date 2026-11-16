@@ -83,7 +83,7 @@ export default defineBlogPost({
         {
           heading: 'Ako to vyzerá u nás',
           paragraphs: [
-            'U ProjentIQ sa ceny skladajú z jednorazovej implementácie a mesačného poplatku, ktorý zahŕňa prevádzku, náklady na AI, monitoring a podporu. Automatizácia jedného jasne ohraničeného procesu začína od 990 € a 79 € mesačne, znalostný systém od 1 490 € a 99 € mesačne, AI agent pre jeden pracovný proces od 2 500 € a 199 € mesačne. Ceny sú konečné, nie sme platcami DPH.',
+            'U ProjentIQ si vyberiete jednu z dvoch možností: jednorazovú implementáciu, alebo mesačný paušál. Paušál pokrýva hosting, monitoring, základnú podporu a dohodnutý limit používania AI. Automatizácia jedného jasne ohraničeného procesu začína od 990 € jednorazovo alebo od 79 € mesačne, znalostný systém od 1 490 € alebo od 99 € mesačne, AI agent pre jeden pracovný proces od 2 500 € alebo od 199 € mesačne. Ceny sú konečné, nie sme platiteľom DPH.',
             'Pilot s pevnou cenou 490 € vám umožní overiť riešenie skôr, než sa rozhodnete. Ak budete pokračovať, jeho cena sa odpočíta z ceny implementácie.'
           ]
         }
@@ -142,7 +142,7 @@ export default defineBlogPost({
         {
           heading: 'Jak to vypadá u nás',
           paragraphs: [
-            'U ProjentIQ se ceny skládají z jednorázové implementace a měsíčního poplatku, který zahrnuje provoz, náklady na AI, monitoring a podporu. Automatizace jednoho jasně vymezeného procesu začíná od 990 € a 79 € měsíčně, znalostní systém od 1 490 € a 99 € měsíčně, AI agent pro jeden pracovní proces od 2 500 € a 199 € měsíčně. Ceny jsou konečné, nejsme plátci DPH.',
+            'U ProjentIQ si vyberete jednu ze dvou možností: jednorázovou implementaci, nebo měsíční paušál. Paušál pokrývá hosting, monitoring, základní podporu a dohodnutý limit používání AI. Automatizace jednoho jasně vymezeného procesu začíná od 990 € jednorázově nebo od 79 € měsíčně, znalostní systém od 1 490 € nebo od 99 € měsíčně, AI agent pro jeden pracovní proces od 2 500 € nebo od 199 € měsíčně. Ceny jsou konečné, nejsme plátci DPH.',
             'Pilot s pevnou cenou 490 € vám umožní ověřit řešení dřív, než se rozhodnete. Pokud budete pokračovat, jeho cena se odečte z ceny implementace.'
           ]
         }
@@ -201,7 +201,7 @@ export default defineBlogPost({
         {
           heading: 'How it looks at ProjentIQ',
           paragraphs: [
-            'At ProjentIQ, prices consist of a one-off implementation and a monthly fee that covers operation, AI costs, monitoring and support. Automating one clearly defined process starts from €990 and €79 a month, a knowledge system from €1,490 and €99 a month, and an AI agent for one work process from €2,500 and €199 a month. Prices are final; we are not VAT payers.',
+            'At ProjentIQ, you choose one of two options: a one-off implementation, or a monthly subscription. The subscription covers hosting, monitoring, basic support and an agreed AI usage limit. Automating one clearly defined process starts from €990 one-off or from €79 a month, a knowledge system from €1,490 or from €99 a month, and an AI agent for one work process from €2,500 or from €199 a month. Prices are final; we are not VAT payers.',
             'A fixed-price pilot at €490 lets you test the solution before you decide. If you continue, its price is deducted from the implementation price.'
           ]
         }
